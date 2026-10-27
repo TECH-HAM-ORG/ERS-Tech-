@@ -1,0 +1,147 @@
+import React, { useState } from "react";
+import { Box, Typography, Grid } from "@mui/material";
+import { FaLocationDot } from "react-icons/fa6";
+import FormModal from "./Modal/FormModal";
+
+function CurrentOpening() {
+  const [openForm, setOpenForm] = useState(false);
+  const [sendData, setSendData] = useState(null);
+
+  let jobs = [
+    {
+      id: 1,
+      title: "ReactJs developer",
+      experience: "2-3",
+      location: "lahore, pakistan",
+    },
+    {
+      id: 2,
+      title: "SQA Engineer",
+      experience: "2-3",
+      location: "lahore, pakistan",
+    },
+    {
+      id: 3,
+      title: "NodeJs developer",
+      experience: "2-3",
+      location: "lahore, pakistan",
+    },
+    {
+      id: 4,
+      title: "Mern Stack Developer",
+      experience: "3-4",
+      location: "lahore, pakistan",
+    },
+    {
+      id: 5,
+      title: "Project Manager",
+      experience: "10",
+      location: "lahore, pakistan",
+    },
+    {
+      id: 6,
+      title: "Teach Lead",
+      experience: "8",
+      location: "lahore, pakistan",
+    },
+  ];
+
+  const handleOpenForm = (data) => {
+    if (data) {
+      setOpenForm(true);
+      setSendData(data);
+    }
+  };
+
+  return (
+    <>
+      <Box className="4xl:!container xxxl:!container xxl:!container xl:!container lg:!container md:!container sm:max-w-full xsm:max-w-full xxs:max-w-full xxxs:max-w-full bg-[rgba(222,233,251,0.2)] py-10">
+        <Box className="block text-center pb-10">
+          <Typography
+            className="capitalize !text-3xl !font-[600] font-poppins !leading-[140%] !tracking-[-0.16px] text-center"
+            variant="h2"
+            component={"h2"}
+            gutterBottom
+          >
+            Current&nbsp;<span className="text-ersPrimary">Openings</span>
+          </Typography>
+        </Box>
+        <Box className="w-[90%] max-w-full mx-auto relative mt-6">
+          <Grid container spacing={4} pb={8}>
+            {jobs.map((data, i) => {
+              return (
+                <Grid key={i} item xs={12} sm={6} md={6} lg={4}>
+                  <Box className="job-card-box">
+                    <Box className="job-card p-6">
+                      <Box className="pl-8 mb-4">
+                        <Typography
+                          variant="h5"
+                          component={"h5"}
+                          gutterBottom
+                          className="!text-[18px] !font-[500] font-poppins !leading-[140%] !tracking-[-0.16px] !capitalize !mb-3"
+                        >
+                          {data.title}
+                        </Typography>
+                        <Typography
+                          variant="h6"
+                          component={"h6"}
+                          gutterBottom
+                          className="!text-base !font-[400] font-poppins !leading-[140%] !tracking-[-0.16px]  !capitalize !mb-6"
+                        >
+                          Experience&nbsp;{data.experience}&nbsp;Years
+                        </Typography>
+                        <Typography
+                          variant="h6"
+                          component={"h6"}
+                          gutterBottom
+                          className="!text-sm !text-gray-500 !font-[400] font-poppins !leading-[140%] !tracking-[-0.16px] !capitalize flex items-center"
+                        >
+                          <FaLocationDot color="#000" size={18} />
+                          &nbsp; {data.location}
+                        </Typography>
+                      </Box>
+                      <Box className="flex justify-end items-center">
+                        <button
+                          type="button"
+                          onClick={() => handleOpenForm(data)}
+                          className="capitalize !text-base !text-ersPrimary !font-[500] font-poppins !leading-[140%] !tracking-[-0.16px] hover:!text-[#0F53CE] hover:!border-[#0F53CE]"
+                          style={{
+                            borderBottom: "2px solid #26AFED",
+                            transition:
+                              "color 0.3s ease, border-color 0.3s ease",
+                          }}
+                        >
+                          apply now
+                        </button>
+                      </Box>
+                    </Box>
+                  </Box>
+                </Grid>
+              );
+            })}
+          </Grid>
+          <Box className="flex justify-center items-center">
+            <Typography
+              variant="h5"
+              component={"h5"}
+              display={"block"}
+              className="flex items-center !text-[16px] !font-[400] font-poppins capitalize !flex items-center !leading-[140%] !tracking-[-0.16px]"
+            >
+              Other Field? &nbsp;
+              <button
+                type="button"
+                onClick={() => handleOpenForm('other')}
+                className="!text-base !font-[600] font-poppins text-ersPrimary capitalize !leading-[140%] !tracking-[-0.16px] hover:!text-[#0F53CE]"
+              >
+                apply now
+              </button>
+            </Typography>
+          </Box>
+        </Box>
+      </Box>
+      <FormModal open={openForm} onClose={setOpenForm} data={sendData} />
+    </>
+  );
+}
+
+export default CurrentOpening;

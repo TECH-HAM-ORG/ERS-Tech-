@@ -1,0 +1,57 @@
+import React from "react";
+import Hero from "../../components/Hero";
+import TrustedBy from "../../components/TrustedBy";
+import OurServices from "../../components/OurServices";
+import IndustriesWeServe from "../../components/IndustriesWeServe";
+import Projects from "../../components/Projects";
+import CoreValues from "../../components/CoreValues";
+import ClientsAboutUs from "../../components/ClientsAboutUs";
+import ClientImg from "@/../public/assets/icons/CLIENT-IMG.png";
+import Client2 from "@/../public/assets/icons/client-2.webp";
+import Head from "../../corelayout/Head/index";
+
+function HomePage() {
+  let TestimonialsClients = [
+    {
+      id: 1,
+      name: "Arie Amir",
+      image: ClientImg,
+      designation: "Onboarding Officer Fintech Cashier",
+      description:
+        "My name is Arie Amir and I am the onboarding officer and customer support at FINTECHCASHIER, & as such comprehend ErsTech specialty in developing & maintaining sophisticated APIs for our LATAM Fintech markets. It maintains all high professional responsiveness & cooperation to guarantee our business success in those markets. I warmly recommend a partnership with ERSTECH for all potential customers.",
+    },
+    {
+      id: 2,
+      name: "Faiqa Anwer",
+      image: Client2,
+      designation: "Owner Liftsplit App",
+      description:
+        "My name is Faiqa, I am the founder of liftsplit app. ERSTECH has developed an application for my business that was top-notch in quality. I am satisfied with the company's services as their team is highly cooperative and expert in their domain. Highly recommended!",
+    },
+  ];
+  return (
+    <>
+      <Head
+        title="ERS TECH - Transforming Ideas into Innovative Software Solutions"
+        description="Discover ERS TECH, a leading software development company specializing in Fintech and
+blockchain solutions. Empower your business with cutting-edge technology and innovative
+strategies."
+        canonicalUrl={`https://erstech.org/`}
+      />
+      <div className="w-full max-w-[1920px] mx-auto">
+        <Hero />
+        <TrustedBy />
+        <OurServices title={{ titleOne: "Our", titleTwo: "Services" }} page={"home"}/>
+        <IndustriesWeServe />
+        <Projects title={{ titleOne: "Our Latest", titleTwo: "Projects" }} page={"home"} />
+        <CoreValues />
+        <ClientsAboutUs
+          Heading={"What's Clients Says"}
+          Testimonials={TestimonialsClients}
+        />
+      </div>
+    </>
+  );
+}
+
+export default HomePage;

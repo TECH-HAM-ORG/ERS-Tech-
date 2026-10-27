@@ -1,0 +1,279 @@
+import React, { useState, useEffect, useRef } from "react";
+import Link from "next/link";
+import { IoClose } from "react-icons/io5";
+import { IoMdArrowRoundBack } from "react-icons/io";
+import Logo from "@/../public/assets/images/white-logo.png";
+import CLogo from "@/../public/assets/images/colorlogo.png";
+import AboutIcon from "@/../public/assets/images/about-us.png";
+import CareersIcon from "@/../public/assets/images/careers.png";
+import PortfolioIcon from "@/../public/assets/images/portfolio.png";
+import BlogsIcon from "@/../public/assets/images/blogs.png";
+import WebIcon from "@/../public/assets/images/web-dev-icon.png";
+import AppIcon from "@/../public/assets/images/app-dev-icon.png";
+import QAIcon from "@/../public/assets/images/qa-icon.png";
+import BlockchainIcon from "@/../public/assets/images/blockchain-icon.png";
+import UIIcon from "@/../public/assets/images/ui-icon.png";
+import SupportIcon from "@/../public/assets/images/support-icon.png";
+import Image from "next/image";
+
+function Header() {
+  const menuRef = useRef(null);
+  const menuOverlayRef = useRef(null);
+  let subMenu;
+
+  const [menuActive, setMenuActive] = useState(false);
+  const [scroll, setScroll] = useState(0);
+
+  useEffect(() => {
+    const menu = menuRef.current;
+    const menuSection = menu ? menu.querySelector(".menu-section") : null;
+    const menuArrow = menu ? menu.querySelector(".menu-mobile-arrow") : null;
+    const menuClosed = menu ? menu.querySelector(".menu-mobile-close") : null;
+    const menuTrigger = document.querySelector(".menu-mobile-trigger");
+    const menuOverlay = menuOverlayRef.current;
+
+    const toggleMenu = () => {
+      setMenuActive(!menuActive);
+      menuOverlay?.classList?.toggle("active");
+    };
+
+    const showSubMenu = (hasChildren) => {
+      subMenu = hasChildren.querySelector(".menu-subs");
+      if (subMenu) {
+        subMenu?.classList?.add("active");
+        subMenu.style.animation = "slideLeft 0.5s ease forwards";
+        const menuTitle =
+          hasChildren.querySelector("i")?.parentNode?.childNodes[0].textContent;
+        menu.querySelector(".menu-mobile-title").innerHTML = menuTitle;
+        menu.querySelector(".menu-mobile-header")?.classList?.add("active");
+      }
+    };
+
+    const hideSubMenu = () => {
+      if (subMenu) {
+        subMenu.style.animation = "slideRight 0.5s ease forwards";
+      }
+      setTimeout(() => {
+        subMenu?.classList?.remove("active");
+        menu.querySelector(".menu-mobile-title").innerHTML = "";
+        menu.querySelector(".menu-mobile-header")?.classList?.remove("active");
+      }, 300);
+    };
+
+    const handleResize = () => {
+      if (window.innerWidth > 1195 && menuActive) {
+        toggleMenu();
+      }
+    };
+
+    if (menuSection) {
+      menuSection.addEventListener("click", (e) => {
+        if (!menu?.classList?.contains("active")) {
+          return;
+        }
+        if (e.target.closest(".menu-item-has-children")) {
+          const hasChildren = e.target.closest(".menu-item-has-children");
+          showSubMenu(hasChildren);
+        }
+      });
+    }
+
+    if (menuArrow) {
+      menuArrow.addEventListener("click", hideSubMenu);
+    }
+
+    if (menuTrigger) {
+      menuTrigger.addEventListener("click", toggleMenu);
+    }
+
+    if (menuClosed) {
+      menuClosed.addEventListener("click", toggleMenu);
+    }
+
+    if (menuOverlay) {
+      menuOverlay.addEventListener("click", toggleMenu);
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      // Cleanup event listeners when the component is unmounted
+      if (menuSection) {
+        menuSection.removeEventListener("click", handleResize);
+      }
+      if (menuArrow) {
+        menuArrow.removeEventListener("click", hideSubMenu);
+      }
+      if (menuTrigger) {
+        menuTrigger.removeEventListener("click", toggleMenu);
+      }
+      if (menuClosed) {
+        menuClosed.removeEventListener("click", toggleMenu);
+      }
+      if (menuOverlay) {
+        menuOverlay.removeEventListener("click", toggleMenu);
+      }
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [menuActive]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScroll(window.scrollY);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const headerStyle = {
+    position: scroll > 50 ? "sticky" : "absolute",
+    backgroundColor: scroll > 50 ? "#fff" : "transparent",
+    color: scroll > 50 ? "#3E3E3E !important" : "#fff",
+    transition: "all 0.2s ease",
+    boxShadow: scroll
+      ? "0 4px 6px -1px rgba(0, 0, 0, 0.1),0 2px 4px -1px rgba(0, 0, 0, 0.06)"
+      : "",
+  };
+
+  return (
+    <header className="header" style={headerStyle}>
+      <div className="px-lg-cus container mx-auto">
+        <div className="wrapper-new-menu">
+          <div className="logo-btn header-item-left">
+            <Link href="/">
+              <Image
+                src={scroll > 50 ? CLogo : Logo}
+                alt="logo"
+                width={125}
+                height={125}
+                className="!mb-0 object-cover !rounded-[0px]"
+              />
+            </Link>
+          </div>
+          <div className="header-item-center">
+            {/* <div className="overlay"></div> */}
+            <nav ref={menuRef} className={`menu ${menuActive ? "active" : ""}`}>
+              <div className="menu-mobile-header">
+                <button type="button" className="btn menu-mobile-arrow">
+                  <IoMdArrowRoundBack className="ml-4" size={40} />
+                </button>
+                <div className="menu-mobile-title"></div>
+                <button type="button" className="btn menu-mobile-close">
+                  <IoClose size={40} />
+                </button>
+              </div>
+              <ul className="menu-section">
+                <li className="menu-item-has-children">
+                  <Link
+                    href="/"
+                    className={scroll > 50 ? "!text-[#3E3E3E]" : "text-white"}
+                  >
+                    Home
+                  </Link>
+                </li>
+
+                <li className="menu-item-has-children">
+                  <Link
+                    href=""
+                    className={scroll > 50 ? "!text-[#3E3E3E]" : "text-white"}
+                  >
+                    Company <i class="ion ion-ios-arrow-down"></i>
+                  </Link>
+                  <div className="menu-subs menu-mega menu-column-4 xl:!w-[16%] lg:!w-full md:!w-full sm:!w-full xsm:!w-full xxs:!w-full xxxs:!w-full  xl:!left-[46%] lg:!left-[0%] md:!left-[0%] sm:!left-[0%] xsm:!left-[0%] xxs:!left-[0%] xxxs:!left-[0%] !translate-x-0">
+                    <div className="list-item">
+                      <ul>
+                        <li className="menuuu">
+                          <Link href="/about-us">
+                            <Image
+                              src={AboutIcon}
+                              width={20}
+                              height={20}
+                              className="object-cover"
+                              alt="AboutIcon"
+                            />
+                            &nbsp;About Us
+                          </Link>
+                        </li>
+                        <li className="menuuu">
+                          <Link href="/careers">
+                            <Image
+                              src={CareersIcon}
+                              width={20}
+                              height={20}
+                              className="object-cover"
+                              alt="CareersIcon"
+                            />
+                            &nbsp;Careers
+                          </Link>
+                        </li>
+                        <li className="menuuu">
+                          <Link href="/portfolio">
+                            <Image
+                              src={PortfolioIcon}
+                              width={20}
+                              height={20}
+                              className="object-cover"
+                              alt="PortfolioIcons"
+                            />
+                            &nbsp;Portfolio
+                          </Link>
+                        </li>
+                        <li className="menuuu">
+                          <Link href="/blogs">
+                            <Image
+                              src={BlogsIcon}
+                              width={20}
+                              height={20}
+                              className="object-cover"
+                              alt="BlogsIcons"
+                            />
+                            &nbsp;Blogs
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+
+                <li className="menu-item-has-children">
+                  <Link
+                    href="/services"
+                    className={scroll > 50 ? "!text-[#3E3E3E]" : "text-white"}
+                  >
+                    Services <i class="ion ion-ios-arrow-down"></i>
+                  </Link>
+                </li>
+                <li className="menu-item-has-children">
+                  <Link
+                    href="/pricing"
+                    className={scroll > 50 ? "!text-[#3E3E3E]" : "text-white"}
+                  >
+                    Pricing
+                  </Link>
+                </li>
+                <li className="menu-item-has-children">
+                  <Link href="#contact" className="hire_team">
+                    Contact Us
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div className="header-item-right d-block d-md-block ">
+            <button type="button" className="btn menu-mobile-trigger">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+}
+
+export default Header;

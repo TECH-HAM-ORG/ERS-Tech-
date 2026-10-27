@@ -1,0 +1,173 @@
+[
+  {
+    "id": 1,
+    "name": "Wise1HRM",
+    "category": "web app",
+    "imageUrl": "/assets/projects/Mockups/hrm.jpg",
+    "url": "https://app.wise1ne.com",
+    "techStack": {
+      "frontend": "React.js",
+      "backend": "Node.js",
+      "database": "MongoDB"
+    }
+  },
+  {
+    "id": 2,
+    "name": "FocusMonk",
+    "category": "web app",
+    "imageUrl": "/assets/projects/Mockups/fm.jpg",
+    "url": "https://focusmonk.app",
+    "techStack": {
+      "frontend": "React.js",
+      "backend": "Node.js",
+      "database": "MongoDB"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Aconomy",
+    "category": "web app ,blockchain",
+    "imageUrl": "/assets/projects/Mockups/aconomy.jpg",
+    "url": "https://aconomy.com",
+    "techStack": {
+      "frontend": "Next.js",
+      "backend": "Node.js",
+      "database": "MongoDB"
+    }
+  },
+  {
+    "id": 4,
+    "name": "BlackCardCoin",
+    "category": "web app",
+    "imageUrl": "/assets/projects/Mockups/bccoin.jpg",
+    "url": "https://blackcardcoin.com",
+    "techStack": {
+      "frontend": "Next.js",
+      "backend": "Node.js",
+      "database": "MongoDB"
+    }
+  },
+  {
+    "id": 5,
+    "name": "QuikiPay",
+    "category": "web app ,blockchain",
+    "imageUrl": "/assets/projects/Mockups/quikipay.jpg",
+    "url": "https://dev.quikipay.com",
+    "techStack": {
+      "frontend": "React",
+      "backend": "Laravel",
+      "database": "MySql"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Salharo",
+    "category": "web app",
+    "imageUrl": "/assets/projects/Mockups/salharo.jpg",
+    "url": "https://salharo.us",
+    "techStack": {
+      "frontend": "Next.js",
+      "backend": "Node.js",
+      "database": "MongoDB"
+    }
+  },
+  {
+    "id": 7,
+    "name": "QuickPayCrypto",
+    "category": "web app ,blockchain",
+    "imageUrl": "/assets/projects/Mockups/quickpay.jpg",
+    "url": "https://app.quickpaycrypto.com",
+    "techStack": {
+      "frontend": "React.js",
+      "backend": "Laravel",
+      "database": "MySql"
+    }
+  },
+  {
+    "id": 8,
+    "name": "IBBA",
+    "category": "web app ,blockchain",
+    "imageUrl": "/assets/projects/Mockups/ibba.jpg",
+    "url": "https://cardcustomer.quikipay.com",
+    "techStack": {
+      "frontend": "React.js",
+      "backend": "Laravel",
+      "database": "MySql"
+    }
+  },
+  {
+    "id": 9,
+    "name": "LiftSplit",
+    "category": "mob app",
+    "imageUrl": "/assets/projects/Mockups/liftsplit-app.jpg",
+    "url": "https://liftsplit.com",
+    "techStack": {
+      "frontend": [
+        "Android",
+        "IOS"
+      ],
+      "backend": "Node.js",
+      "database": "MongoDB"
+    }
+  },
+  {
+    "id": 10,
+    "name": "FocusMonk",
+    "category": "mob app",
+    "imageUrl": "/assets/projects/Mockups/fm-app.jpg",
+    "url": "https://www.focusmonk.co",
+    "techStack": {
+      "frontend": "React Native",
+      "backend": "Node.js",
+      "database": "MongoDB"
+    }
+  },
+  {
+    "id": 11,
+    "name": "Wise1HRM",
+    "category": "mob app",
+    "imageUrl": "/assets/projects/Mockups/hrm-app.jpg",
+    "url": "https://app.wise1ne.com",
+    "techStack": {
+      "frontend": "React Native",
+      "backend": "Node.js",
+      "database": "MongoDB"
+    }
+  },
+  {
+    "id": 12,
+    "name": "Aconomy",
+    "category": "mob app",
+    "imageUrl": "/assets/projects/Mockups/aconomy-app.jpg",
+    "url": "https://aconomy.com",
+    "techStack": {
+      "frontend": "React Native",
+      "backend": "Node.js",
+      "database": "MongoDB"
+    }
+  },
+  {
+    "id": 13,
+    "name": "ADM Card",
+    "category": "web app ,blockchain",
+    "imageUrl": "/assets/projects/Mockups/adm.jpg",
+    "url": "https://admcard.com",
+    "techStack": {
+      "frontend": "React.js",
+      "backend": "Laravel",
+      "database": "MySql"
+    }
+  },
+  {
+    "id": 15,
+    "name": "FocusMonk",
+    "category": "software",
+    "imageUrl": "/assets/projects/Mockups/fm.jpg",
+    "url": "https://focusmonk.co",
+    "techStack": {
+      "frontend": "Electron.js",
+      "backend": "Node.js",
+      "database": "MongoDB"
+    }
+  }
+]

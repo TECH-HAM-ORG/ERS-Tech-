@@ -1,0 +1,208 @@
+[
+    {
+        "id": 1,
+        "category": "web-dev",
+        "imageUrl": "/assets/icons/NodeJs.png"
+    },
+    {
+        "id": 2,
+        "category": "web-dev",
+        "imageUrl": "/assets/icons/PHP.png"
+    },
+    {
+        "id": 3,
+        "category": "web-dev",
+        "imageUrl": "/assets/icons/web3.jpg"
+    },
+    {
+        "id": 4,
+        "category": "web-dev",
+        "imageUrl": "/assets/icons/mysql.png"
+    },
+    {
+        "id": 5,
+        "category": "web-dev",
+        "imageUrl": "/assets/icons/Python.png"
+    },
+    {
+        "id": 6,
+        "category": "web-dev",
+        "imageUrl": "/assets/icons/mongo.png"
+    },
+    {
+        "id": 7,
+        "category": "web-dev",
+        "imageUrl": "/assets/icons/RubyOnRails.png"
+    },
+    {
+        "id": 8,
+        "category": "web-dev",
+        "imageUrl": "/assets/icons/postgresql.png"
+    },
+    {
+        "id": 9,
+        "category": "web-dev",
+        "imageUrl": "/assets/icons/laravel.png"
+    },
+    {
+        "id": 10,
+        "category": "app-dev",
+        "imageUrl": "/assets/icons/flutter.png"
+    },
+    {
+        "id": 11,
+        "category": "app-dev",
+        "imageUrl": "/assets/icons/Android.png"
+    },
+    {
+        "id": 12,
+        "category": "app-dev",
+        "imageUrl": "/assets/icons/ios.png"
+    },
+    {
+        "id": 13,
+        "category": "app-dev",
+        "imageUrl": "/assets/icons/react-native.png"
+    },
+    {
+        "id": 14,
+        "category": "app-dev",
+        "imageUrl": "/assets/icons/java.png"
+    },
+    {
+        "id": 15,
+        "category": "app-dev",
+        "imageUrl": "/assets/icons/objective-c.png"
+    },
+    {
+        "id": 16,
+        "category": "app-dev",
+        "imageUrl": "/assets/icons/kotlin.png"
+    },
+    {
+        "id": 17,
+        "category": "app-dev",
+        "imageUrl": "/assets/icons/swift.png"
+    },
+    {
+        "id": 18,
+        "category": "app-dev",
+        "imageUrl": "/assets/icons/Python.png"
+    },
+    {
+        "id": 19,
+        "category": "app-dev",
+        "imageUrl": "/assets/icons/Python.png"
+    },
+    {
+        "id": 20,
+        "category": "dev-ops",
+        "imageUrl": "/assets/icons/puppet.png"
+    },
+    {
+        "id": 21,
+        "category": "dev-ops",
+        "imageUrl": "/assets/icons/docker.png"
+    },
+    {
+        "id": 22,
+        "category": "dev-ops",
+        "imageUrl": "/assets/icons/kubernetes.png"
+    },
+    {
+        "id": 23,
+        "category": "dev-ops",
+        "imageUrl": "/assets/icons/ansible.png"
+    },
+    {
+        "id": 24,
+        "category": "dev-ops",
+        "imageUrl": "/assets/icons/git.png"
+    },
+    {
+        "id": 25,
+        "category": "dev-ops",
+        "imageUrl": "/assets/icons/selenium.png"
+    },
+    {
+        "id": 26,
+        "category": "dev-ops",
+        "imageUrl": "/assets/icons/aws-icon.png"
+    },
+    {
+        "id": 27,
+        "category": "dev-ops",
+        "imageUrl": "/assets/icons/azure-icon.png"
+    },
+    {
+        "id": 28,
+        "category": "dev-ops",
+        "imageUrl": "/assets/icons/jenkins.png"
+    },
+    {
+        "id": 29,
+        "category": "uiux",
+        "imageUrl": "/assets/icons/figma.png"
+    },
+    {
+        "id": 30,
+        "category": "uiux",
+        "imageUrl": "/assets/icons/photoshop.png"
+    },
+    {
+        "id": 31,
+        "category": "uiux",
+        "imageUrl": "/assets/icons/adobeai.png"
+    },
+    {
+        "id": 32,
+        "category": "uiux",
+        "imageUrl": "/assets/icons/sketch.png"
+    },
+    {
+        "id": 33,
+        "category": "uiux",
+        "imageUrl": "/assets/icons/xdesign.png"
+    },
+    {
+        "id": 34,
+        "category": "uiux",
+        "imageUrl": "/assets/icons/proto.png"
+    },
+    {
+        "id": 35,
+        "category": "uiux",
+        "imageUrl": "/assets/icons/invision.png"
+    },
+    {
+        "id": 36,
+        "category": "technical-support",
+        "imageUrl": "/assets/icons/slack.png"
+    },
+    {
+        "id": 37,
+        "category": "technical-support",
+        "imageUrl": "/assets/icons/anydesk.png"
+    },
+    {
+        "id": 38,
+        "category": "technical-support",
+        "imageUrl": "/assets/icons/jira.png"
+    },
+    {
+        "id": 39,
+        "category": "technical-support",
+        "imageUrl": "/assets/icons/Trello.png"
+    },
+    {
+        "id": 40,
+        "category": "technical-support",
+        "imageUrl": "/assets/icons/teamviewer.svg"
+    },
+    {
+        "id": 41,
+        "category": "technical-support",
+        "imageUrl": "/assets/icons/freshdesk.png"
+    }
+    
+]
