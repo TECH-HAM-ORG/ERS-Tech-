@@ -1,58 +1,90 @@
 # Default rules for all web crawlers
 User-agent: *
-Allow: /
 Disallow: /api/
 Disallow: /private/
+Allow: /
 
-# AI Search & Retrieval Bots (Allow all for indexation and conversational citation)
+# AI Search & Retrieval Crawlers
 User-agent: OAI-SearchBot
+Disallow: /api/
+Disallow: /private/
 Allow: /
 
 User-agent: ChatGPT-User
+Disallow: /api/
+Disallow: /private/
 Allow: /
 
 User-agent: Claude-SearchBot
+Disallow: /api/
+Disallow: /private/
 Allow: /
 
 User-agent: Claude-User
+Disallow: /api/
+Disallow: /private/
 Allow: /
 
 User-agent: PerplexityBot
+Disallow: /api/
+Disallow: /private/
 Allow: /
 
 User-agent: Perplexity-User
+Disallow: /api/
+Disallow: /private/
 Allow: /
 
 User-agent: DuckAssistBot
+Disallow: /api/
+Disallow: /private/
 Allow: /
 
 # AI Model Training Crawlers
 # To disable training crawlers, change 'Allow: /' to 'Disallow: /' in this block
 User-agent: GPTBot
+Disallow: /api/
+Disallow: /private/
 Allow: /
 
 User-agent: ClaudeBot
+Disallow: /api/
+Disallow: /private/
 Allow: /
 
 User-agent: anthropic-ai
+Disallow: /api/
+Disallow: /private/
 Allow: /
 
 User-agent: Google-Extended
+Disallow: /api/
+Disallow: /private/
 Allow: /
 
 User-agent: Applebot-Extended
+Disallow: /api/
+Disallow: /private/
 Allow: /
 
 User-agent: CCBot
+Disallow: /api/
+Disallow: /private/
 Allow: /
 
 User-agent: Meta-ExternalAgent
+Disallow: /api/
+Disallow: /private/
 Allow: /
 
 User-agent: Bytespider
+Disallow: /api/
+Disallow: /private/
 Allow: /
 
 User-agent: Amazonbot
+Disallow: /api/
+Disallow: /private/
 Allow: /
 
 Sitemap: https://erstech.org/sitemap.xml

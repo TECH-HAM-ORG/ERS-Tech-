@@ -173,23 +173,12 @@ export async function getStaticProps({ params }) {
   const posts = await fetchAllPosts(4000);
 
   // Case b: WordPress unreachable / timed out / returned invalid data
-  // In development mode or during build, fallback safely without crashing
+  // Unreachable => NEVER return notFound (never cache a 404). Throw so Next.js preserves last good version or retries.
   if (posts === null) {
-    if (
-      process.env.NODE_ENV === "development" ||
-      process.env.NEXT_PHASE === "phase-production-build" ||
-      process.env.npm_lifecycle_event === "build"
-    ) {
-      return {
-        notFound: true,
-        revalidate: 60,
-      };
-    }
-    // Throw an error so Next.js keeps serving the last good ISR version in production
-    throw new Error(`WordPress API unreachable while fetching post "${slug}". Triggering ISR fallback.`);
+    throw new Error(`WordPress API unreachable while fetching post "${slug}". Keeping last good version (no cached 404).`);
   }
 
-  // Case a: WordPress responded, but slug is not found in the list => 404
+  // Case a: WordPress responded, but slug is not found in the list => real 404
   const post = posts.find((item) => item.slug === slug);
   if (!post) {
     return {

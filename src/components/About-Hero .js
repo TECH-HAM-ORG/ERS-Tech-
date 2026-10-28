@@ -24,38 +24,9 @@ function Hero() {
   const targetCount = 50;
   const ExpCount = 10;
   // Initialize with target values so server-rendered HTML contains the full numbers for bots/crawlers
-  const [count, setCount] = useState(targetCount);
-  const [years, setYears] = useState(ExpCount);
-
-  useEffect(() => {
-    // Reset to 0 on client mount to trigger the counting animation
-    setCount(0);
-    setYears(0);
-    const interval = setInterval(() => {
-      setCount((prevCount) => {
-        if (prevCount >= targetCount) {
-          clearInterval(interval);
-          return targetCount;
-        }
-        return prevCount + 1;
-      });
-    }, 20);
-
-    const Expinterval = setInterval(() => {
-      setYears((prevCount) => {
-        if (prevCount >= ExpCount) {
-          clearInterval(Expinterval);
-          return ExpCount;
-        }
-        return prevCount + 1;
-      });
-    }, 20);
-
-    return () => {
-      clearInterval(interval);
-      clearInterval(Expinterval);
-    };
-  }, []);
+  // Kept stable on mount to avoid visual flash (jumping from target to 0 and back) and hydration mismatches
+  const [count] = useState(targetCount);
+  const [years] = useState(ExpCount);
 
   return (
     <>

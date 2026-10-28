@@ -15,78 +15,12 @@ function OurStats() {
   const totalCustomer = 97;
 
   // Initialize with target numbers so raw HTML / bots see the full stats
-  const [projects, setProjects] = useState(totalProject);
-  const [reviews, setReviews] = useState(totalReviews);
-  const [members, setMembers] = useState(totalMembers);
-  const [clients, setClients] = useState(totalclients);
-  const [customer, setCustomer] = useState(totalCustomer);
-
-  useEffect(() => {
-    // Reset to 0 on client mount to trigger the counting animation
-    setProjects(0);
-    setReviews(0);
-    setMembers(0);
-    setClients(0);
-    setCustomer(0);
-
-    const projectinterval = setInterval(() => {
-      setProjects((prevCount) => {
-        if (prevCount >= totalProject) {
-          clearInterval(projectinterval);
-          return totalProject;
-        }
-        return prevCount + 1;
-      });
-    }, 20);
-
-    const Reviewinterval = setInterval(() => {
-      setReviews((prevCount) => {
-        if (prevCount >= totalReviews) {
-          clearInterval(Reviewinterval);
-          return totalReviews;
-        }
-        return prevCount + 1;
-      });
-    }, 20);
-
-    const Memberinterval = setInterval(() => {
-      setMembers((prevCount) => {
-        if (prevCount >= totalMembers) {
-          clearInterval(Memberinterval);
-          return totalMembers;
-        }
-        return prevCount + 1;
-      });
-    }, 20);
-
-    const Clientinterval = setInterval(() => {
-      setClients((prevCount) => {
-        if (prevCount >= totalclients) {
-          clearInterval(Clientinterval);
-          return totalclients;
-        }
-        return prevCount + 1;
-      });
-    }, 20);
-
-    const Customerinterval = setInterval(() => {
-      setCustomer((prevCount) => {
-        if (prevCount >= totalCustomer) {
-          clearInterval(Customerinterval);
-          return totalCustomer;
-        }
-        return prevCount + 1;
-      });
-    }, 20);
-
-    return () => {
-      clearInterval(projectinterval);
-      clearInterval(Reviewinterval);
-      clearInterval(Memberinterval);
-      clearInterval(Clientinterval);
-      clearInterval(Customerinterval);
-    };
-  }, []);
+  // Kept stable on mount to avoid visual flash (jumping from target to 0 and back) and hydration mismatches
+  const [projects] = useState(totalProject);
+  const [reviews] = useState(totalReviews);
+  const [members] = useState(totalMembers);
+  const [clients] = useState(totalclients);
+  const [customer] = useState(totalCustomer);
 
   return (
     <>

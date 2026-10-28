@@ -62,7 +62,11 @@ function FeaturedBlogs({ initialBlogs = null }) {
                 {blogsToDisplay?.map((data, i) => {
                   return (
                     <Grid key={i} item xs={12} sm={12} md={6} lg={4}>
-                      <Link href={`/blogs/${data.slug}`}>
+                      <Link
+                        href={`/blogs/${data.slug}`}
+                        aria-label={`Read more about ${data.title}`}
+                        className="block h-full group"
+                      >
                         <Box className="h-[430px] min-h-full relative">
                           <Box className="block w-full h-[250px] mb-6 mx-auto rounded-[20px] relative z-[1]">
                             <Image
@@ -99,11 +103,8 @@ function FeaturedBlogs({ initialBlogs = null }) {
                                 <ImCalendar size={16} color="#25A9EB" />
                                 &nbsp;{moment(data.date).format("D-MMM-YY")}
                               </Typography>
-                              <span
-                                className="!text-[14px] text-ersPrimary capitalize !font-[400] font-poppins flex items-center read-more-btn"
-                                aria-label={`Read more about ${data.title}`}
-                              >
-                                read more<span className="sr-only"> about {data.title}</span>&nbsp;
+                              <span className="!text-[14px] text-ersPrimary capitalize !font-[400] font-poppins flex items-center read-more-btn">
+                                Read more&nbsp;
                                 <MdArrowRightAlt
                                   size={23}
                                   className="arrow-read-more"

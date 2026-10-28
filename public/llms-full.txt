@@ -1,61 +1,61 @@
-# ERS TECH - Full Company Knowledge Profile
+# ERS TECH - Company Profile
 
-## Overview
-ERS TECH is a custom software development company based in Lahore, Pakistan. The company partners with startups, scale-ups, and global enterprises to build scalable digital products, enterprise web and mobile applications, and decentralized blockchain systems.
+## Company Overview
+ERS TECH is your partner for software innovation, offering an IT guide to a vast variety of organizations throughout the world. We continue to provide strategic value in the days, weeks & years after the launch of the product.
 
-- **Website**: https://erstech.org
-- **Headquarters**: Divine Mega 2, Office 226, 2nd Floor, Airport Rd., Lahore, Pakistan
-- **Email**: info@erstech.org
-- **Phone / WhatsApp**: +92 300 1420033
-- **Experience**: 10+ Years of Experience
-- **Team Size**: 50+ Engineers, Designers, and IT Specialists
-- **Completed Projects**: 600+ Projects
-- **Customer Satisfaction**: 97%+ Positive Ratings
+- Website: https://erstech.org
+- Address: Divine Mega 2, Office 226, 2nd Floor, Airport Rd. Lahore, Pakistan
+- Email: info@erstech.org
+- Phone: +923001420033
+- Years of Experience: 10 Years of Experience
+- Glorious Years: 10 Glorious Years
+- Team of Experts: 50+ Team of Experts
+- Team Members: 50+ Team Members
+- Projects Completed: 600+ Projects Completed
+- Positive Reviews: 100+ Positive Reviews
+- Happy Clients: 100+ Happy Clients
+- Customer Satisfaction: 97% Customer Satisfaction
 
----
+## Mission, Vision, and Values
+- Mission: We aim to deliver innovative, tailored tech solutions in app development, blockchain, and software. By partnering with businesses, we help them achieve growth, efficiency, and a competitive edge in the digital world.
+- Vision: Our vision is to become a global leader in technology innovation, empowering businesses of all sizes with scalable, sustainable, and future-ready digital solutions that transform ideas into reality.
+- Values: We uphold innovation, integrity, and excellence in everything we do. Our commitment to delivering high-quality solutions drives us to embrace creativity and cutting-edge technologies. We build strong relationships through honesty and transparency, ensuring client success remains at the core of our approach.
 
-## Core Services
+## Services Offered
+1. Web Development: Empowering your business with dynamic, user-friendly websites tailored to deliver seamless experiences and drive growth effectively.
+2. UI/UX Design: We craft seamless, user-friendly interfaces that enhance digital experiences, focusing on aesthetics and functionality for your business growth.
+3. Mobile App Development: We create intuitive, high-performance mobile apps tailored to your business needs, ensuring seamless user experiences and innovation.
+4. Software Development: We deliver robust and tailored software solutions, simplifying complex challenges to empower businesses with innovation and efficiency.
+5. AI / Robotics: We deliver AI-driven and robotic solutions, revolutionizing industries with intelligent automation and smart technologies for enhanced productivity.
+6. Blockchain Development: We deliver secure, scalable blockchain solutions tailored to your business, ensuring seamless integration and transformative results.
 
-### 1. Web Application Development
-- Full-stack web development using modern front-end frameworks (Next.js, React) and robust back-end systems (Node.js, Python, Express).
-- Scalable APIs, microservices architecture, and cloud deployment on AWS, Azure, and Google Cloud.
+## Technologies Supported
+PHP/Laravel, Blockchain, JavaScript, Node Js, iOS & Android, ReactJS, React-Native.
 
-### 2. Mobile App Development
-- Native and cross-platform mobile applications for iOS and Android using React Native and Flutter.
-- Offline-first architecture, push notifications, and payment integrations.
+## Featured Products Developed
+Quikipay, CardHolder, FocusMonk, Salharo, LiftSplit, Wise1ne, Mukaf.
 
-### 3. Custom Software Development & Enterprise Solutions
-- End-to-end custom software architecture tailored to specific business operations.
-- ERP, CRM, workflow automation, and data dashboards.
+## Pricing Plans
+1. Technical Support: 24/7 support for any technical issues, troubleshooting and issue resolution, regular system monitoring and maintenance, fast response times to ensure minimal downtime.
+2. Custom Development: Tailored solutions based on your project requirements, end-to-end development from planning to execution, flexible pricing depending on the project scope, regular progress reviews and collaboration with your team.
+3. Hire A Dedicated Staff: Access to a team of skilled professionals, custom resource allocation based on your needs, full transparency with daily/weekly updates, cost-effective solution for long-term projects.
 
-### 4. Blockchain & Fintech
-- Smart contract development, decentralized finance (DeFi) protocols, Web3 integrations, and secure payment rails.
-- Security-audited architecture and cryptographic consensus algorithms.
+## Careers
+Current openings located in Lahore, Pakistan:
+- ReactJs Developer (2-3 years experience)
+- SQA Engineer (2-3 years experience)
+- NodeJs Developer (2-3 years experience)
+- MERN Stack Developer (3-4 years experience)
+- Project Manager (10 years experience)
+- Tech Lead (8 years experience)
 
-### 5. UI/UX Design
-- User-centric design systems, interactive prototypes (Figma), wireframing, and user journey optimization.
-
-### 6. Quality Assurance & Testing
-- Automated and manual software testing, regression testing, load testing, and security vulnerability scanning.
-
----
-
-## Engagement Models
-
-1. **Dedicated Development Team**: Long-term dedicated software engineers working as an extension of your in-house engineering team.
-2. **Fixed-Price Project**: Defined scope, timeline, and deliverables with guaranteed milestone completion.
-3. **Time & Material (Hourly)**: Flexible development sprints with iterative backlog prioritization.
-
----
-
-## Technical Sitemap & Navigation
+## URLs
 - Home: https://erstech.org/
 - About Us: https://erstech.org/about-us
 - Services: https://erstech.org/services
 - Portfolio: https://erstech.org/portfolio
 - Pricing: https://erstech.org/pricing
 - Careers: https://erstech.org/careers
-- Technology Blogs: https://erstech.org/blogs
-- XML Sitemap: https://erstech.org/sitemap.xml
+- Blogs: https://erstech.org/blogs
+- Sitemap: https://erstech.org/sitemap.xml
 - RSS Feed: https://erstech.org/rss.xml
-

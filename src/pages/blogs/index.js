@@ -39,7 +39,7 @@ export async function getStaticProps() {
   // Case b: WordPress unreachable / timed out / returned invalid data
   if (posts === null) {
     // In development mode or during build, never crash the page with a 500 error.
-    // Return empty blogs list so the page renders gracefully without throwing in dev.
+    // Return empty blogs list with revalidate: 30 so it self-heals quickly instead of caching empty for 600s
     if (
       process.env.NODE_ENV === "development" ||
       process.env.NEXT_PHASE === "phase-production-build" ||
@@ -49,7 +49,7 @@ export async function getStaticProps() {
         props: {
           initialBlogs: [],
         },
-        revalidate: 60,
+        revalidate: 30,
       };
     }
     // During production ISR revalidation, throw so Next.js retains last good version

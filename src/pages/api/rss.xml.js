@@ -8,14 +8,11 @@ let lastRssFetchTime = 0;
 const RSS_CACHE_TTL_MS = 10 * 60 * 1000;
 let lastGoodRssXml = null;
 
-function escapeXml(unsafe) {
-  if (!unsafe) return "";
-  return unsafe
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&apos;");
+function cdata(str) {
+  if (!str) return "";
+  // Ensure string is clean and prevent CDATA breakout
+  const text = String(str).replace(/]]>/g, "]]]]><![CDATA[>");
+  return `<![CDATA[${text}]]>`;
 }
 
 function buildRssXml(posts) {
@@ -31,12 +28,18 @@ function buildRssXml(posts) {
         pubDate = "";
       }
 
+      // Short excerpt (under 300 characters), not full post body
+      const shortDesc = (post.meta_description || post.title || "")
+        .replace(/<[^>]*>/g, "") // strip any stray HTML tags
+        .trim()
+        .slice(0, 300);
+
       return `    <item>
-      <title>${escapeXml(post.title)}</title>
+      <title>${cdata(post.title)}</title>
       <link>${postUrl}</link>
       <guid isPermaLink="true">${postUrl}</guid>
       ${pubDate ? `<pubDate>${pubDate}</pubDate>` : ""}
-      <description>${escapeXml(post.meta_description || post.title)}</description>
+      <description>${cdata(shortDesc)}</description>
     </item>`;
     })
     .join("\n");
