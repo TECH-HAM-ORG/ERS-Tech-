@@ -1,0 +1,61 @@
+# ERS TECH - Full Company Knowledge Profile
+
+## Overview
+ERS TECH is a custom software development company based in Lahore, Pakistan. The company partners with startups, scale-ups, and global enterprises to build scalable digital products, enterprise web and mobile applications, and decentralized blockchain systems.
+
+- **Website**: https://erstech.org
+- **Headquarters**: Divine Mega 2, Office 226, 2nd Floor, Airport Rd., Lahore, Pakistan
+- **Email**: info@erstech.org
+- **Phone / WhatsApp**: +92 300 1420033
+- **Experience**: 10+ Years of Experience
+- **Team Size**: 50+ Engineers, Designers, and IT Specialists
+- **Completed Projects**: 600+ Projects
+- **Customer Satisfaction**: 97%+ Positive Ratings
+
+---
+
+## Core Services
+
+### 1. Web Application Development
+- Full-stack web development using modern front-end frameworks (Next.js, React) and robust back-end systems (Node.js, Python, Express).
+- Scalable APIs, microservices architecture, and cloud deployment on AWS, Azure, and Google Cloud.
+
+### 2. Mobile App Development
+- Native and cross-platform mobile applications for iOS and Android using React Native and Flutter.
+- Offline-first architecture, push notifications, and payment integrations.
+
+### 3. Custom Software Development & Enterprise Solutions
+- End-to-end custom software architecture tailored to specific business operations.
+- ERP, CRM, workflow automation, and data dashboards.
+
+### 4. Blockchain & Fintech
+- Smart contract development, decentralized finance (DeFi) protocols, Web3 integrations, and secure payment rails.
+- Security-audited architecture and cryptographic consensus algorithms.
+
+### 5. UI/UX Design
+- User-centric design systems, interactive prototypes (Figma), wireframing, and user journey optimization.
+
+### 6. Quality Assurance & Testing
+- Automated and manual software testing, regression testing, load testing, and security vulnerability scanning.
+
+---
+
+## Engagement Models
+
+1. **Dedicated Development Team**: Long-term dedicated software engineers working as an extension of your in-house engineering team.
+2. **Fixed-Price Project**: Defined scope, timeline, and deliverables with guaranteed milestone completion.
+3. **Time & Material (Hourly)**: Flexible development sprints with iterative backlog prioritization.
+
+---
+
+## Technical Sitemap & Navigation
+- Home: https://erstech.org/
+- About Us: https://erstech.org/about-us
+- Services: https://erstech.org/services
+- Portfolio: https://erstech.org/portfolio
+- Pricing: https://erstech.org/pricing
+- Careers: https://erstech.org/careers
+- Technology Blogs: https://erstech.org/blogs
+- XML Sitemap: https://erstech.org/sitemap.xml
+- RSS Feed: https://erstech.org/rss.xml
+

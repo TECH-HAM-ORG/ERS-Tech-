@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
+import JsonLd from "@/components/JsonLd";
 
 const SITE_URL = "https://erstech.org";
 const DEFAULT_TITLE = "ERS TECH - Custom Software & Blockchain Solutions";
@@ -7,12 +8,32 @@ const DEFAULT_DESCRIPTION =
   "ERS TECH is a leading software development company specializing in custom Fintech and blockchain solutions. Empower your business with robust digital innovation.";
 const DEFAULT_IMAGE = `${SITE_URL}/assets/icons/og.png`;
 
+/**
+ * Build a BreadcrumbList schema from an array of { name, item } objects.
+ * item is the full URL. The last breadcrumb may omit item (current page).
+ */
+function buildBreadcrumb(crumbs) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: crumbs.map((crumb, idx) => ({
+      "@type": "ListItem",
+      position: idx + 1,
+      name: crumb.name,
+      ...(crumb.item ? { item: crumb.item } : {}),
+    })),
+  };
+}
+
 const Default = ({
   title = "",
   description = "",
   image = "",
   canonicalUrl = "",
   noindex = false,
+  publishedTime = "",
+  breadcrumbs = null, // array of { name, item? }
+  extraJsonLd = null, // any additional schema object (BlogPosting, FAQPage, etc.)
 }) => {
   const router = useRouter();
 
@@ -29,7 +50,6 @@ const Default = ({
       finalCanonical = `${SITE_URL}${cleanPath.replace(/\/+$/, "")}`;
     }
   } else if (finalCanonical) {
-    // Ensure canonical has no trailing slash except for home root
     if (finalCanonical === `${SITE_URL}` || finalCanonical === `${SITE_URL}/`) {
       finalCanonical = `${SITE_URL}/`;
     } else {
@@ -51,6 +71,13 @@ const Default = ({
 
   const robotsDirective = noindex ? "noindex, nofollow" : "index, follow";
 
+  // Auto-generate breadcrumbs if not provided (for pages other than home)
+  let breadcrumbSchema = null;
+  const crumbs = breadcrumbs;
+  if (crumbs && crumbs.length > 0) {
+    breadcrumbSchema = buildBreadcrumb(crumbs);
+  }
+
   return (
     <Head>
       <title>{finalTitle}</title>
@@ -63,6 +90,14 @@ const Default = ({
       {/* Canonical URL */}
       <link rel="canonical" href={finalCanonical} />
 
+      {/* RSS Feed */}
+      <link
+        rel="alternate"
+        type="application/rss+xml"
+        title="ERS TECH RSS Feed"
+        href={`${SITE_URL}/rss.xml`}
+      />
+
       {/* Open Graph */}
       <meta property="og:type" content={ogType} />
       <meta property="og:site_name" content="ERS TECH" />
@@ -73,6 +108,9 @@ const Default = ({
       <meta property="og:image" content={finalImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
+      {ogType === "article" && publishedTime && (
+        <meta property="article:published_time" content={publishedTime} />
+      )}
 
       {/* Twitter Cards */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -83,6 +121,24 @@ const Default = ({
       {/* Touch Icons */}
       <link rel="apple-touch-icon" href="/assets/icons/og.png" />
       <meta name="apple-mobile-web-app-title" content="ERS TECH" />
+
+      {/* Structured Data */}
+      {breadcrumbSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(breadcrumbSchema).replace(/</g, "\\u003c"),
+          }}
+        />
+      )}
+      {extraJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(extraJsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
+      )}
     </Head>
   );
 };

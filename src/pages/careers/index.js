@@ -38,6 +38,10 @@ function page() {
         title="Careers at ERS TECH - Join Our Engineering Team"
         description="Explore exciting career opportunities at ERS TECH. Join a talented team building innovative software solutions while enjoying industry-leading perks and growth."
         canonicalUrl="https://erstech.org/careers"
+        breadcrumbs={[
+          { name: "Home", item: "https://erstech.org/" },
+          { name: "Careers" },
+        ]}
       />
       <div className="w-full max-w-[1920px] mx-auto">
         <Careerhero

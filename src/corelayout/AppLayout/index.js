@@ -13,7 +13,11 @@ const AppLayout = ({ children }) => {
   const router = useRouter();
 
   const isUnRestrictedRoute = (pathname) => {
-    return pathname === "/sitemap.xml";
+    return (
+      pathname === "/sitemap.xml" ||
+      pathname === "/sitmap.xml" ||
+      pathname === "/rss.xml"
+    );
   };
   return isUnRestrictedRoute(router.pathname) ? (
     children

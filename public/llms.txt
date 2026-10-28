@@ -1,0 +1,14 @@
+# ERS TECH
+
+> ERS TECH is a leading custom software development and IT consulting company specializing in enterprise software, fintech solutions, mobile applications, web development, and blockchain technologies. With over a decade of experience and a team of 50+ technology experts, ERS TECH delivers scalable, secure, and future-ready digital solutions to businesses worldwide.
+
+## Key Sections
+
+- [About Us](https://erstech.org/about-us): Learn about our mission, vision, values, 10+ years of experience, and leadership in software innovation.
+- [Services](https://erstech.org/services): Custom web development, mobile app development, enterprise software, UI/UX design, QA testing, blockchain engineering, and cloud consulting.
+- [Portfolio](https://erstech.org/portfolio): Case studies and delivered projects across fintech, healthcare, blockchain, and enterprise SaaS applications.
+- [Pricing](https://erstech.org/pricing): Flexible engagement models including dedicated engineering teams, fixed-price contracts, and hourly/milestone billing.
+- [Careers](https://erstech.org/careers): Current career opportunities for senior developers, UI/UX designers, QA engineers, and project managers.
+- [Blogs](https://erstech.org/blogs): In-depth articles, engineering guides, and industry analyses on web development, mobile frameworks, and blockchain innovation.
+- [Contact](https://erstech.org/about-us): Office address: Divine Mega 2, Office 226, 2nd Floor, Airport Rd., Lahore, Pakistan. Email: info@erstech.org. Phone: +92 300 1420033.
+

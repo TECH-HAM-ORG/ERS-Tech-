@@ -32,7 +32,7 @@ function Footer() {
   };
   return (
     <>
-      <Box className="w-full max-w-[1920px] mx-auto bg-gradient-to-r to-[#0E51CD] from-[#29BCF1] pt-20 pb-10">
+      <Box component="footer" className="w-full max-w-[1920px] mx-auto bg-gradient-to-r to-[#0E51CD] from-[#29BCF1] pt-20 pb-10">
         <Box className="w-[90%] max-w-full mx-auto">
           <Box className="text-white">
             <Grid container spacing={4}>
@@ -180,47 +180,49 @@ function Footer() {
                   >
                     Contact
                   </Typography>
-                  <List>
-                    <ListItem className="!pl-0 !py-1">
-                      <ListItemText
-                        primary={
-                          <Typography
-                            variant="subtitle1"
-                            component={"p"}
-                            className="!text-[14px] !font-[400] font-poppins leading-[140%] tracking-[-0.16px] capitalize"
-                          >
-                            Divine Mega 2, Office 226, 2nd Floor, Airport Rd.
-                            Lahore, Pakistan
-                          </Typography>
-                        }
-                      />
-                    </ListItem>
-                    <ListItem className="!pl-0 !py-1">
-                      <ListItemText
-                        primary={
-                          <a
-                            href="mailto:info@erstech.org"
-                            className="text-white !text-[14px] !font-[400] font-poppins leading-[140%] tracking-[-0.16px] capitalize hover:text-ersPrimary"
-                          >
-                            Email: info@erstech.org
-                          </a>
-                        }
-                      />
-                    </ListItem>
-                    <ListItem className="!pl-0 !py-1">
-                      <ListItemText
-                        primary={
-                          <button
-                            type="button"
-                            onClick={openWhatsApp}
-                            className="text-white !text-[14px] !font-[400] font-poppins leading-[140%] tracking-[-0.16px] capitalize hover:text-ersPrimary"
-                          >
-                            +923001420033
-                          </button>
-                        }
-                      />
-                    </ListItem>
-                  </List>
+                  <address className="not-italic">
+                    <List>
+                      <ListItem className="!pl-0 !py-1">
+                        <ListItemText
+                          primary={
+                            <Typography
+                              variant="subtitle1"
+                              component={"p"}
+                              className="!text-[14px] !font-[400] font-poppins leading-[140%] tracking-[-0.16px] capitalize"
+                            >
+                              Divine Mega 2, Office 226, 2nd Floor, Airport Rd.
+                              Lahore, Pakistan
+                            </Typography>
+                          }
+                        />
+                      </ListItem>
+                      <ListItem className="!pl-0 !py-1">
+                        <ListItemText
+                          primary={
+                            <a
+                              href="mailto:info@erstech.org"
+                              className="text-white !text-[14px] !font-[400] font-poppins leading-[140%] tracking-[-0.16px] capitalize hover:text-ersPrimary"
+                            >
+                              Email: info@erstech.org
+                            </a>
+                          }
+                        />
+                      </ListItem>
+                      <ListItem className="!pl-0 !py-1">
+                        <ListItemText
+                          primary={
+                            <a
+                              href="tel:+923001420033"
+                              onClick={openWhatsApp}
+                              className="text-white !text-[14px] !font-[400] font-poppins leading-[140%] tracking-[-0.16px] capitalize hover:text-ersPrimary"
+                            >
+                              +923001420033
+                            </a>
+                          }
+                        />
+                      </ListItem>
+                    </List>
+                  </address>
                 </Box>
               </Grid>
             </Grid>

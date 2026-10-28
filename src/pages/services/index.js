@@ -1,4 +1,6 @@
 import React from "react";
+import fs from "fs";
+import path from "path";
 import Head from "../../corelayout/Head/index";
 import ServicesHero from "../../components/Careerhero";
 import ServicesGraphic from "../../../public/assets/images/services.png";
@@ -6,13 +8,18 @@ import OurServices from "@/components/OurServices";
 import OurStack from "@/components/OurStack";
 import Projects from "@/components/Projects";
 import RequestQueryForm from "@/components/RequestQueryForm";
-function index() {
+
+function index({ initialStack = null }) {
   return (
     <>
       <Head
         title="Software Development Services | ERS TECH"
         description="Explore ERS TECH software development services. We deliver custom web, mobile, blockchain, and fintech solutions tailored to accelerate your business growth."
         canonicalUrl="https://erstech.org/services"
+        breadcrumbs={[
+          { name: "Home", item: "https://erstech.org/" },
+          { name: "Services" },
+        ]}
       />
       <div className="w-full max-w-[1920px] mx-auto">
         <ServicesHero
@@ -28,12 +35,12 @@ function index() {
           title={{ titleOne: "Services", titleTwo: "We Offer" }}
           page={"services"}
         />
-        <OurStack />
+        <OurStack initialStack={initialStack} />
         <div className="mb-20">
-        <Projects
-          title={{ titleOne: "featured", titleTwo: "Projects" }}
-          page={"Services"}
-        />
+          <Projects
+            title={{ titleOne: "featured", titleTwo: "Projects" }}
+            page={"Services"}
+          />
         </div>
         <div className="mb-10">
           <RequestQueryForm />
@@ -41,6 +48,30 @@ function index() {
       </div>
     </>
   );
+}
+
+export async function getStaticProps() {
+  try {
+    const filePath = path.join(process.cwd(), "public", "stackdata.json");
+    const stackData = JSON.parse(fs.readFileSync(filePath, "utf8"));
+    const webDevItems = stackData.filter(
+      (item) => item.category && item.category.toLowerCase() === "web-dev"
+    );
+    const initialStack = { imageUrls: webDevItems.map((item) => item.imageUrl) };
+
+    return {
+      props: {
+        initialStack,
+      },
+    };
+  } catch (err) {
+    console.error("Failed to load stackdata.json:", err.message);
+    return {
+      props: {
+        initialStack: null,
+      },
+    };
+  }
 }
 
 export default index;

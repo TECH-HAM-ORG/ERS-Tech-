@@ -9,17 +9,23 @@ import { useSelector, useDispatch } from "react-redux";
 import moment from "moment";
 import Loader from "@/utils/Loader";
 import dummy from "../../public/assets/imgs/dummy.jpg";
-function FeaturedBlogs() {
+
+function FeaturedBlogs({ initialBlogs = null }) {
   const dispatch = useDispatch();
   const { AllBlogs, loading } = useSelector((state) => state.blogs);
   const Limit = 10;
+
+  const blogsToDisplay = (AllBlogs && AllBlogs.length > 0) ? AllBlogs : (initialBlogs || []);
+  const isLoading = loading && blogsToDisplay.length === 0;
+
   useEffect(() => {
-    if (!AllBlogs) {
+    if (!AllBlogs && (!initialBlogs || initialBlogs.length === 0)) {
       dispatch(getBlogs(Limit));
     }
-  }, [AllBlogs, dispatch]);
+  }, [AllBlogs, initialBlogs, dispatch]);
 
   function truncateString(str, maxLength = 100) {
+    if (!str) return "";
     return str.length > maxLength ? str.substring(0, maxLength) + "..." : str;
   }
 
@@ -49,11 +55,11 @@ function FeaturedBlogs() {
         </Box>
         <Box className="w-[90%] max-w-full mx-auto">
           <Box className="h-full">
-            {loading ? (
+            {isLoading ? (
               <Loader />
             ) : (
               <Grid container spacing={6}>
-                {AllBlogs?.map((data, i) => {
+                {blogsToDisplay?.map((data, i) => {
                   return (
                     <Grid key={i} item xs={12} sm={12} md={6} lg={4}>
                       <Link href={`/blogs/${data.slug}`}>
@@ -64,7 +70,7 @@ function FeaturedBlogs() {
                               width={1000}
                               height={1000}
                               className="w-full h-full rounded-[20px] object-cover"
-                              alt="..."
+                              alt={data.title || "Blog post preview"}
                             />
                           </Box>
                           <Box className="text-start blog-content-box px-4">
@@ -93,16 +99,16 @@ function FeaturedBlogs() {
                                 <ImCalendar size={16} color="#25A9EB" />
                                 &nbsp;{moment(data.date).format("D-MMM-YY")}
                               </Typography>
-                              <Link
-                                href={`/blogs/${data.slug}`}
+                              <span
                                 className="!text-[14px] text-ersPrimary capitalize !font-[400] font-poppins flex items-center read-more-btn"
+                                aria-label={`Read more about ${data.title}`}
                               >
-                                read more&nbsp;
+                                read more<span className="sr-only"> about {data.title}</span>&nbsp;
                                 <MdArrowRightAlt
                                   size={23}
                                   className="arrow-read-more"
                                 />
-                              </Link>
+                              </span>
                             </Box>
                           </Box>
                         </Box>

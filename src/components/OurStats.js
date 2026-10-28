@@ -8,24 +8,32 @@ import Menu from "@/../public/assets/images/menu.png";
 import {isIphone} from "../utils/DetectDevice"
 import Image from "next/image";
 function OurStats() {
-  const [projects, setProjects] = useState(0);
-  const [reviews, setReviews] = useState(0);
-  const [members, setMembers] = useState(0);
-  const [clients, setClients] = useState(0);
-  const [customer, setCustomer] = useState(0);
-
   const totalProject = 600;
   const totalReviews = 100;
   const totalMembers = 50;
   const totalclients = 100;
   const totalCustomer = 97;
 
+  // Initialize with target numbers so raw HTML / bots see the full stats
+  const [projects, setProjects] = useState(totalProject);
+  const [reviews, setReviews] = useState(totalReviews);
+  const [members, setMembers] = useState(totalMembers);
+  const [clients, setClients] = useState(totalclients);
+  const [customer, setCustomer] = useState(totalCustomer);
+
   useEffect(() => {
+    // Reset to 0 on client mount to trigger the counting animation
+    setProjects(0);
+    setReviews(0);
+    setMembers(0);
+    setClients(0);
+    setCustomer(0);
+
     const projectinterval = setInterval(() => {
       setProjects((prevCount) => {
-        if (prevCount === totalProject) {
+        if (prevCount >= totalProject) {
           clearInterval(projectinterval);
-          return prevCount;
+          return totalProject;
         }
         return prevCount + 1;
       });
@@ -33,44 +41,43 @@ function OurStats() {
 
     const Reviewinterval = setInterval(() => {
       setReviews((prevCount) => {
-        if (prevCount === totalReviews) {
+        if (prevCount >= totalReviews) {
           clearInterval(Reviewinterval);
-          return prevCount;
+          return totalReviews;
         }
         return prevCount + 1;
       });
     }, 20);
 
     const Memberinterval = setInterval(() => {
-        setMembers((prevCount) => {
-          if (prevCount === totalMembers) {
-            clearInterval(Memberinterval);
-            return prevCount;
-          }
-          return prevCount + 1;
-        });
-      }, 20);
+      setMembers((prevCount) => {
+        if (prevCount >= totalMembers) {
+          clearInterval(Memberinterval);
+          return totalMembers;
+        }
+        return prevCount + 1;
+      });
+    }, 20);
 
-      const Clientinterval = setInterval(() => {
-        setClients((prevCount) => {
-          if (prevCount === totalclients) {
-            clearInterval(Clientinterval);
-            return prevCount;
-          }
-          return prevCount + 1;
-        });
-      }, 20);
+    const Clientinterval = setInterval(() => {
+      setClients((prevCount) => {
+        if (prevCount >= totalclients) {
+          clearInterval(Clientinterval);
+          return totalclients;
+        }
+        return prevCount + 1;
+      });
+    }, 20);
 
-      const Customerinterval = setInterval(() => {
-        setCustomer((prevCount) => {
-          if (prevCount === totalCustomer) {
-            clearInterval(Customerinterval);
-            return prevCount;
-          }
-          return prevCount + 1;
-        });
-      }, 20);
-
+    const Customerinterval = setInterval(() => {
+      setCustomer((prevCount) => {
+        if (prevCount >= totalCustomer) {
+          clearInterval(Customerinterval);
+          return totalCustomer;
+        }
+        return prevCount + 1;
+      });
+    }, 20);
 
     return () => {
       clearInterval(projectinterval);

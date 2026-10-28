@@ -5,8 +5,8 @@ import { FaEye } from "react-icons/fa";
 import RequestQueryForm from "./RequestQueryForm";
 import Link from "next/link";
 import Image from "next/image";
-function FeaturedProjects() {
-  const [data, setData] = useState([]);
+function FeaturedProjects({ initialProjects = [] }) {
+  const [data, setData] = useState(initialProjects);
   const [error, setError] = useState("");
   const [selected, setSelected] = useState("all");
 
@@ -27,8 +27,10 @@ function FeaturedProjects() {
   };
 
   useEffect(() => {
-    handleCategory("all");
-  }, []);
+    if (!initialProjects || initialProjects.length === 0) {
+      handleCategory("all");
+    }
+  }, [initialProjects]);
 
   const getFullImageUrl = (relativeUrl) => {
     if (typeof window === "undefined") {

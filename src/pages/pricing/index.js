@@ -12,6 +12,10 @@ function pricing() {
         title="Transparent Software Development Pricing | ERS TECH"
         description="Get transparent, competitive pricing for software development services at ERS TECH. We deliver top-quality digital solutions tailored to your business budget."
         canonicalUrl="https://erstech.org/pricing"
+        breadcrumbs={[
+          { name: "Home", item: "https://erstech.org/" },
+          { name: "Pricing" },
+        ]}
       />
       <div className="w-full max-w-[1920px] mx-auto">
         <Careerhero

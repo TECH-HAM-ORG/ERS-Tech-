@@ -21,17 +21,21 @@ function Hero() {
     setValue(newValue);
   };
 
-  const [count, setCount] = useState(0);
-  const [years, setYears] = useState(0);
   const targetCount = 50;
   const ExpCount = 10;
+  // Initialize with target values so server-rendered HTML contains the full numbers for bots/crawlers
+  const [count, setCount] = useState(targetCount);
+  const [years, setYears] = useState(ExpCount);
 
   useEffect(() => {
+    // Reset to 0 on client mount to trigger the counting animation
+    setCount(0);
+    setYears(0);
     const interval = setInterval(() => {
       setCount((prevCount) => {
-        if (prevCount === targetCount) {
+        if (prevCount >= targetCount) {
           clearInterval(interval);
-          return prevCount;
+          return targetCount;
         }
         return prevCount + 1;
       });
@@ -39,9 +43,9 @@ function Hero() {
 
     const Expinterval = setInterval(() => {
       setYears((prevCount) => {
-        if (prevCount === ExpCount) {
+        if (prevCount >= ExpCount) {
           clearInterval(Expinterval);
-          return prevCount;
+          return ExpCount;
         }
         return prevCount + 1;
       });
@@ -140,7 +144,11 @@ function Hero() {
                         />
                       </TabList>
                     </Box>
-                    <TabPanel value="1" className="!px-0 !pt-[11px]">
+                    <div
+                      role="tabpanel"
+                      hidden={value !== "1"}
+                      className={`!px-0 !pt-[11px] ${value === "1" ? "block" : "hidden"}`}
+                    >
                       <Typography
                         variant="subtitle1"
                         component={"p"}
@@ -151,8 +159,12 @@ function Hero() {
                         with businesses, we help them achieve growth,
                         efficiency, and a competitive edge in the digital world.
                       </Typography>
-                    </TabPanel>
-                    <TabPanel value="2" className="!px-0 !pt-[11px]">
+                    </div>
+                    <div
+                      role="tabpanel"
+                      hidden={value !== "2"}
+                      className={`!px-0 !pt-[11px] ${value === "2" ? "block" : "hidden"}`}
+                    >
                       <Typography
                         variant="subtitle1"
                         component={"p"}
@@ -163,8 +175,12 @@ function Hero() {
                         scalable, sustainable, and future-ready digital
                         solutions that transform ideas into reality.
                       </Typography>
-                    </TabPanel>
-                    <TabPanel value="3" className="!px-0 !pt-[11px]">
+                    </div>
+                    <div
+                      role="tabpanel"
+                      hidden={value !== "3"}
+                      className={`!px-0 !pt-[11px] ${value === "3" ? "block" : "hidden"}`}
+                    >
                       <Typography
                         variant="subtitle1"
                         component={"p"}
@@ -177,7 +193,7 @@ function Hero() {
                         relationships through honesty and transparency, ensuring
                         client success remains at the core of our approach.
                       </Typography>
-                    </TabPanel>
+                    </div>
                   </TabContext>
                 </Box>
               </Box>
