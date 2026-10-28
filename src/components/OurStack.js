@@ -3,9 +3,9 @@ import { Box, Typography, Grid } from "@mui/material";
 import Image from "next/image";
 import Web3 from "../../public/assets/icons/web3.jpg";
 
-function OurStack() {
+function OurStack({ initialStack = null }) {
   const [selected, setSelected] = useState("web-dev");
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(initialStack || []);
   const [error, setError] = useState("");
 
   const handleStack = (category) => {
@@ -25,8 +25,10 @@ function OurStack() {
   };
 
   useEffect(() => {
-    handleStack("web-dev");
-  }, []);
+    if (!initialStack || !initialStack.imageUrls || initialStack.imageUrls.length === 0) {
+      handleStack("web-dev");
+    }
+  }, [initialStack]);
 
   return (
     <>
@@ -106,8 +108,7 @@ function OurStack() {
                   src={url}
                   width={120}
                   height={120}
-                  className="stack-icons"
-                  alt="..."
+                  className="stack-icons" alt="Technology stack logo"
                 />
               </Grid>
             ))}
@@ -127,8 +128,7 @@ function OurStack() {
                     src={url}
                     width={120}
                     height={120}
-                    className="stack-icons"
-                    alt="..."
+                    className="stack-icons" alt="Technology stack logo"
                   />
                 </Grid>
               ))}

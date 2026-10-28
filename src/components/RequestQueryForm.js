@@ -1,5 +1,5 @@
 import React from "react";
-import book from "@/../public/assets/icons/request-quote.png";
+import book from "@/../public/assets/icons/request-quote.webp";
 import { useTheme } from "@mui/material/styles";
 import { TextareaAutosize } from "@mui/base/TextareaAutosize";
 import { FaLinkedin } from "react-icons/fa";
@@ -21,7 +21,10 @@ import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 import { AddUserForm } from "../redux/features/form/formSlice";
 import { toast } from "react-toastify";
+import { useRouter } from "next/router";
 function RequestQueryForm() {
+  const router = useRouter();
+  const queryEmail = typeof router.query?.email === "string" ? router.query.email : "";
   const { loading } = useSelector((state) => state.form);
   const dispatch = useDispatch();
   const theme = useTheme();
@@ -37,7 +40,7 @@ function RequestQueryForm() {
   return (
     <>
       <Box id="contact">
-        <Grid container xs={10} className="!mx-auto">
+        <Grid container className="!w-10/12 !mx-auto">
           <Grid container spacing={2}>
             <Grid item xs={12} sm={12} md={3} lg={3}>
               <Box className="bg-white shadow-xl pb-6 xl:h-[450px] lg:h-[450px] md:h-full sm:h-full xsm:h-full xxs:h-full xxxs:h-full min-h-full">
@@ -45,7 +48,7 @@ function RequestQueryForm() {
                   <Image
                     src={book}
                     className="lg:w-full md:w-1/2 lg:mx-0 md:mx-auto h-full object-cover mb-4"
-                    alt="..."
+                    alt="Consultation illustration"
                     loading="lazy"
                   />
                 </Box>
@@ -88,14 +91,14 @@ function RequestQueryForm() {
                     <Box className="block text-start mb-6">
                       <Typography
                         variant="h6"
-                        component={"h6"}
+                        component="p"
                         className="!text-lg !font-[500] font-poppins !leading-[140%]"
                       >
                         Want To
                       </Typography>
                       <Typography
                         variant="h6"
-                        component={"h6"}
+                        component="h3"
                         gutterBottom
                         className="!text-xl !font-[600] !text-ersPrimary font-poppins !leading-[140%]"
                       >
@@ -104,8 +107,9 @@ function RequestQueryForm() {
                       <Divider className="w-[170px] !border-[1.5px]" />
                     </Box>
                     <Formik
+                      enableReinitialize
                       initialValues={{
-                        email: "",
+                        email: queryEmail || "",
                         Name: "",
                         Contact: "",
                         Subject: "",
@@ -347,14 +351,14 @@ function RequestQueryForm() {
                     <Box className="grid place-content-center	text-start">
                       <Typography
                         variant="h6"
-                        component={"h6"}
+                        component="p"
                         className="!text-lg text-center !font-[500] font-poppins !leading-[140%]"
                       >
                         Talk To Our
                       </Typography>
                       <Typography
                         variant="h6"
-                        component={"h6"}
+                        component="h3"
                         gutterBottom
                         className="!text-2xl !tracking-wide !font-[600] font-poppins !leading-[140%] !text-ersPrimary"
                       >
@@ -363,11 +367,11 @@ function RequestQueryForm() {
                     </Box>
                     <Box className="grid place-content-center	text-center">
                       <Image
-                        src={"/assets/images/sales-team.jpg"}
+                        src={"/assets/images/sales-team.webp"}
                         width={180}
                         height={180}
                         className="object-cover"
-                        alt="salesTeam"
+                        alt="Khizar Mughal - Head of Sales"
                         loading="lazy"
                       />
                     </Box>
@@ -377,7 +381,7 @@ function RequestQueryForm() {
                         <Image
                           className="mask-img mask-img-one"
                           src={HR}
-                          alt="..."
+                          alt="Consultation illustration"
                         />
                       </div>
                     </Box> */}
@@ -391,7 +395,7 @@ function RequestQueryForm() {
                       </Typography>
                       <Typography
                         variant="h6"
-                        component={"h6"}
+                        component="p"
                         gutterBottom
                         className="!text-base !font-[500] font-poppins !leading-[140%] text-ersPrimary"
                       >

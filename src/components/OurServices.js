@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Typography, Grid } from "@mui/material";
 import Weblogo from "@/../public/assets/icons/web-dev.png";
-import UIlogo from "@/../public/assets/icons/ui:ux.png";
+import UIlogo from "@/../public/assets/icons/ui-ux.png";
 import Blockchain from "@/../public/assets/icons/blockChain.png";
 import AIRobots from "../../public/assets/icons/Ai-Robots.png";
 import softwareDev from "@/../public/assets/icons/software.png";
@@ -86,14 +86,14 @@ function OurServices({ title, page }) {
                         <Image
                           src={data.image}
                           className="w-[40%] object-cover"
-                          alt="..."
+                          alt={data.title || "Service icon"}
                         />
                       </Box>
                       <Box className="block text-start">
                         <Typography
                           className="!text-lg !font-[500] text-start font-poppins"
                           variant="h6"
-                          component={"h6"}
+                          component="h3"
                           gutterBottom
                         >
                           {data.title}
@@ -121,7 +121,7 @@ function OurServices({ title, page }) {
                       ) : (
                         <Link
                           className="absolute bottom-0 text-[14px] text-ersPrimary !font-[400] font-poppins flex items-center pb-4 read-more-btn"
-                          href="#"
+                          href="/services"
                         >
                           Learn More &nbsp;
                           <MdArrowRightAlt
@@ -145,14 +145,14 @@ function OurServices({ title, page }) {
                         <Image
                           src={TechnicalSupport}
                           className="w-[40%] object-cover"
-                          alt="..."
+                          alt="Technical support service icon"
                         />
                       </Box>
                       <Box className="block text-start">
                         <Typography
                           className="!text-lg !font-[500] text-start font-poppins"
                           variant="h6"
-                          component={"h6"}
+                          component="h3"
                           gutterBottom
                         >
                           {"Technical support"}

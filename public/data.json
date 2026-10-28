@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Wise1HRM",
     "category": "web app",
-    "imageUrl": "/assets/projects/Mockups/hrm.jpg",
+    "imageUrl": "/assets/projects/Mockups/hrm.webp",
     "url": "https://app.wise1ne.com",
     "techStack": {
       "frontend": "React.js",
@@ -15,7 +15,7 @@
     "id": 2,
     "name": "FocusMonk",
     "category": "web app",
-    "imageUrl": "/assets/projects/Mockups/fm.jpg",
+    "imageUrl": "/assets/projects/Mockups/fm.webp",
     "url": "https://focusmonk.app",
     "techStack": {
       "frontend": "React.js",
@@ -27,7 +27,7 @@
     "id": 3,
     "name": "Aconomy",
     "category": "web app ,blockchain",
-    "imageUrl": "/assets/projects/Mockups/aconomy.jpg",
+    "imageUrl": "/assets/projects/Mockups/aconomy.webp",
     "url": "https://aconomy.com",
     "techStack": {
       "frontend": "Next.js",
@@ -39,7 +39,7 @@
     "id": 4,
     "name": "BlackCardCoin",
     "category": "web app",
-    "imageUrl": "/assets/projects/Mockups/bccoin.jpg",
+    "imageUrl": "/assets/projects/Mockups/bccoin.webp",
     "url": "https://blackcardcoin.com",
     "techStack": {
       "frontend": "Next.js",
@@ -51,7 +51,7 @@
     "id": 5,
     "name": "QuikiPay",
     "category": "web app ,blockchain",
-    "imageUrl": "/assets/projects/Mockups/quikipay.jpg",
+    "imageUrl": "/assets/projects/Mockups/quikipay.webp",
     "url": "https://dev.quikipay.com",
     "techStack": {
       "frontend": "React",
@@ -63,7 +63,7 @@
     "id": 6,
     "name": "Salharo",
     "category": "web app",
-    "imageUrl": "/assets/projects/Mockups/salharo.jpg",
+    "imageUrl": "/assets/projects/Mockups/salharo.webp",
     "url": "https://salharo.us",
     "techStack": {
       "frontend": "Next.js",
@@ -75,7 +75,7 @@
     "id": 7,
     "name": "QuickPayCrypto",
     "category": "web app ,blockchain",
-    "imageUrl": "/assets/projects/Mockups/quickpay.jpg",
+    "imageUrl": "/assets/projects/Mockups/quickpay.webp",
     "url": "https://app.quickpaycrypto.com",
     "techStack": {
       "frontend": "React.js",
@@ -87,7 +87,7 @@
     "id": 8,
     "name": "IBBA",
     "category": "web app ,blockchain",
-    "imageUrl": "/assets/projects/Mockups/ibba.jpg",
+    "imageUrl": "/assets/projects/Mockups/ibba.webp",
     "url": "https://cardcustomer.quikipay.com",
     "techStack": {
       "frontend": "React.js",
@@ -99,7 +99,7 @@
     "id": 9,
     "name": "LiftSplit",
     "category": "mob app",
-    "imageUrl": "/assets/projects/Mockups/liftsplit-app.jpg",
+    "imageUrl": "/assets/projects/Mockups/liftsplit-app.webp",
     "url": "https://liftsplit.com",
     "techStack": {
       "frontend": [
@@ -114,7 +114,7 @@
     "id": 10,
     "name": "FocusMonk",
     "category": "mob app",
-    "imageUrl": "/assets/projects/Mockups/fm-app.jpg",
+    "imageUrl": "/assets/projects/Mockups/fm-app.webp",
     "url": "https://www.focusmonk.co",
     "techStack": {
       "frontend": "React Native",
@@ -126,7 +126,7 @@
     "id": 11,
     "name": "Wise1HRM",
     "category": "mob app",
-    "imageUrl": "/assets/projects/Mockups/hrm-app.jpg",
+    "imageUrl": "/assets/projects/Mockups/hrm-app.webp",
     "url": "https://app.wise1ne.com",
     "techStack": {
       "frontend": "React Native",
@@ -138,7 +138,7 @@
     "id": 12,
     "name": "Aconomy",
     "category": "mob app",
-    "imageUrl": "/assets/projects/Mockups/aconomy-app.jpg",
+    "imageUrl": "/assets/projects/Mockups/aconomy-app.webp",
     "url": "https://aconomy.com",
     "techStack": {
       "frontend": "React Native",
@@ -150,7 +150,7 @@
     "id": 13,
     "name": "ADM Card",
     "category": "web app ,blockchain",
-    "imageUrl": "/assets/projects/Mockups/adm.jpg",
+    "imageUrl": "/assets/projects/Mockups/adm.webp",
     "url": "https://admcard.com",
     "techStack": {
       "frontend": "React.js",
@@ -162,7 +162,7 @@
     "id": 15,
     "name": "FocusMonk",
     "category": "software",
-    "imageUrl": "/assets/projects/Mockups/fm.jpg",
+    "imageUrl": "/assets/projects/Mockups/fm.webp",
     "url": "https://focusmonk.co",
     "techStack": {
       "frontend": "Electron.js",

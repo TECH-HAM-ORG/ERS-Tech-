@@ -28,42 +28,42 @@ function HowWeDo() {
             <ListItem className="!justify-center border-bottom-box1">
               <Box className="bg-[#F6F6F4] w-[120px] h-[120px] flex justify-center items-center rounded-[50%] cruve-box1">
                 <Box className="bg-gradient-to-r from-[#28B8EF] to-[#115BD0] w-[100px] h-[100px] flex justify-center items-center rounded-[50%]">
-                  <Image src={Meeting} className="w-[55px] object-cover" alt="..."/>
+                  <Image src={Meeting} className="w-[55px] object-cover" alt="" />
                 </Box>
               </Box>
             </ListItem>
             <ListItem className="!justify-center border-bottom-box2">
               <Box className="bg-[#F6F6F4] w-[120px] h-[120px] flex justify-center items-center rounded-[50%] cruve-box2">
                 <Box className="bg-gradient-to-r from-[#28B8EF] to-[#115BD0] w-[100px] h-[100px] flex justify-center items-center rounded-[50%]">
-                  <Image src={desing} className="w-[55px] object-cover" alt="..."/>
+                  <Image src={desing} className="w-[55px] object-cover" alt="" />
                 </Box>
               </Box>
             </ListItem>
             <ListItem className="!justify-center border-bottom-box3">
               <Box className="bg-[#F6F6F4] w-[120px] h-[120px] flex justify-center items-center rounded-[50%] cruve-box3">
                 <Box className="bg-gradient-to-r from-[#28B8EF] to-[#115BD0] w-[100px] h-[100px] flex justify-center items-center rounded-[50%]">
-                  <Image src={develop} className="w-[55px] object-cover" alt="..."/>
+                  <Image src={develop} className="w-[55px] object-cover" alt="" />
                 </Box>
               </Box>
             </ListItem>
             <ListItem className="!justify-center border-bottom-box4">
               <Box className="bg-[#F6F6F4] w-[120px] h-[120px] flex justify-center items-center rounded-[50%] cruve-box4">
                 <Box className="bg-gradient-to-r from-[#28B8EF] to-[#115BD0] w-[100px] h-[100px] flex justify-center items-center rounded-[50%]">
-                  <Image src={test} className="w-[55px] object-cover" alt="..."/>
+                  <Image src={test} className="w-[55px] object-cover" alt="" />
                 </Box>
               </Box>
             </ListItem>
             <ListItem className="!justify-center border-bottom-box5">
               <Box className="bg-[#F6F6F4] w-[120px] h-[120px] flex justify-center items-center rounded-[50%] cruve-box5">
                 <Box className="bg-gradient-to-r from-[#28B8EF] to-[#115BD0] w-[100px] h-[100px] flex justify-center items-center rounded-[50%]">
-                  <Image src={review} className="w-[55px] object-cover" alt="..."/>
+                  <Image src={review} className="w-[55px] object-cover" alt="" />
                 </Box>
               </Box>
             </ListItem>
             <ListItem className="!justify-center border-bottom-box6">
               <Box className="bg-[#F6F6F4] w-[120px] h-[120px] flex justify-center items-center rounded-[50%]">
                 <Box className="bg-gradient-to-r from-[#28B8EF] to-[#115BD0] w-[100px] h-[100px] flex justify-center items-center rounded-[50%]">
-                  <Image src={live} className="w-[55px] object-cover" alt="..."/>
+                  <Image src={live} className="w-[55px] object-cover" alt="" />
                 </Box>
               </Box>
             </ListItem>
@@ -90,7 +90,7 @@ function HowWeDo() {
           </List>
           <List className="flex items-center relative w-full !mt-[0.9rem] !gap-[1px] relative">
             <ListItem className="!justify-center !grid">
-              <Typography variant="h6" display={"block"} className={isIphone () ? "!text-sm !font-[400] font-poppins !leading-[140%] !uppercase"    :  "!text-lg !font-[400] font-poppins !leading-[140%] !uppercase"}>
+              <Typography variant="h6" component="h3" display={"block"} className={isIphone () ? "!text-sm !font-[400] font-poppins !leading-[140%] !uppercase"    :  "!text-lg !font-[400] font-poppins !leading-[140%] !uppercase"}>
               Meeting
               </Typography>
               <span className="gradient-b-border"></span>

@@ -1,14 +1,17 @@
 import React from "react";
+import dynamic from "next/dynamic";
 import Hero from "../../components/Hero";
 import TrustedBy from "../../components/TrustedBy";
 import OurServices from "../../components/OurServices";
 import IndustriesWeServe from "../../components/IndustriesWeServe";
-import Projects from "../../components/Projects";
 import CoreValues from "../../components/CoreValues";
-import ClientsAboutUs from "../../components/ClientsAboutUs";
 import ClientImg from "@/../public/assets/icons/CLIENT-IMG.png";
-import Client2 from "@/../public/assets/icons/client-2.webp";
+import Client2 from "@/../public/assets/icons/client-2-opt.webp";
 import Head from "../../corelayout/Head/index";
+
+// Below-the-fold dynamic imports for performance
+const Projects = dynamic(() => import("../../components/Projects"));
+const ClientsAboutUs = dynamic(() => import("../../components/ClientsAboutUs"));
 
 function HomePage() {
   let TestimonialsClients = [
@@ -32,11 +35,9 @@ function HomePage() {
   return (
     <>
       <Head
-        title="ERS TECH - Transforming Ideas into Innovative Software Solutions"
-        description="Discover ERS TECH, a leading software development company specializing in Fintech and
-blockchain solutions. Empower your business with cutting-edge technology and innovative
-strategies."
-        canonicalUrl={`https://erstech.org/`}
+        title="ERS TECH - Custom Software & Blockchain Solutions"
+        description="Discover ERS TECH, a leading software development company specializing in Fintech and blockchain solutions. Empower your business with cutting-edge technology."
+        canonicalUrl="https://erstech.org/"
       />
       <div className="w-full max-w-[1920px] mx-auto">
         <Hero />

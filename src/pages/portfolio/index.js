@@ -1,16 +1,22 @@
 import React from "react";
+import fs from "fs";
+import path from "path";
 import Head from "../../corelayout/Head/index";
 import Careerhero from "../../components/Careerhero";
 import PortfoiloGraphic from "@/../public/assets/images/portfolio-grapjics2.png";
 import FeaturedProjects from "../../components/FeaturedProjects";
-function index() {
+
+function index({ initialProjects = [] }) {
   return (
     <>
       <Head
-        title="ERS TECH Portfolio - Showcasing Our Expertise"
-        description="Browse our portfolio of successful projects in Fintech and blockchain development. Discover
-how ERS TECH transforms ideas into impactful software solutions."
-        canonicalUrl={`https://erstech.org/portfolio`}
+        title="ERS TECH Portfolio - Our Latest Projects & Case Studies"
+        description="Browse our portfolio of successful projects in Fintech and blockchain development. Discover how ERS TECH transforms complex ideas into high-impact software."
+        canonicalUrl="https://erstech.org/portfolio"
+        breadcrumbs={[
+          { name: "Home", item: "https://erstech.org/" },
+          { name: "Portfolio" },
+        ]}
       />
       <div className="w-full max-w-[1920px] mx-auto">
         <Careerhero
@@ -24,10 +30,29 @@ how ERS TECH transforms ideas into impactful software solutions."
           img={PortfoiloGraphic}
           width={""}
         />
-        <FeaturedProjects />
+        <FeaturedProjects initialProjects={initialProjects} />
       </div>
     </>
   );
+}
+
+export async function getStaticProps() {
+  try {
+    const filePath = path.join(process.cwd(), "public", "data.json");
+    const initialProjects = JSON.parse(fs.readFileSync(filePath, "utf8"));
+    return {
+      props: {
+        initialProjects: Array.isArray(initialProjects) ? initialProjects : [],
+      },
+    };
+  } catch (err) {
+    console.error("Failed to load data.json:", err.message);
+    return {
+      props: {
+        initialProjects: [],
+      },
+    };
+  }
 }
 
 export default index;

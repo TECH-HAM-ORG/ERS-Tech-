@@ -6,11 +6,11 @@ import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
-import Aconomy from "@/../public/assets/projects/Aconomy.jpg";
-import BCCOIN from "@/../public/assets/projects/BCCOIN.jpg";
-import Focusmonk from "@/../public/assets/projects/Focusmonk.jpg";
-import Salharo from "@/../public/assets/projects/Salharo.jpg";
-import Wise1HRM from "@/../public/assets/projects/Wise1HRM.jpg";
+import Aconomy from "@/../public/assets/projects/aconomy.webp";
+import BCCOIN from "@/../public/assets/projects/bccoin.webp";
+import Focusmonk from "@/../public/assets/projects/focusmonk.webp";
+import Salharo from "@/../public/assets/projects/salharo.webp";
+import Wise1HRM from "@/../public/assets/projects/wise1hrm.webp";
 import Link from "next/link";
 import Image from "next/image";
 function Projects({ title }) {
@@ -129,16 +129,14 @@ function Projects({ title }) {
                 <Box className="rounded-[10px] h-[400px] one-background">
                   <Box className="rounded-[10px] h-[400px] second-bg">
                     <Image
-                      src={Aconomy}
-                      className="object-cover img-style"
-                      alt="..."
+                      src={Aconomy} className="object-cover img-style" alt="Aconomy project preview"
                     />
                   </Box>
                 </Box>
                 <Box className="project-slider-content text-start pb-4 relative">
                   <Typography
                     variant="h6"
-                    component={"h6"}
+                    component="h3"
                     gutterBottom
                     className="!text-lg !font-[600] font-poppins !leading-[140%] text-white !mb-2"
                   >
@@ -177,7 +175,7 @@ function Projects({ title }) {
                 <Box className="project-slider-content text-start pb-4 relative">
                   <Typography
                     variant="h6"
-                    component={"h6"}
+                    component="h3"
                     gutterBottom
                     className="!text-lg !font-[600] font-poppins !leading-[140%] text-white !mb-2"
                   >
@@ -215,7 +213,7 @@ function Projects({ title }) {
                 <Box className="project-slider-content text-start pb-4 relative">
                   <Typography
                     variant="h6"
-                    component={"h6"}
+                    component="h3"
                     gutterBottom
                     className="!text-lg !font-[600] font-poppins !leading-[140%] text-white !mb-2"
                   >
@@ -244,16 +242,14 @@ function Projects({ title }) {
                 <Box className="rounded-[10px] h-[400px] one-background">
                   <Box className="rounded-[10px] h-[400px] second-bg">
                     <Image
-                      src={Salharo}
-                      className="object-cover img-style"
-                      alt="..."
+                      src={Salharo} className="object-cover img-style" alt="Salharo project preview"
                     />
                   </Box>
                 </Box>
                 <Box className="project-slider-content text-start pb-4 relative">
                   <Typography
                     variant="h6"
-                    component={"h6"}
+                    component="h3"
                     gutterBottom
                     className="!text-lg !font-[600] font-poppins !leading-[140%] text-white !mb-2"
                   >

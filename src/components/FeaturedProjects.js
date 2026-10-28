@@ -5,8 +5,8 @@ import { FaEye } from "react-icons/fa";
 import RequestQueryForm from "./RequestQueryForm";
 import Link from "next/link";
 import Image from "next/image";
-function FeaturedProjects() {
-  const [data, setData] = useState([]);
+function FeaturedProjects({ initialProjects = [] }) {
+  const [data, setData] = useState(initialProjects);
   const [error, setError] = useState("");
   const [selected, setSelected] = useState("all");
 
@@ -27,8 +27,10 @@ function FeaturedProjects() {
   };
 
   useEffect(() => {
-    handleCategory("all");
-  }, []);
+    if (!initialProjects || initialProjects.length === 0) {
+      handleCategory("all");
+    }
+  }, [initialProjects]);
 
   const getFullImageUrl = (relativeUrl) => {
     if (typeof window === "undefined") {
@@ -121,11 +123,11 @@ function FeaturedProjects() {
                         className="w-[90%] h-full rounded-[15px] object-cover portfolio-image"
                         alt={data.name}
                       />
-                      <div class="overlay">
+                      <div className="overlay">
                         <Link
                           href={data.url}
                           target="_blank"
-                          class="icon"
+                          className="icon"
                           title={data.name}
                         >
                           <FaEye color="#fff" className="eye-icon" />
@@ -133,10 +135,10 @@ function FeaturedProjects() {
                       </div>
                     </Box>
                     <Box className="text-center">
-                      <Link href="">
+                      <Link href={data.url} target="_blank" rel="noopener noreferrer">
                         <Typography
                           variant="h6"
-                          component={"h6"}
+                          component="h3"
                           gutterBottom
                           className="!text-[16px] !font-[600] font-poppins !leading-[140%] !tracking-[-0.16px] capitalize"
                         >

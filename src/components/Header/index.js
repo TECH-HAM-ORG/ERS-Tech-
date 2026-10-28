@@ -132,9 +132,10 @@ function Header() {
     backgroundColor: scroll > 50 ? "#fff" : "transparent",
     color: scroll > 50 ? "#3E3E3E !important" : "#fff",
     transition: "all 0.2s ease",
-    boxShadow: scroll
-      ? "0 4px 6px -1px rgba(0, 0, 0, 0.1),0 2px 4px -1px rgba(0, 0, 0, 0.06)"
-      : "",
+    boxShadow:
+      scroll > 50
+        ? "0 4px 6px -1px rgba(0, 0, 0, 0.1),0 2px 4px -1px rgba(0, 0, 0, 0.06)"
+        : undefined,
   };
 
   return (
@@ -145,9 +146,10 @@ function Header() {
             <Link href="/">
               <Image
                 src={scroll > 50 ? CLogo : Logo}
-                alt="logo"
+                alt="ERS TECH Logo"
                 width={125}
                 height={125}
+                priority
                 className="!mb-0 object-cover !rounded-[0px]"
               />
             </Link>
@@ -176,10 +178,11 @@ function Header() {
 
                 <li className="menu-item-has-children">
                   <Link
-                    href=""
+                    href="/about-us"
+                    onClick={(e) => e.preventDefault()}
                     className={scroll > 50 ? "!text-[#3E3E3E]" : "text-white"}
                   >
-                    Company <i class="ion ion-ios-arrow-down"></i>
+                    Company <i className="ion ion-ios-arrow-down"></i>
                   </Link>
                   <div className="menu-subs menu-mega menu-column-4 xl:!w-[16%] lg:!w-full md:!w-full sm:!w-full xsm:!w-full xxs:!w-full xxxs:!w-full  xl:!left-[46%] lg:!left-[0%] md:!left-[0%] sm:!left-[0%] xsm:!left-[0%] xxs:!left-[0%] xxxs:!left-[0%] !translate-x-0">
                     <div className="list-item">
@@ -191,7 +194,7 @@ function Header() {
                               width={20}
                               height={20}
                               className="object-cover"
-                              alt="AboutIcon"
+                              alt=""
                             />
                             &nbsp;About Us
                           </Link>
@@ -203,7 +206,7 @@ function Header() {
                               width={20}
                               height={20}
                               className="object-cover"
-                              alt="CareersIcon"
+                              alt=""
                             />
                             &nbsp;Careers
                           </Link>
@@ -215,7 +218,7 @@ function Header() {
                               width={20}
                               height={20}
                               className="object-cover"
-                              alt="PortfolioIcons"
+                              alt=""
                             />
                             &nbsp;Portfolio
                           </Link>
@@ -227,7 +230,7 @@ function Header() {
                               width={20}
                               height={20}
                               className="object-cover"
-                              alt="BlogsIcons"
+                              alt=""
                             />
                             &nbsp;Blogs
                           </Link>
@@ -242,7 +245,7 @@ function Header() {
                     href="/services"
                     className={scroll > 50 ? "!text-[#3E3E3E]" : "text-white"}
                   >
-                    Services <i class="ion ion-ios-arrow-down"></i>
+                    Services <i className="ion ion-ios-arrow-down"></i>
                   </Link>
                 </li>
                 <li className="menu-item-has-children">
@@ -254,7 +257,7 @@ function Header() {
                   </Link>
                 </li>
                 <li className="menu-item-has-children">
-                  <Link href="#contact" className="hire_team">
+                  <Link href="/services#contact" className="hire_team">
                     Contact Us
                   </Link>
                 </li>

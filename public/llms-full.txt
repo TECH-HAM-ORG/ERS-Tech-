@@ -1,0 +1,61 @@
+# ERS TECH - Company Profile
+
+## Company Overview
+ERS TECH is your partner for software innovation, offering an IT guide to a vast variety of organizations throughout the world. We continue to provide strategic value in the days, weeks & years after the launch of the product.
+
+- Website: https://erstech.org
+- Address: Divine Mega 2, Office 226, 2nd Floor, Airport Rd. Lahore, Pakistan
+- Email: info@erstech.org
+- Phone: +923001420033
+- Years of Experience: 10 Years of Experience
+- Glorious Years: 10 Glorious Years
+- Team of Experts: 50+ Team of Experts
+- Team Members: 50+ Team Members
+- Projects Completed: 600+ Projects Completed
+- Positive Reviews: 100+ Positive Reviews
+- Happy Clients: 100+ Happy Clients
+- Customer Satisfaction: 97% Customer Satisfaction
+
+## Mission, Vision, and Values
+- Mission: We aim to deliver innovative, tailored tech solutions in app development, blockchain, and software. By partnering with businesses, we help them achieve growth, efficiency, and a competitive edge in the digital world.
+- Vision: Our vision is to become a global leader in technology innovation, empowering businesses of all sizes with scalable, sustainable, and future-ready digital solutions that transform ideas into reality.
+- Values: We uphold innovation, integrity, and excellence in everything we do. Our commitment to delivering high-quality solutions drives us to embrace creativity and cutting-edge technologies. We build strong relationships through honesty and transparency, ensuring client success remains at the core of our approach.
+
+## Services Offered
+1. Web Development: Empowering your business with dynamic, user-friendly websites tailored to deliver seamless experiences and drive growth effectively.
+2. UI/UX Design: We craft seamless, user-friendly interfaces that enhance digital experiences, focusing on aesthetics and functionality for your business growth.
+3. Mobile App Development: We create intuitive, high-performance mobile apps tailored to your business needs, ensuring seamless user experiences and innovation.
+4. Software Development: We deliver robust and tailored software solutions, simplifying complex challenges to empower businesses with innovation and efficiency.
+5. AI / Robotics: We deliver AI-driven and robotic solutions, revolutionizing industries with intelligent automation and smart technologies for enhanced productivity.
+6. Blockchain Development: We deliver secure, scalable blockchain solutions tailored to your business, ensuring seamless integration and transformative results.
+
+## Technologies Supported
+PHP/Laravel, Blockchain, JavaScript, Node Js, iOS & Android, ReactJS, React-Native.
+
+## Featured Products Developed
+Quikipay, CardHolder, FocusMonk, Salharo, LiftSplit, Wise1ne, Mukaf.
+
+## Pricing Plans
+1. Technical Support: 24/7 support for any technical issues, troubleshooting and issue resolution, regular system monitoring and maintenance, fast response times to ensure minimal downtime.
+2. Custom Development: Tailored solutions based on your project requirements, end-to-end development from planning to execution, flexible pricing depending on the project scope, regular progress reviews and collaboration with your team.
+3. Hire A Dedicated Staff: Access to a team of skilled professionals, custom resource allocation based on your needs, full transparency with daily/weekly updates, cost-effective solution for long-term projects.
+
+## Careers
+Current openings located in Lahore, Pakistan:
+- ReactJs Developer (2-3 years experience)
+- SQA Engineer (2-3 years experience)
+- NodeJs Developer (2-3 years experience)
+- MERN Stack Developer (3-4 years experience)
+- Project Manager (10 years experience)
+- Tech Lead (8 years experience)
+
+## URLs
+- Home: https://erstech.org/
+- About Us: https://erstech.org/about-us
+- Services: https://erstech.org/services
+- Portfolio: https://erstech.org/portfolio
+- Pricing: https://erstech.org/pricing
+- Careers: https://erstech.org/careers
+- Blogs: https://erstech.org/blogs
+- Sitemap: https://erstech.org/sitemap.xml
+- RSS Feed: https://erstech.org/rss.xml

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Box, Typography, Button, Tab } from "@mui/material";
 import aboutOneImg from "@/../public/assets/images/about-h-img.png";
-import TabContext from "@material-ui/lab/TabContext";
-import TabList from "@material-ui/lab/TabList";
-import TabPanel from "@material-ui/lab/TabPanel";
+import TabContext from "@mui/lab/TabContext";
+import TabList from "@mui/lab/TabList";
+import TabPanel from "@mui/lab/TabPanel";
 import { makeStyles } from "@mui/styles";
 import Image from "next/image";
 const useStyles = makeStyles({
@@ -21,37 +21,12 @@ function Hero() {
     setValue(newValue);
   };
 
-  const [count, setCount] = useState(0);
-  const [years, setYears] = useState(0);
   const targetCount = 50;
   const ExpCount = 10;
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCount((prevCount) => {
-        if (prevCount === targetCount) {
-          clearInterval(interval);
-          return prevCount;
-        }
-        return prevCount + 1;
-      });
-    }, 20);
-
-    const Expinterval = setInterval(() => {
-      setYears((prevCount) => {
-        if (prevCount === ExpCount) {
-          clearInterval(Expinterval);
-          return prevCount;
-        }
-        return prevCount + 1;
-      });
-    }, 20);
-
-    return () => {
-      clearInterval(interval);
-      clearInterval(Expinterval);
-    };
-  }, []);
+  // Initialize with target values so server-rendered HTML contains the full numbers for bots/crawlers
+  // Kept stable on mount to avoid visual flash (jumping from target to 0 and back) and hydration mismatches
+  const [count] = useState(targetCount);
+  const [years] = useState(ExpCount);
 
   return (
     <>
@@ -94,7 +69,7 @@ function Hero() {
                           label={
                             <Typography
                               variant="h6"
-                              component={"h6"}
+                              component="span"
                               className={
                                 value === "1"
                                   ? "!font-[700] !text-[16px] font-poppins !leading-[140%] text-white capitalize"
@@ -110,7 +85,7 @@ function Hero() {
                           label={
                             <Typography
                               variant="h6"
-                              component={"h6"}
+                              component="span"
                               className={
                                 value === "2"
                                   ? "!font-[700] !text-[16px] font-poppins !leading-[140%] text-white capitalize"
@@ -126,7 +101,7 @@ function Hero() {
                           label={
                             <Typography
                               variant="h6"
-                              component={"h6"}
+                              component="span"
                               className={
                                 value === "3"
                                   ? "!font-[700] !text-[16px] font-poppins !leading-[140%] text-white capitalize"
@@ -140,7 +115,11 @@ function Hero() {
                         />
                       </TabList>
                     </Box>
-                    <TabPanel value="1" className="!px-0 !pt-[11px]">
+                    <div
+                      role="tabpanel"
+                      hidden={value !== "1"}
+                      className={`!px-0 !pt-[11px] ${value === "1" ? "block" : "hidden"}`}
+                    >
                       <Typography
                         variant="subtitle1"
                         component={"p"}
@@ -151,8 +130,12 @@ function Hero() {
                         with businesses, we help them achieve growth,
                         efficiency, and a competitive edge in the digital world.
                       </Typography>
-                    </TabPanel>
-                    <TabPanel value="2" className="!px-0 !pt-[11px]">
+                    </div>
+                    <div
+                      role="tabpanel"
+                      hidden={value !== "2"}
+                      className={`!px-0 !pt-[11px] ${value === "2" ? "block" : "hidden"}`}
+                    >
                       <Typography
                         variant="subtitle1"
                         component={"p"}
@@ -163,8 +146,12 @@ function Hero() {
                         scalable, sustainable, and future-ready digital
                         solutions that transform ideas into reality.
                       </Typography>
-                    </TabPanel>
-                    <TabPanel value="3" className="!px-0 !pt-[11px]">
+                    </div>
+                    <div
+                      role="tabpanel"
+                      hidden={value !== "3"}
+                      className={`!px-0 !pt-[11px] ${value === "3" ? "block" : "hidden"}`}
+                    >
                       <Typography
                         variant="subtitle1"
                         component={"p"}
@@ -177,7 +164,7 @@ function Hero() {
                         relationships through honesty and transparency, ensuring
                         client success remains at the core of our approach.
                       </Typography>
-                    </TabPanel>
+                    </div>
                   </TabContext>
                 </Box>
               </Box>
@@ -186,14 +173,15 @@ function Hero() {
                   <Image
                     src={aboutOneImg}
                     className="w-[95%] object-cover"
-                    alt=".."
+                    priority
+                    alt="About ERS TECH software engineering team"
                   />
                   <Box className="h-[100px] w-[90%] mx-auto bg-white border-[3px] border-[rgba(41,188,241,0.6)] rounded-[14px] absolute xl:-bottom-[12%] lg:-bottom-[18%] md:-bottom-[25%] right-[5%] z-[1]">
                     <Box className="p-4 flex items-center justify-around gap-4">
                       <Box className="grid place-items-center place-content-center text-center">
                         <Typography
                           variant="h6"
-                          component={"h6"}
+                          component="span"
                           className="!text-2xl !font-[600] font-poppins !leading-[140%]"
                         >
                           {years}
@@ -217,7 +205,7 @@ function Hero() {
                       <Box className="grid place-items-center place-content-center text-center">
                         <Typography
                           variant="h6"
-                          component={"h6"}
+                          component="span"
                           className="!text-2xl !font-[600] font-poppins !leading-[140%]"
                         >
                           {count}+

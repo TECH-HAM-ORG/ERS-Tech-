@@ -27,94 +27,94 @@ function TrustedBy() {
               Trusted <span className="text-ersPrimary">By</span>
             </Typography>
           </Box>
-          <div class="slider">
-            <div class="slide-track">
-              <div class="slide">
+          <div className="slider">
+            <div className="slide-track">
+              <div className="slide">
                 <Image src={CLD5} height="100" width="250" alt="" />
               </div>
-              <div class="slide">
+              <div className="slide">
                 <Image src={CLD4} height="100" width="250" alt="" />
               </div>
-              <div class="slide">
+              <div className="slide">
                 <Image src={CLD3} height="100" width="250" alt="" />
               </div>
-              <div class="slide">
+              <div className="slide">
                 <Image src={CLD2} height="100" width="250" alt="" />
               </div>
-              <div class="slide">
+              <div className="slide">
                 <Image src={CLD1} height="100" width="250" alt="" />
               </div>
-              <div class="slide">
+              <div className="slide">
                 <Image src={CLD6} height="100" width="250" alt="" />
               </div>
-              <div class="slide">
+              <div className="slide">
                 <Image src={CLD7} height="100" width="250" alt="" />
               </div>
-              <div class="slide">
+              <div className="slide">
                 <Image src={CLD8} height="100" width="250" alt="" />
               </div>
-              <div class="slide">
+              <div className="slide">
                 <Image src={CLD9} height="100" width="250" alt="" />
               </div>
-              <div class="slide">
+              <div className="slide">
                 <Image src={CLD10} height="100" width="250" alt="" />
               </div>
-              <div class="slide">
+              <div className="slide">
                 <Image src={CLD5} height="100" width="250" alt="" />
               </div>
-              <div class="slide">
+              <div className="slide">
                 <Image src={CLD4} height="100" width="250" alt="" />
               </div>
-              <div class="slide">
+              <div className="slide">
                 <Image src={CLD3} height="100" width="250" alt="" />
               </div>
-              <div class="slide">
+              <div className="slide">
                 <Image src={CLD2} height="100" width="250" alt="" />
               </div>
             </div>
           </div>
-          <div class="slider-left">
-            <div class="slide-track-left">
-              <div class="slide-left">
+          <div className="slider-left">
+            <div className="slide-track-left">
+              <div className="slide-left">
                 <Image src={CLD5} height="100" width="250" alt="" />
               </div>
-              <div class="slide-left">
+              <div className="slide-left">
                 <Image src={CLD4} height="100" width="250" alt="" />
               </div>
-              <div class="slide-left">
+              <div className="slide-left">
                 <Image src={CLD3} height="100" width="250" alt="" />
               </div>
-              <div class="slide-left">
+              <div className="slide-left">
                 <Image src={CLD2} height="100" width="250" alt="" />
               </div>
-              <div class="slide-left">
+              <div className="slide-left">
                 <Image src={CLD1} height="100" width="250" alt="" />
               </div>
-              <div class="slide-left">
+              <div className="slide-left">
                 <Image src={CLD6} height="100" width="250" alt="" />
               </div>
-              <div class="slide-left">
+              <div className="slide-left">
                 <Image src={CLD7} height="100" width="250" alt="" />
               </div>
-              <div class="slide-left">
+              <div className="slide-left">
                 <Image src={CLD8} height="100" width="250" alt="" />
               </div>
-              <div class="slide-left">
+              <div className="slide-left">
                 <Image src={CLD9} height="100" width="250" alt="" />
               </div>
-              <div class="slide-left">
+              <div className="slide-left">
                 <Image src={CLD10} height="100" width="250" alt="" />
               </div>
-              <div class="slide-left">
+              <div className="slide-left">
                 <Image src={CLD5} height="100" width="250" alt="" />
               </div>
-              <div class="slide-left">
+              <div className="slide-left">
                 <Image src={CLD4} height="100" width="250" alt="" />
               </div>
-              <div class="slide-left">
+              <div className="slide-left">
                 <Image src={CLD3} height="100" width="250" alt="" />
               </div>
-              <div class="slide-left">
+              <div className="slide-left">
                 <Image src={CLD2} height="100" width="250" alt="" />
               </div>
             </div>

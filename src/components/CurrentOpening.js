@@ -1,7 +1,10 @@
 import React, { useState } from "react";
+import dynamic from "next/dynamic";
 import { Box, Typography, Grid } from "@mui/material";
 import { FaLocationDot } from "react-icons/fa6";
-import FormModal from "./Modal/FormModal";
+
+// Dynamic import for modal dialog (interaction-only)
+const FormModal = dynamic(() => import("./Modal/FormModal"));
 
 function CurrentOpening() {
   const [openForm, setOpenForm] = useState(false);
@@ -76,7 +79,7 @@ function CurrentOpening() {
                       <Box className="pl-8 mb-4">
                         <Typography
                           variant="h5"
-                          component={"h5"}
+                          component="h3"
                           gutterBottom
                           className="!text-[18px] !font-[500] font-poppins !leading-[140%] !tracking-[-0.16px] !capitalize !mb-3"
                         >
@@ -84,7 +87,7 @@ function CurrentOpening() {
                         </Typography>
                         <Typography
                           variant="h6"
-                          component={"h6"}
+                          component="p"
                           gutterBottom
                           className="!text-base !font-[400] font-poppins !leading-[140%] !tracking-[-0.16px]  !capitalize !mb-6"
                         >
@@ -92,7 +95,7 @@ function CurrentOpening() {
                         </Typography>
                         <Typography
                           variant="h6"
-                          component={"h6"}
+                          component="p"
                           gutterBottom
                           className="!text-sm !text-gray-500 !font-[400] font-poppins !leading-[140%] !tracking-[-0.16px] !capitalize flex items-center"
                         >

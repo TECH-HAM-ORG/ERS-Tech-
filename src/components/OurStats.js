@@ -8,78 +8,19 @@ import Menu from "@/../public/assets/images/menu.png";
 import {isIphone} from "../utils/DetectDevice"
 import Image from "next/image";
 function OurStats() {
-  const [projects, setProjects] = useState(0);
-  const [reviews, setReviews] = useState(0);
-  const [members, setMembers] = useState(0);
-  const [clients, setClients] = useState(0);
-  const [customer, setCustomer] = useState(0);
-
   const totalProject = 600;
   const totalReviews = 100;
   const totalMembers = 50;
   const totalclients = 100;
   const totalCustomer = 97;
 
-  useEffect(() => {
-    const projectinterval = setInterval(() => {
-      setProjects((prevCount) => {
-        if (prevCount === totalProject) {
-          clearInterval(projectinterval);
-          return prevCount;
-        }
-        return prevCount + 1;
-      });
-    }, 20);
-
-    const Reviewinterval = setInterval(() => {
-      setReviews((prevCount) => {
-        if (prevCount === totalReviews) {
-          clearInterval(Reviewinterval);
-          return prevCount;
-        }
-        return prevCount + 1;
-      });
-    }, 20);
-
-    const Memberinterval = setInterval(() => {
-        setMembers((prevCount) => {
-          if (prevCount === totalMembers) {
-            clearInterval(Memberinterval);
-            return prevCount;
-          }
-          return prevCount + 1;
-        });
-      }, 20);
-
-      const Clientinterval = setInterval(() => {
-        setClients((prevCount) => {
-          if (prevCount === totalclients) {
-            clearInterval(Clientinterval);
-            return prevCount;
-          }
-          return prevCount + 1;
-        });
-      }, 20);
-
-      const Customerinterval = setInterval(() => {
-        setCustomer((prevCount) => {
-          if (prevCount === totalCustomer) {
-            clearInterval(Customerinterval);
-            return prevCount;
-          }
-          return prevCount + 1;
-        });
-      }, 20);
-
-
-    return () => {
-      clearInterval(projectinterval);
-      clearInterval(Reviewinterval);
-      clearInterval(Memberinterval);
-      clearInterval(Clientinterval);
-      clearInterval(Customerinterval);
-    };
-  }, []);
+  // Initialize with target numbers so raw HTML / bots see the full stats
+  // Kept stable on mount to avoid visual flash (jumping from target to 0 and back) and hydration mismatches
+  const [projects] = useState(totalProject);
+  const [reviews] = useState(totalReviews);
+  const [members] = useState(totalMembers);
+  const [clients] = useState(totalclients);
+  const [customer] = useState(totalCustomer);
 
   return (
     <>
@@ -106,7 +47,7 @@ function OurStats() {
                 </div>
                 <div className="custom-boxes">
                   <div className="custom-box box-1">
-                    <Image className="stat-img-lazyloaded" src={Pen} alt="..." />
+                    <Image className="stat-img-lazyloaded" src={Pen} alt="" />
                     <div className="custom-values">
                       <div className="row-align">
                         <p className={isIphone() ? "md:!text-lg !text-lg" : ""}>{projects}</p> <span className={isIphone() ? "md:!text-lg !text-lg" : ""}>+</span>
@@ -115,7 +56,7 @@ function OurStats() {
                     </div>
                   </div>
                   <div className="custom-box box-2">
-                    <Image className="stat-img-lazyloaded" src={Search} alt="..." />
+                    <Image className="stat-img-lazyloaded" src={Search} alt="" />
                     <div className="custom-values">
                       <div className="row-align">
                         <p className={isIphone() ? "md:!text-lg !text-lg" : ""}>{reviews}</p> <span className={isIphone() ? "md:!text-lg !text-lg" : ""}>+</span>
@@ -124,7 +65,7 @@ function OurStats() {
                     </div>
                   </div>
                   <div className="custom-box box-5">
-                    <Image className="stat-img-lazyloaded" src={Menu} alt="..." />
+                    <Image className="stat-img-lazyloaded" src={Menu} alt="" />
                     <div className="custom-values">
                       <div className="row-align">
                         <p className={isIphone() ? "md:!text-lg !text-lg" : ""}>{customer}</p> <span className={isIphone() ? "md:!text-lg !text-lg" : ""}>%</span>
@@ -133,7 +74,7 @@ function OurStats() {
                     </div>
                   </div>
                   <div className="custom-box box-4">
-                    <Image className="stat-img-lazyloaded" src={Graph} alt="..."/>
+                    <Image className="stat-img-lazyloaded" src={Graph} alt=""/>
                     <div className="custom-values">
                       <div className="row-align">
                         <p className={isIphone() ? "md:!text-lg !text-lg" : ""}>{clients}</p> <span className={isIphone() ? "md:!text-lg !text-lg" : ""}>+</span>
@@ -142,7 +83,7 @@ function OurStats() {
                     </div>
                   </div>
                   <div className="custom-box box-3">
-                    <Image className="stat-img-lazyloaded" src={Avatar} alt="..."/>
+                    <Image className="stat-img-lazyloaded" src={Avatar} alt=""/>
                     <div className="custom-values">
                       <div className="row-align">
                         <p className={isIphone() ? "md:!text-lg !text-lg" : ""}>{members}</p> <span className={isIphone() ? "md:!text-lg !text-lg" : ""}>+</span>

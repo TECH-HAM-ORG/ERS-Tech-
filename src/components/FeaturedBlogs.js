@@ -9,17 +9,23 @@ import { useSelector, useDispatch } from "react-redux";
 import moment from "moment";
 import Loader from "@/utils/Loader";
 import dummy from "../../public/assets/imgs/dummy.jpg";
-function FeaturedBlogs() {
+
+function FeaturedBlogs({ initialBlogs = null }) {
   const dispatch = useDispatch();
   const { AllBlogs, loading } = useSelector((state) => state.blogs);
   const Limit = 10;
+
+  const blogsToDisplay = (AllBlogs && AllBlogs.length > 0) ? AllBlogs : (initialBlogs || []);
+  const isLoading = loading && blogsToDisplay.length === 0;
+
   useEffect(() => {
-    if (!AllBlogs) {
+    if (!AllBlogs && (!initialBlogs || initialBlogs.length === 0)) {
       dispatch(getBlogs(Limit));
     }
-  }, [AllBlogs, dispatch]);
+  }, [AllBlogs, initialBlogs, dispatch]);
 
   function truncateString(str, maxLength = 100) {
+    if (!str) return "";
     return str.length > maxLength ? str.substring(0, maxLength) + "..." : str;
   }
 
@@ -49,28 +55,34 @@ function FeaturedBlogs() {
         </Box>
         <Box className="w-[90%] max-w-full mx-auto">
           <Box className="h-full">
-            {loading ? (
+            {isLoading ? (
               <Loader />
             ) : (
               <Grid container spacing={6}>
-                {AllBlogs?.map((data, i) => {
+                {blogsToDisplay?.map((data, i) => {
                   return (
                     <Grid key={i} item xs={12} sm={12} md={6} lg={4}>
-                      <Link href={`/blogs/${data.slug}`}>
+                      <Link
+                        href={`/blogs/${data.slug}`}
+                        aria-label={`Read more about ${data.title}`}
+                        className="block h-full group"
+                      >
                         <Box className="h-[430px] min-h-full relative">
                           <Box className="block w-full h-[250px] mb-6 mx-auto rounded-[20px] relative z-[1]">
                             <Image
                               src={data.image ? data.image : dummy}
-                              width={1000}
-                              height={1000}
+                              width={400}
+                              height={250}
+                              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                              loading="lazy"
                               className="w-full h-full rounded-[20px] object-cover"
-                              alt="..."
+                              alt={data.title || "Blog post preview"}
                             />
                           </Box>
                           <Box className="text-start blog-content-box px-4">
                             <Typography
                               variant="h6"
-                              component={"h6"}
+                              component="h3"
                               gutterBottom
                               className="!text-[16px] !font-[600] font-poppins !leading-[140%] !tracking-[-0.16px]  capitalize !mb-4"
                             >
@@ -93,16 +105,13 @@ function FeaturedBlogs() {
                                 <ImCalendar size={16} color="#25A9EB" />
                                 &nbsp;{moment(data.date).format("D-MMM-YY")}
                               </Typography>
-                              <Link
-                                href={`/blogs/${data.slug}`}
-                                className="!text-[14px] text-ersPrimary capitalize !font-[400] font-poppins flex items-center read-more-btn"
-                              >
-                                read more&nbsp;
+                              <span className="!text-[14px] text-ersPrimary capitalize !font-[400] font-poppins flex items-center read-more-btn">
+                                Read more&nbsp;
                                 <MdArrowRightAlt
                                   size={23}
                                   className="arrow-read-more"
                                 />
-                              </Link>
+                              </span>
                             </Box>
                           </Box>
                         </Box>

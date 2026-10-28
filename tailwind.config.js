@@ -7,7 +7,8 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      poppins: ["Poppins", "sans-serif"],
+      poppins: ["var(--font-poppins)", "Poppins", "sans-serif"],
+      inter: ["var(--font-inter)", "Inter", "sans-serif"],
     },
     screens: {
       xxxs: "320px",

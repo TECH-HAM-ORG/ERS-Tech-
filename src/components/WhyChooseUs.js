@@ -31,13 +31,13 @@ function WhyChooseUs() {
                     <Image
                       src={Innovation}
                       className="w-[40%] object-cover"
-                      alt="..."
+                      alt=""
                     />
                   </Box>
                 </Box>
                 <Typography
                   variant="h6"
-                  component={"h6"}
+                  component="h3"
                   gutterBottom
                   className="!text-[18px] !font-[500] font-poppins !leading-[140%] !tracking-[-0.16px] text-center !mb-4"
                 >
@@ -62,13 +62,13 @@ function WhyChooseUs() {
                     <Image
                       src={quality}
                       className="w-[40%] object-cover"
-                      alt="..."
+                      alt=""
                     />
                   </Box>
                 </Box>
                 <Typography
                   variant="h6"
-                  component={"h6"}
+                  component="h3"
                   gutterBottom
                   className="!text-[18px] !font-[500] font-poppins !leading-[140%] !tracking-[-0.16px] text-center !mb-4"
                 >
@@ -94,13 +94,13 @@ function WhyChooseUs() {
                     <Image
                       src={teamwork}
                       className="w-[40%] object-cover"
-                      alt="..."
+                      alt=""
                     />
                   </Box>
                 </Box>
                 <Typography
                   variant="h6"
-                  component={"h6"}
+                  component="h3"
                   gutterBottom
                   className="!text-[18px] !font-[500] font-poppins !leading-[140%] !tracking-[-0.16px] text-center !mb-4"
                 >
@@ -125,13 +125,13 @@ function WhyChooseUs() {
                     <Image
                       src={support}
                       className="w-[40%] object-cover"
-                      alt="..."
+                      alt=""
                     />
                   </Box>
                 </Box>
                 <Typography
                   variant="h6"
-                  component={"h6"}
+                  component="h3"
                   gutterBottom
                   className="!text-[18px] !font-[500] font-poppins !leading-[140%] !tracking-[-0.16px] text-center !mb-4"
                 >
@@ -155,7 +155,7 @@ function WhyChooseUs() {
               <Image
                 src={TopLeft}
                 className="w-[30px] object-cover pb-6"
-                alt="..."
+                alt=""
               />
               <Typography
                 variant="subtitle1"
@@ -190,7 +190,7 @@ function WhyChooseUs() {
                 <Image
                   src={BottomRight}
                   className="w-[30px] object-cover"
-                  alt="..."
+                  alt=""
                 />
               </Box>
               <Box className="flex items-center gap-4">
@@ -198,13 +198,13 @@ function WhyChooseUs() {
                   <Image
                     src={TeamMember}
                     className="w-[50px] object-cover translate-y-[4px]"
-                    alt="..."
+                    alt=""
                   />
                 </Box>
                 <Box className="text-start">
                   <Typography
                     variant="h6"
-                    component={"h6"}
+                    component="h3"
                     className="!text-lg !font-[600] font-poppins !leading-[140%] !tracking-[-0.16px]"
                   >
                     Haider Ali Mughal

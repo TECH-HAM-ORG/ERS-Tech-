@@ -87,7 +87,7 @@ function Team() {
                 </Typography>
                 <Typography
                   variant="h6"
-                  component={"h6"}
+                  component="h3"
                   gutterBottom
                   className="!text-[14px] !font-[400] font-poppins !text-ersPrimary !leading-[140%] !tracking-[-0.16px]"
                 >
@@ -116,7 +116,7 @@ function Team() {
                 </Typography>
                 <Typography
                   variant="h6"
-                  component={"h6"}
+                  component="h3"
                   gutterBottom
                   className="!text-[14px] !font-[400] font-poppins !text-ersPrimary !leading-[140%] !tracking-[-0.16px]"
                 >
@@ -145,7 +145,7 @@ function Team() {
                 </Typography>
                 <Typography
                   variant="h6"
-                  component={"h6"}
+                  component="h3"
                   gutterBottom
                   className="!text-[14px] !font-[400] font-poppins !text-ersPrimary !leading-[140%] !tracking-[-0.16px]"
                 >
@@ -174,7 +174,7 @@ function Team() {
                 </Typography>
                 <Typography
                   variant="h6"
-                  component={"h6"}
+                  component="h3"
                   gutterBottom
                   className="!text-[14px] !font-[400] font-poppins !text-ersPrimary !leading-[140%] !tracking-[-0.16px]"
                 >
@@ -203,7 +203,7 @@ function Team() {
                 </Typography>
                 <Typography
                   variant="h6"
-                  component={"h6"}
+                  component="h3"
                   gutterBottom
                   className="!text-[14px] !font-[400] font-poppins !text-ersPrimary !leading-[140%] !tracking-[-0.16px]"
                 >

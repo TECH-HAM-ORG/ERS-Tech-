@@ -38,12 +38,12 @@ function PerksAndBenefits() {
                 <Image
                   src={PaidLeave}
                   className="object-cover w-[40%]"
-                  alt="..."
+                  alt=""
                 />
               </Box>
               <Typography
                 variant="h6"
-                component={"h6"}
+                component="h3"
                 display={"block"}
                 gutterBottom
                 className="text-center !text-base !font-[500] font-poppins !leading-[140%] !tracking-[-0.16px] capitalize"
@@ -56,12 +56,12 @@ function PerksAndBenefits() {
                 <Image
                   src={LeaveEnchashment}
                   className="object-cover w-[40%]"
-                  alt="..."
+                  alt=""
                 />
               </Box>
               <Typography
                 variant="h6"
-                component={"h6"}
+                component="h3"
                 display={"block"}
                 gutterBottom
                 className="text-center !text-base !font-[500] font-poppins !leading-[140%] !tracking-[-0.16px] capitalize"
@@ -71,11 +71,11 @@ function PerksAndBenefits() {
             </Grid>
             <Grid item xs={6} sm={4} md={4} lg={3}>
               <Box className="perks-hover h-[100px] w-[100px] bg-gradient-to-b from-[#27B4EE] to-[#115DCE] flex items-center justify-center rounded-[50px] shadow-xl mx-auto mb-4">
-                <Image src={Fule} className="object-cover w-[40%]" alt="..." />
+                <Image src={Fule} className="object-cover w-[40%]" alt="" />
               </Box>
               <Typography
                 variant="h6"
-                component={"h6"}
+                component="h3"
                 display={"block"}
                 gutterBottom
                 className="text-center !text-base !font-[500] font-poppins !leading-[140%] !tracking-[-0.16px] capitalize"
@@ -88,12 +88,12 @@ function PerksAndBenefits() {
                 <Image
                   src={BIannualincrement}
                   className="object-cover w-[40%]"
-                  alt="..."
+                  alt=""
                 />
               </Box>
               <Typography
                 variant="h6"
-                component={"h6"}
+                component="h3"
                 display={"block"}
                 gutterBottom
                 className="text-center !text-base !font-[500] font-poppins !leading-[140%] !tracking-[-0.16px] capitalize"
@@ -107,12 +107,12 @@ function PerksAndBenefits() {
                 <Image
                   src={MonthlyBonnus}
                   className="object-cover w-[40%]"
-                  alt="..."
+                  alt=""
                 />
               </Box>
               <Typography
                 variant="h6"
-                component={"h6"}
+                component="h3"
                 display={"block"}
                 gutterBottom
                 className="text-center !text-base !font-[500] font-poppins !leading-[140%] !tracking-[-0.16px] capitalize"
@@ -125,12 +125,12 @@ function PerksAndBenefits() {
                 <Image
                   src={workHome}
                   className="object-cover w-[40%]"
-                  alt="..."
+                  alt=""
                 />
               </Box>
               <Typography
                 variant="h6"
-                component={"h6"}
+                component="h3"
                 display={"block"}
                 gutterBottom
                 className="text-center !text-base !font-[500] font-poppins !leading-[140%] !tracking-[-0.16px] capitalize"
@@ -143,12 +143,12 @@ function PerksAndBenefits() {
                 <Image
                   src={AdvanceSalary}
                   className="object-cover w-[40%]"
-                  alt="..."
+                  alt=""
                 />
               </Box>
               <Typography
                 variant="h6"
-                component={"h6"}
+                component="h3"
                 display={"block"}
                 gutterBottom
                 className="text-center !text-base !font-[500] font-poppins !leading-[140%] !tracking-[-0.16px] capitalize"
@@ -161,12 +161,12 @@ function PerksAndBenefits() {
                 <Image
                   src={PersonalLoan}
                   className="object-cover w-[40%]"
-                  alt="..."
+                  alt=""
                 />
               </Box>
               <Typography
                 variant="h6"
-                component={"h6"}
+                component="h3"
                 display={"block"}
                 gutterBottom
                 className="text-center !text-base !font-[500] font-poppins !leading-[140%] !tracking-[-0.16px] capitalize"
@@ -181,12 +181,12 @@ function PerksAndBenefits() {
                 <Image
                   src={InternationlTour}
                   className="object-cover w-[40%]"
-                  alt="..."
+                  alt=""
                 />
               </Box>
               <Typography
                 variant="h6"
-                component={"h6"}
+                component="h3"
                 display={"block"}
                 gutterBottom
                 className="text-center !text-base !font-[500] font-poppins !leading-[140%] !tracking-[-0.16px] capitalize"
@@ -199,12 +199,12 @@ function PerksAndBenefits() {
                 <Image
                   src={NationalTour}
                   className="object-cover w-[40%]"
-                  alt="..."
+                  alt=""
                 />
               </Box>
               <Typography
                 variant="h6"
-                component={"h6"}
+                component="h3"
                 display={"block"}
                 gutterBottom
                 className="text-center !text-base !font-[500] font-poppins !leading-[140%] !tracking-[-0.16px] capitalize"
@@ -217,12 +217,12 @@ function PerksAndBenefits() {
                 <Image
                   src={Birthday}
                   className="object-cover w-[40%]"
-                  alt="..."
+                  alt=""
                 />
               </Box>
               <Typography
                 variant="h6"
-                component={"h6"}
+                component="h3"
                 display={"block"}
                 gutterBottom
                 className="text-center !text-base !font-[500] font-poppins !leading-[140%] !tracking-[-0.16px] capitalize"
@@ -235,12 +235,12 @@ function PerksAndBenefits() {
                 <Image
                   src={Monthlydinner}
                   className="object-cover w-[40%]"
-                  alt="..."
+                  alt=""
                 />
               </Box>
               <Typography
                 variant="h6"
-                component={"h6"}
+                component="h3"
                 display={"block"}
                 gutterBottom
                 className="text-center !text-base !font-[500] font-poppins !leading-[140%] !tracking-[-0.16px] capitalize"
@@ -254,12 +254,12 @@ function PerksAndBenefits() {
                 <Image
                   src={WeeklyRefreshment}
                   className="object-cover w-[40%]"
-                  alt="..."
+                  alt=""
                 />
               </Box>
               <Typography
                 variant="h6"
-                component={"h6"}
+                component="h3"
                 display={"block"}
                 gutterBottom
                 className="text-center !text-base !font-[500] font-poppins !leading-[140%] !tracking-[-0.16px] capitalize"
@@ -272,12 +272,12 @@ function PerksAndBenefits() {
                 <Image
                   src={workAnniversary}
                   className="object-cover w-[40%]"
-                  alt="..."
+                  alt=""
                 />
               </Box>
               <Typography
                 variant="h6"
-                component={"h6"}
+                component="h3"
                 display={"block"}
                 gutterBottom
                 className="text-center !text-base !font-[500] font-poppins !leading-[140%] !tracking-[-0.16px] capitalize"
@@ -290,12 +290,12 @@ function PerksAndBenefits() {
                 <Image
                   src={flexibletiming}
                   className="object-cover w-[40%]"
-                  alt="..."
+                  alt=""
                 />
               </Box>
               <Typography
                 variant="h6"
-                component={"h6"}
+                component="h3"
                 display={"block"}
                 gutterBottom
                 className="text-center !text-base !font-[500] font-poppins !leading-[140%] !tracking-[-0.16px] capitalize"
@@ -308,12 +308,12 @@ function PerksAndBenefits() {
                 <Image
                   src={Vehiclepolicy}
                   className="object-cover w-[40%]"
-                  alt="..."
+                  alt=""
                 />
               </Box>
               <Typography
                 variant="h6"
-                component={"h6"}
+                component="h3"
                 display={"block"}
                 gutterBottom
                 className="text-center !text-base !font-[500] font-poppins !leading-[140%] !tracking-[-0.16px] capitalize"

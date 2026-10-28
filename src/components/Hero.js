@@ -22,20 +22,16 @@ function Hero() {
                 </Typography>
               </Box>
               <Typography
-                className="xl:!text-2xl lg:!text-2xl md:!text-2xl sm:!text-2xl xsm:!text-2xl xxs:!text-2xl xxxs:!text-xl !font-medium !leading-[150%] !tracking-[-0.16px] text-white !mb-3 font-poppins"
-                variant="h5"
-                component="h5"
-                gutterBottom
-              >
-                Transform Your Ideas Into
-              </Typography>
-              <Typography
-                className="!text-white xl:!text-[4.2rem] lg:!text-[2.7rem] md:!text-6xl sm:!text-5xl xsm:!text-5xl xxs:!text-5xl xxxs:!text-4xl !font-[600] !leading-[150%] !tracking-[-0.16px] uppercase !mb-3 font-poppins "
-                variant="h1"
                 component="h1"
                 gutterBottom
+                className="!mb-3"
               >
-                Intelligent solutions
+                <span className="block xl:!text-2xl lg:!text-2xl md:!text-2xl sm:!text-2xl xsm:!text-2xl xxs:!text-2xl xxxs:!text-xl !font-medium !leading-[150%] !tracking-[-0.16px] text-white !mb-3 font-poppins">
+                  Transform Your Ideas Into
+                </span>
+                <span className="block !text-white xl:!text-[4.2rem] lg:!text-[2.7rem] md:!text-6xl sm:!text-5xl xsm:!text-5xl xxs:!text-5xl xxxs:!text-4xl !font-[600] !leading-[150%] !tracking-[-0.16px] uppercase font-poppins">
+                  Intelligent solutions
+                </span>
               </Typography>
               <Typography
                 variant="overline"
@@ -52,14 +48,16 @@ function Hero() {
                 <Image
                   src={ROneImg}
                   className="w-[80%] object-cover"
-                  alt=".."
+                  priority
+                  alt="Software development showcase graphic"
                 />
               </Box>
               <Box className="xl:h-[210px] lg:h-[210px] md:h-[165px] sm:h-[210px] xsm:h-[210px] xxs:h-[210px] xxxs:h-[210px] xl:w-[300px] lg:w-[300px] md:w-[230px] sm:w-[300px] xsm:w-[300px] xxs:w-[300px] xxxs:w-[300px] bg-white border-[3px] border-[rgba(41,188,241,0.6)] rounded-[10px] right-two-visual flex justify-center items-center z-[1]">
                 <Image
                   src={RTwoImg}
                   className="w-[70%] object-cover"
-                  alt=".."
+                  priority
+                  alt="Fintech dashboard illustration"
                 />
               </Box>
               <Box className="backward-border xl:h-[460px] lg:h-[460px] md:h-[320px] sm:h-[410px] xsm:h-[410px] xxs:h-[410px] xxxs:h-[410px] xl:w-[340px] lg:w-[300px] md:w-[242px] sm:w-[320px] xsm:w-[320px] xxs:w-[320px] xxxs:w-[320px]"></Box>
