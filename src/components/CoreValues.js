@@ -58,8 +58,7 @@ function CoreValues() {
                         <ListItemIcon className="justify-center">
                           <Image
                             src={cv1}
-                            className="w-[35px] block object-cover"
-                            alt="..."
+                            className="w-[35px] block object-cover" alt=""
                           />
                         </ListItemIcon>
                         <ListItemText
@@ -93,8 +92,7 @@ function CoreValues() {
                         <ListItemIcon className="justify-center">
                           <Image
                             src={cv2}
-                            className="w-[35px] block object-cover"
-                            alt="..."
+                            className="w-[35px] block object-cover" alt=""
                           />
                         </ListItemIcon>
                         <ListItemText
@@ -128,8 +126,7 @@ function CoreValues() {
                         <ListItemIcon className="justify-center">
                           <Image
                             src={cv3}
-                            className="w-[35px] block object-cover"
-                            alt="..."
+                            className="w-[35px] block object-cover" alt=""
                           />
                         </ListItemIcon>
                         <ListItemText
@@ -163,8 +160,7 @@ function CoreValues() {
                         <ListItemIcon className="justify-center">
                           <Image
                             src={cv4}
-                            className="w-[35px] block object-cover"
-                            alt="..."
+                            className="w-[35px] block object-cover" alt=""
                           />
                         </ListItemIcon>
                         <ListItemText
@@ -198,8 +194,7 @@ function CoreValues() {
                         <ListItemIcon className="justify-center">
                           <Image
                             src={cv5}
-                            className="w-[35px] block object-cover"
-                            alt="..."
+                            className="w-[35px] block object-cover" alt=""
                           />
                         </ListItemIcon>
                         <ListItemText
@@ -233,8 +228,7 @@ function CoreValues() {
                         <ListItemIcon className="justify-center">
                           <Image
                             src={cv6}
-                            className="w-[35px] block object-cover"
-                            alt="..."
+                            className="w-[35px] block object-cover" alt=""
                           />
                         </ListItemIcon>
                         <ListItemText
@@ -267,9 +261,7 @@ function CoreValues() {
             </Grid>
             <Grid item xs={12} sm={12} md={4} lg={4} >
               <Image
-                src={Qmark}
-                className="lg:w-full lg:h-full md:w-1/2 object-cover lg:mx-0 md:mx-auto"
-                alt="..."
+                src={Qmark} className="lg:w-full lg:h-full md:w-1/2 object-cover lg:mx-0 md:mx-auto" alt="ERS TECH core values illustration"
               />
             </Grid>
           </Grid>

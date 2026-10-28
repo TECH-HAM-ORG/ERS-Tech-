@@ -7,10 +7,9 @@ function blogs() {
   return (
     <>
       <Head
-        title="ERS TECH Blog - Insights into Software Development and Technology"
-        description="Stay updated with the latest trends in Fintech, blockchain, and software development. Explore
-expert insights and tips from the ERS TECH blog."
-        canonicalUrl={`https://erstech.org/blogs`}
+        title="ERS TECH Blog - Software, Fintech & Tech Insights"
+        description="Stay updated with the latest trends in Fintech, blockchain, and software development. Explore expert tech insights, engineering guides, and industry updates."
+        canonicalUrl="https://erstech.org/blogs"
       />
       <div className="w-full max-w-[1920px] mx-auto">
         <Careerhero

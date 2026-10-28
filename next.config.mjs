@@ -3,19 +3,15 @@ const nextConfig = {
   images: {
     domains: ["localhost", "erstech-lime.vercel.app", "blogs.erstech.org"],
   },
-  // async headers() {
-  //   return [
-  //     {
-  //       source: "/sitmap.xml",
-  //       headers: [
-  //         {
-  //           key: "Content-Type",
-  //           value: "application/xml",
-  //         },
-  //       ],
-  //     },
-  //   ];
-  // },
+  async redirects() {
+    return [
+      {
+        source: "/home",
+        destination: "/",
+        statusCode: 301,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

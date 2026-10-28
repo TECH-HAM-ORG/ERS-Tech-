@@ -45,7 +45,7 @@ function RequestQueryForm() {
                   <Image
                     src={book}
                     className="lg:w-full md:w-1/2 lg:mx-0 md:mx-auto h-full object-cover mb-4"
-                    alt="..."
+                    alt="Consultation illustration"
                     loading="lazy"
                   />
                 </Box>
@@ -88,14 +88,14 @@ function RequestQueryForm() {
                     <Box className="block text-start mb-6">
                       <Typography
                         variant="h6"
-                        component={"h6"}
+                        component="p"
                         className="!text-lg !font-[500] font-poppins !leading-[140%]"
                       >
                         Want To
                       </Typography>
                       <Typography
                         variant="h6"
-                        component={"h6"}
+                        component="h3"
                         gutterBottom
                         className="!text-xl !font-[600] !text-ersPrimary font-poppins !leading-[140%]"
                       >
@@ -347,14 +347,14 @@ function RequestQueryForm() {
                     <Box className="grid place-content-center	text-start">
                       <Typography
                         variant="h6"
-                        component={"h6"}
+                        component="p"
                         className="!text-lg text-center !font-[500] font-poppins !leading-[140%]"
                       >
                         Talk To Our
                       </Typography>
                       <Typography
                         variant="h6"
-                        component={"h6"}
+                        component="h3"
                         gutterBottom
                         className="!text-2xl !tracking-wide !font-[600] font-poppins !leading-[140%] !text-ersPrimary"
                       >
@@ -367,7 +367,7 @@ function RequestQueryForm() {
                         width={180}
                         height={180}
                         className="object-cover"
-                        alt="salesTeam"
+                        alt="Khizar Mughal - Head of Sales"
                         loading="lazy"
                       />
                     </Box>
@@ -377,7 +377,7 @@ function RequestQueryForm() {
                         <Image
                           className="mask-img mask-img-one"
                           src={HR}
-                          alt="..."
+                          alt="Consultation illustration"
                         />
                       </div>
                     </Box> */}
@@ -391,7 +391,7 @@ function RequestQueryForm() {
                       </Typography>
                       <Typography
                         variant="h6"
-                        component={"h6"}
+                        component="p"
                         gutterBottom
                         className="!text-base !font-[500] font-poppins !leading-[140%] text-ersPrimary"
                       >

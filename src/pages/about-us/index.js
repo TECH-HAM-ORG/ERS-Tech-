@@ -11,10 +11,9 @@ function page() {
   return (
     <>
       <Head
-        title="About ERS TECH - Your Trusted Software Development Partner"
-        description="Learn more about ERS TECH, a dynamic software development company delivering exceptional
-Fintech and blockchain solutions. Discover our mission, values, and success stories."
-        canonicalUrl={`https://erstech.org/about-us`}
+        title="About ERS TECH - Trusted Software Development Partner"
+        description="Learn more about ERS TECH, a dynamic software development company delivering proven Fintech and blockchain solutions. Discover our mission, team, and values."
+        canonicalUrl="https://erstech.org/about-us"
       />
       <div className="w-full max-w-[1920px] mx-auto">
         <AboutHero />

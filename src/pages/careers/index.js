@@ -35,10 +35,9 @@ function page() {
   return (
     <>
       <Head
-        title="Careers at ERS TECH - Join Our Innovative Team"
-        description="Explore exciting career opportunities at ERS TECH. Be part of a talented team that creates
-innovative software solutions while enjoying industry-leading perks and benefits."
-        canonicalUrl={`https://erstech.org/careers`}
+        title="Careers at ERS TECH - Join Our Engineering Team"
+        description="Explore exciting career opportunities at ERS TECH. Join a talented team building innovative software solutions while enjoying industry-leading perks and growth."
+        canonicalUrl="https://erstech.org/careers"
       />
       <div className="w-full max-w-[1920px] mx-auto">
         <Careerhero

@@ -106,7 +106,7 @@ function OurStats() {
                 </div>
                 <div className="custom-boxes">
                   <div className="custom-box box-1">
-                    <Image className="stat-img-lazyloaded" src={Pen} alt="..." />
+                    <Image className="stat-img-lazyloaded" src={Pen} alt="" />
                     <div className="custom-values">
                       <div className="row-align">
                         <p className={isIphone() ? "md:!text-lg !text-lg" : ""}>{projects}</p> <span className={isIphone() ? "md:!text-lg !text-lg" : ""}>+</span>
@@ -115,7 +115,7 @@ function OurStats() {
                     </div>
                   </div>
                   <div className="custom-box box-2">
-                    <Image className="stat-img-lazyloaded" src={Search} alt="..." />
+                    <Image className="stat-img-lazyloaded" src={Search} alt="" />
                     <div className="custom-values">
                       <div className="row-align">
                         <p className={isIphone() ? "md:!text-lg !text-lg" : ""}>{reviews}</p> <span className={isIphone() ? "md:!text-lg !text-lg" : ""}>+</span>
@@ -124,7 +124,7 @@ function OurStats() {
                     </div>
                   </div>
                   <div className="custom-box box-5">
-                    <Image className="stat-img-lazyloaded" src={Menu} alt="..." />
+                    <Image className="stat-img-lazyloaded" src={Menu} alt="" />
                     <div className="custom-values">
                       <div className="row-align">
                         <p className={isIphone() ? "md:!text-lg !text-lg" : ""}>{customer}</p> <span className={isIphone() ? "md:!text-lg !text-lg" : ""}>%</span>
@@ -133,7 +133,7 @@ function OurStats() {
                     </div>
                   </div>
                   <div className="custom-box box-4">
-                    <Image className="stat-img-lazyloaded" src={Graph} alt="..."/>
+                    <Image className="stat-img-lazyloaded" src={Graph} alt=""/>
                     <div className="custom-values">
                       <div className="row-align">
                         <p className={isIphone() ? "md:!text-lg !text-lg" : ""}>{clients}</p> <span className={isIphone() ? "md:!text-lg !text-lg" : ""}>+</span>
@@ -142,7 +142,7 @@ function OurStats() {
                     </div>
                   </div>
                   <div className="custom-box box-3">
-                    <Image className="stat-img-lazyloaded" src={Avatar} alt="..."/>
+                    <Image className="stat-img-lazyloaded" src={Avatar} alt=""/>
                     <div className="custom-values">
                       <div className="row-align">
                         <p className={isIphone() ? "md:!text-lg !text-lg" : ""}>{members}</p> <span className={isIphone() ? "md:!text-lg !text-lg" : ""}>+</span>

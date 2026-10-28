@@ -41,11 +41,11 @@ function Footer() {
                   <Image
                     src={logo}
                     className="w-[50%] object-cover pb-6 !rounded-[0px] !mb-0"
-                    alt="logo"
+                    alt="ERS TECH Logo"
                   />
                   <Typography
                     variant="subtitle1"
-                    component={"h6"}
+                    component="p"
                     gutterBottom
                     className="!text-[14px] !font-[400] font-poppins leading-[150%] tracking-[-0.16px] !mb-0 !pb-6"
                   >
@@ -54,7 +54,7 @@ function Footer() {
                   </Typography>
                   <Typography
                     variant="h6"
-                    component={"h6"}
+                    component="p"
                     gutterBottom
                     className="!text-base !font-[600] font-poppins leading-[140%] tracking-[-0.16px] !pb-1"
                   >
@@ -82,7 +82,7 @@ function Footer() {
                 <Box className="text-start">
                   <Typography
                     variant="h4"
-                    component={"h4"}
+                    component="p"
                     gutterBottom
                     className="!text-xl !font-[600] font-poppins leading-[140%] tracking-[-0.16px]"
                   >
@@ -128,7 +128,7 @@ function Footer() {
                 <Box className="text-start">
                   <Typography
                     variant="h4"
-                    component={"h4"}
+                    component="p"
                     gutterBottom
                     className="!text-xl !font-[600] font-poppins leading-[140%] tracking-[-0.16px]"
                   >
@@ -174,7 +174,7 @@ function Footer() {
                 <Box className="text-start">
                   <Typography
                     variant="h4"
-                    component={"h4"}
+                    component="p"
                     gutterBottom
                     className="!text-xl !font-[600] font-poppins leading-[140%] tracking-[-0.16px]"
                   >

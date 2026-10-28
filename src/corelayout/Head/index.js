@@ -1,49 +1,91 @@
 import Head from "next/head";
-import OgImg from "../../../public/assets/icons/og.png";
+import { useRouter } from "next/router";
+
+const SITE_URL = "https://erstech.org";
+const DEFAULT_TITLE = "ERS TECH - Custom Software & Blockchain Solutions";
+const DEFAULT_DESCRIPTION =
+  "ERS TECH is a leading software development company specializing in custom Fintech and blockchain solutions. Empower your business with robust digital innovation.";
+const DEFAULT_IMAGE = `${SITE_URL}/assets/icons/og.png`;
+
 const Default = ({
   title = "",
   description = "",
-  keywords = "",
   image = "",
   canonicalUrl = "",
+  noindex = false,
 }) => {
-  if (title == "") {
-    title = "";
+  const router = useRouter();
+
+  const finalTitle = (title && title.trim()) || DEFAULT_TITLE;
+  const finalDescription = (description && description.trim()) || DEFAULT_DESCRIPTION;
+
+  // Auto-build canonical URL when not passed or invalid
+  let finalCanonical = canonicalUrl && !canonicalUrl.includes("undefined") ? canonicalUrl.trim() : "";
+  if (!finalCanonical && router && router.asPath) {
+    const cleanPath = router.asPath.split("?")[0].split("#")[0];
+    if (cleanPath === "/" || cleanPath === "") {
+      finalCanonical = `${SITE_URL}/`;
+    } else {
+      finalCanonical = `${SITE_URL}${cleanPath.replace(/\/+$/, "")}`;
+    }
+  } else if (finalCanonical) {
+    // Ensure canonical has no trailing slash except for home root
+    if (finalCanonical === `${SITE_URL}` || finalCanonical === `${SITE_URL}/`) {
+      finalCanonical = `${SITE_URL}/`;
+    } else {
+      finalCanonical = finalCanonical.replace(/\/+$/, "");
+    }
+  } else {
+    finalCanonical = `${SITE_URL}/`;
   }
-  if (description == "") {
-    description = "";
+
+  // Determine Open Graph image
+  let finalImage = DEFAULT_IMAGE;
+  if (image && image.trim()) {
+    finalImage = image.startsWith("http") ? image.trim() : `${SITE_URL}${image.startsWith("/") ? "" : "/"}${image.trim()}`;
   }
-  if (keywords == "") {
-    keywords = "";
-  }
-  if (canonicalUrl == "") {
-    canonicalUrl = "";
-  }
+
+  // Determine Open Graph type
+  const isBlogPost = router?.pathname?.startsWith("/blogs/") && router?.pathname !== "/blogs";
+  const ogType = isBlogPost ? "article" : "website";
+
+  const robotsDirective = noindex ? "noindex, nofollow" : "index, follow";
 
   return (
     <Head>
-      <title>
-        {title ||
-          "ERS TECH - Transforming Ideas into Innovative Software Solutions"}
-      </title>
-      <meta name="description" content={description} />
-      <meta
-        name="keywords"
-        content="Software Development Company,Software Development Company,Blockchain Development Services,Custom Software Development,
-        Top Software Development Firm,Fintech Software Company,Blockchain Solutions Provider"
-      />
+      <title>{finalTitle}</title>
+      <meta name="description" content={finalDescription} />
       <meta name="author" content="ERS TECH" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={"/assets/icons/og.png"} />
-      <link rel="canonical" href={canonicalUrl} />
-      <meta name="googlebot" content={"index,follow"} />
-      <meta name="robots" content={"index,follow"} />
-      <link rel="apple-touch-icon" href={"/assets/icons/og.png"} />
+      <meta name="robots" content={robotsDirective} />
+      <meta name="googlebot" content={robotsDirective} />
+
+      {/* Canonical URL */}
+      <link rel="canonical" href={finalCanonical} />
+
+      {/* Open Graph */}
+      <meta property="og:type" content={ogType} />
+      <meta property="og:site_name" content="ERS TECH" />
+      <meta property="og:locale" content="en_US" />
+      <meta property="og:url" content={finalCanonical} />
+      <meta property="og:title" content={finalTitle} />
+      <meta property="og:description" content={finalDescription} />
+      <meta property="og:image" content={finalImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+
+      {/* Twitter Cards */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={finalTitle} />
+      <meta name="twitter:description" content={finalDescription} />
+      <meta name="twitter:image" content={finalImage} />
+
+      {/* Touch Icons */}
+      <link rel="apple-touch-icon" href="/assets/icons/og.png" />
       <meta name="apple-mobile-web-app-title" content="ERS TECH" />
     </Head>
   );
 };
 
 export default Default;
+

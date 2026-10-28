@@ -145,7 +145,7 @@ function Header() {
             <Link href="/">
               <Image
                 src={scroll > 50 ? CLogo : Logo}
-                alt="logo"
+                alt="ERS TECH Logo"
                 width={125}
                 height={125}
                 className="!mb-0 object-cover !rounded-[0px]"
@@ -176,7 +176,8 @@ function Header() {
 
                 <li className="menu-item-has-children">
                   <Link
-                    href=""
+                    href="/about-us"
+                    onClick={(e) => e.preventDefault()}
                     className={scroll > 50 ? "!text-[#3E3E3E]" : "text-white"}
                   >
                     Company <i class="ion ion-ios-arrow-down"></i>
@@ -191,7 +192,7 @@ function Header() {
                               width={20}
                               height={20}
                               className="object-cover"
-                              alt="AboutIcon"
+                              alt=""
                             />
                             &nbsp;About Us
                           </Link>
@@ -203,7 +204,7 @@ function Header() {
                               width={20}
                               height={20}
                               className="object-cover"
-                              alt="CareersIcon"
+                              alt=""
                             />
                             &nbsp;Careers
                           </Link>
@@ -215,7 +216,7 @@ function Header() {
                               width={20}
                               height={20}
                               className="object-cover"
-                              alt="PortfolioIcons"
+                              alt=""
                             />
                             &nbsp;Portfolio
                           </Link>
@@ -227,7 +228,7 @@ function Header() {
                               width={20}
                               height={20}
                               className="object-cover"
-                              alt="BlogsIcons"
+                              alt=""
                             />
                             &nbsp;Blogs
                           </Link>
@@ -254,7 +255,7 @@ function Header() {
                   </Link>
                 </li>
                 <li className="menu-item-has-children">
-                  <Link href="#contact" className="hire_team">
+                  <Link href="/services#contact" className="hire_team">
                     Contact Us
                   </Link>
                 </li>

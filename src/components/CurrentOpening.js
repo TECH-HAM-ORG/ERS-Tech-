@@ -76,7 +76,7 @@ function CurrentOpening() {
                       <Box className="pl-8 mb-4">
                         <Typography
                           variant="h5"
-                          component={"h5"}
+                          component="h3"
                           gutterBottom
                           className="!text-[18px] !font-[500] font-poppins !leading-[140%] !tracking-[-0.16px] !capitalize !mb-3"
                         >
@@ -84,7 +84,7 @@ function CurrentOpening() {
                         </Typography>
                         <Typography
                           variant="h6"
-                          component={"h6"}
+                          component="p"
                           gutterBottom
                           className="!text-base !font-[400] font-poppins !leading-[140%] !tracking-[-0.16px]  !capitalize !mb-6"
                         >
@@ -92,7 +92,7 @@ function CurrentOpening() {
                         </Typography>
                         <Typography
                           variant="h6"
-                          component={"h6"}
+                          component="p"
                           gutterBottom
                           className="!text-sm !text-gray-500 !font-[400] font-poppins !leading-[140%] !tracking-[-0.16px] !capitalize flex items-center"
                         >

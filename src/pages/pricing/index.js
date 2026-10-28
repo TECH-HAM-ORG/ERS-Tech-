@@ -9,10 +9,9 @@ function pricing() {
   return (
     <>
       <Head
-        title="ERS TECH Pricing - Affordable Software Development Solutions"
-        description="Get transparent and competitive pricing for software development services at ERS TECH.
-Delivering top-quality solutions tailored to your business needs."
-        canonicalUrl={`https://erstech.org/pricing`}
+        title="Transparent Software Development Pricing | ERS TECH"
+        description="Get transparent, competitive pricing for software development services at ERS TECH. We deliver top-quality digital solutions tailored to your business budget."
+        canonicalUrl="https://erstech.org/pricing"
       />
       <div className="w-full max-w-[1920px] mx-auto">
         <Careerhero

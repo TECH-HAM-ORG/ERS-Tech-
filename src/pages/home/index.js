@@ -32,11 +32,9 @@ function HomePage() {
   return (
     <>
       <Head
-        title="ERS TECH - Transforming Ideas into Innovative Software Solutions"
-        description="Discover ERS TECH, a leading software development company specializing in Fintech and
-blockchain solutions. Empower your business with cutting-edge technology and innovative
-strategies."
-        canonicalUrl={`https://erstech.org/`}
+        title="ERS TECH - Custom Software & Blockchain Solutions"
+        description="Discover ERS TECH, a leading software development company specializing in Fintech and blockchain solutions. Empower your business with cutting-edge technology."
+        canonicalUrl="https://erstech.org/"
       />
       <div className="w-full max-w-[1920px] mx-auto">
         <Hero />

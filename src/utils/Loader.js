@@ -10,7 +10,7 @@ function Loader() {
           width={70}
           height={70}
           className="object-cover fade-animation"
-          alt="logo"
+          alt="ERS TECH Logo"
         />
       </div>
     </>

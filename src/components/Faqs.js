@@ -109,7 +109,7 @@ function Faqs() {
                 </span>
                 <Typography
                   variant="h6"
-                  component={"h6"}
+                  component="h3"
                   className="!text-lg !font-[500] font-poppins !leading-[140%] tracking-[-0.16px] xl:!mr-0 lg:!mr-0 md:!mr-0 sm:!mr-4 xsm:!mr-0 xxs:!mr-4 xxxs:!mr-4"
                 >
                   {faq.question}
@@ -135,7 +135,7 @@ function Faqs() {
                         <Typography
                           key={i}
                           variant="h6"
-                          component={"h6"}
+                          component="p"
                           className="!text-[15px] !font-[500] font-poppins !leading-[140%] !tracking-[-0.16px] !mb-2"
                         >
                           {item}
@@ -144,7 +144,7 @@ function Faqs() {
                         <li key={i}>
                           <Typography
                             variant="h6"
-                            component={"h6"}
+                            component="p"
                             className="!text-[14px] !font-[400] font-poppins"
                           >
                             {item}
@@ -156,7 +156,7 @@ function Faqs() {
                 ) : (
                   <Typography
                     variant="h6"
-                    component={"h6"}
+                    component="p"
                     className="!text-[14px] !font-[400] font-poppins !leading-[140%] !tracking-[-0.16px]"
                   >
                     {faq.answer}

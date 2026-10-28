@@ -106,8 +106,7 @@ function OurStack() {
                   src={url}
                   width={120}
                   height={120}
-                  className="stack-icons"
-                  alt="..."
+                  className="stack-icons" alt="Technology stack logo"
                 />
               </Grid>
             ))}
@@ -127,8 +126,7 @@ function OurStack() {
                     src={url}
                     width={120}
                     height={120}
-                    className="stack-icons"
-                    alt="..."
+                    className="stack-icons" alt="Technology stack logo"
                   />
                 </Grid>
               ))}

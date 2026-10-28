@@ -59,7 +59,7 @@ function Careerhero({
                   className={
                     width ? `w-${width} object-cover` : "w-[80%] object-cover"
                   }
-                  alt=".."
+                  alt={btnText ? `${btnText} banner illustration` : "ERS TECH banner illustration"}
                 />
               </Box>
             </Box>

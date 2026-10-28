@@ -70,7 +70,7 @@ function FeaturedBlogs() {
                           <Box className="text-start blog-content-box px-4">
                             <Typography
                               variant="h6"
-                              component={"h6"}
+                              component="h3"
                               gutterBottom
                               className="!text-[16px] !font-[600] font-poppins !leading-[140%] !tracking-[-0.16px]  capitalize !mb-4"
                             >

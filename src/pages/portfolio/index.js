@@ -7,10 +7,9 @@ function index() {
   return (
     <>
       <Head
-        title="ERS TECH Portfolio - Showcasing Our Expertise"
-        description="Browse our portfolio of successful projects in Fintech and blockchain development. Discover
-how ERS TECH transforms ideas into impactful software solutions."
-        canonicalUrl={`https://erstech.org/portfolio`}
+        title="ERS TECH Portfolio - Our Latest Projects & Case Studies"
+        description="Browse our portfolio of successful projects in Fintech and blockchain development. Discover how ERS TECH transforms complex ideas into high-impact software."
+        canonicalUrl="https://erstech.org/portfolio"
       />
       <div className="w-full max-w-[1920px] mx-auto">
         <Careerhero

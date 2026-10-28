@@ -133,10 +133,10 @@ function FeaturedProjects() {
                       </div>
                     </Box>
                     <Box className="text-center">
-                      <Link href="">
+                      <Link href={data.url} target="_blank" rel="noopener noreferrer">
                         <Typography
                           variant="h6"
-                          component={"h6"}
+                          component="h3"
                           gutterBottom
                           className="!text-[16px] !font-[600] font-poppins !leading-[140%] !tracking-[-0.16px] capitalize"
                         >

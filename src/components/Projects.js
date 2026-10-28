@@ -129,16 +129,14 @@ function Projects({ title }) {
                 <Box className="rounded-[10px] h-[400px] one-background">
                   <Box className="rounded-[10px] h-[400px] second-bg">
                     <Image
-                      src={Aconomy}
-                      className="object-cover img-style"
-                      alt="..."
+                      src={Aconomy} className="object-cover img-style" alt="Aconomy project preview"
                     />
                   </Box>
                 </Box>
                 <Box className="project-slider-content text-start pb-4 relative">
                   <Typography
                     variant="h6"
-                    component={"h6"}
+                    component="h3"
                     gutterBottom
                     className="!text-lg !font-[600] font-poppins !leading-[140%] text-white !mb-2"
                   >
@@ -177,7 +175,7 @@ function Projects({ title }) {
                 <Box className="project-slider-content text-start pb-4 relative">
                   <Typography
                     variant="h6"
-                    component={"h6"}
+                    component="h3"
                     gutterBottom
                     className="!text-lg !font-[600] font-poppins !leading-[140%] text-white !mb-2"
                   >
@@ -215,7 +213,7 @@ function Projects({ title }) {
                 <Box className="project-slider-content text-start pb-4 relative">
                   <Typography
                     variant="h6"
-                    component={"h6"}
+                    component="h3"
                     gutterBottom
                     className="!text-lg !font-[600] font-poppins !leading-[140%] text-white !mb-2"
                   >
@@ -244,16 +242,14 @@ function Projects({ title }) {
                 <Box className="rounded-[10px] h-[400px] one-background">
                   <Box className="rounded-[10px] h-[400px] second-bg">
                     <Image
-                      src={Salharo}
-                      className="object-cover img-style"
-                      alt="..."
+                      src={Salharo} className="object-cover img-style" alt="Salharo project preview"
                     />
                   </Box>
                 </Box>
                 <Box className="project-slider-content text-start pb-4 relative">
                   <Typography
                     variant="h6"
-                    component={"h6"}
+                    component="h3"
                     gutterBottom
                     className="!text-lg !font-[600] font-poppins !leading-[140%] text-white !mb-2"
                   >

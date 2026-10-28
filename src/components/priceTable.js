@@ -42,9 +42,7 @@ function priceTable() {
                 <Box className="h-[70px]">
                   <Box className="w-[100px] h-[100px] rounded-[50px] flex justify-center items-center bg-gradient-to-b from-[#27B4EE] to-[#115DCE] ptable-circle">
                     <Image
-                      src={Support}
-                      className="w-[50%] object-cover"
-                      alt="..."
+                      src={Support} className="w-[50%] object-cover" alt="Technical Support plan icon"
                     />
                   </Box>
                 </Box>

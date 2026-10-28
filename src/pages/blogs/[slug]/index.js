@@ -62,9 +62,13 @@ function SingleBlog() {
   return (
     <>
       <Head
-        title={singleBlog?.title}
-        description={singleBlog?.meta_description}
-        canonicalUrl={`https://erstech.org/blogs/${singleBlog?.slug}`}
+        title={singleBlog?.title ? `${singleBlog.title} | ERS TECH` : "ERS TECH Blog"}
+        description={
+          singleBlog?.meta_description ||
+          "Read expert insights on Fintech, blockchain, and custom software development from the engineering team at ERS TECH."
+        }
+        canonicalUrl={singleBlog?.slug ? `https://erstech.org/blogs/${singleBlog.slug}` : "https://erstech.org/blogs"}
+        image={singleBlog?.image || ""}
       />
       {loading ? (
         <Loader />

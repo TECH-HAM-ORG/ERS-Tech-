@@ -105,7 +105,7 @@ function ClientsAboutUs({ Heading ,Testimonials}) {
                     <Image
                       src={TopLeft}
                       className="w-[30px] object-cover pb-6"
-                      alt="..."
+                      alt=""
                     />
                     <Typography
                       variant="subtitle1"
@@ -119,7 +119,7 @@ function ClientsAboutUs({ Heading ,Testimonials}) {
                       <Image
                         src={BottomRight}
                         className="w-[30px] object-cover"
-                        alt="..."
+                        alt=""
                       />
                     </Box>
                     <Box className="flex items-center gap-4 xl:flex-nowrap lg:flex-nowrap md:flex-nowrap sm:flex-wrap xsm:flex-wrap xxs:flex-wrap xxxs:flex-wrap">
@@ -127,13 +127,13 @@ function ClientsAboutUs({ Heading ,Testimonials}) {
                         <Image
                           src={data.image ? data.image : TeamMember}
                           className={data.image ? "w-[50px] object-cover" : "w-[30px] object-cover translate-y-[4px]"}
-                          alt="..."
+                          alt={data.name || "Client testimonial"}
                         />
                       </Box>
                       <Box className="text-start">
                         <Typography
                           variant="h6"
-                          component={"h6"}
+                          component="h3"
                           className="!text-[15px] !font-[600] font-poppins leading-[140%] tracking-[-0.16px] !mb-0"
                         >
                           {data.name}

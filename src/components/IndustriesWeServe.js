@@ -107,7 +107,7 @@ function IndustriesWeServe() {
                     <Box className="block my-[4rem] px-2">
                       <Typography
                         variant="h6"
-                        component={"h6"}
+                        component="h3"
                         gutterBottom
                         className="!text-base !font-[500] font-poppins text-center !leading-snug !leading-[140%] !mb-6"
                         dangerouslySetInnerHTML={{ __html: data.title }}

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Box, Typography, Button, Tab } from "@mui/material";
 import aboutOneImg from "@/../public/assets/images/about-h-img.png";
-import TabContext from "@material-ui/lab/TabContext";
-import TabList from "@material-ui/lab/TabList";
-import TabPanel from "@material-ui/lab/TabPanel";
+import TabContext from "@mui/lab/TabContext";
+import TabList from "@mui/lab/TabList";
+import TabPanel from "@mui/lab/TabPanel";
 import { makeStyles } from "@mui/styles";
 import Image from "next/image";
 const useStyles = makeStyles({
@@ -94,7 +94,7 @@ function Hero() {
                           label={
                             <Typography
                               variant="h6"
-                              component={"h6"}
+                              component="span"
                               className={
                                 value === "1"
                                   ? "!font-[700] !text-[16px] font-poppins !leading-[140%] text-white capitalize"
@@ -110,7 +110,7 @@ function Hero() {
                           label={
                             <Typography
                               variant="h6"
-                              component={"h6"}
+                              component="span"
                               className={
                                 value === "2"
                                   ? "!font-[700] !text-[16px] font-poppins !leading-[140%] text-white capitalize"
@@ -126,7 +126,7 @@ function Hero() {
                           label={
                             <Typography
                               variant="h6"
-                              component={"h6"}
+                              component="span"
                               className={
                                 value === "3"
                                   ? "!font-[700] !text-[16px] font-poppins !leading-[140%] text-white capitalize"
@@ -186,14 +186,14 @@ function Hero() {
                   <Image
                     src={aboutOneImg}
                     className="w-[95%] object-cover"
-                    alt=".."
+                    alt="About ERS TECH software engineering team"
                   />
                   <Box className="h-[100px] w-[90%] mx-auto bg-white border-[3px] border-[rgba(41,188,241,0.6)] rounded-[14px] absolute xl:-bottom-[12%] lg:-bottom-[18%] md:-bottom-[25%] right-[5%] z-[1]">
                     <Box className="p-4 flex items-center justify-around gap-4">
                       <Box className="grid place-items-center place-content-center text-center">
                         <Typography
                           variant="h6"
-                          component={"h6"}
+                          component="span"
                           className="!text-2xl !font-[600] font-poppins !leading-[140%]"
                         >
                           {years}
@@ -217,7 +217,7 @@ function Hero() {
                       <Box className="grid place-items-center place-content-center text-center">
                         <Typography
                           variant="h6"
-                          component={"h6"}
+                          component="span"
                           className="!text-2xl !font-[600] font-poppins !leading-[140%]"
                         >
                           {count}+
