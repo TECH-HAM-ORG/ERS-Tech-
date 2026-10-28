@@ -66,7 +66,6 @@ function ClientsAboutUs({ Heading ,Testimonials}) {
               delay: 5000,
               disableOnInteraction: false,
             }}
-            showsPagination={true}
             pagination={{
               dynamicBullets: true,
               clickable: true,

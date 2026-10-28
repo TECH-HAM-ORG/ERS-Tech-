@@ -123,11 +123,11 @@ function FeaturedProjects({ initialProjects = [] }) {
                         className="w-[90%] h-full rounded-[15px] object-cover portfolio-image"
                         alt={data.name}
                       />
-                      <div class="overlay">
+                      <div className="overlay">
                         <Link
                           href={data.url}
                           target="_blank"
-                          class="icon"
+                          className="icon"
                           title={data.name}
                         >
                           <FaEye color="#fff" className="eye-icon" />

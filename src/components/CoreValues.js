@@ -45,7 +45,7 @@ function CoreValues() {
             who we are and guide how we work.
           </Typography>
         </Box>
-        <Grid container xs={10} className="!mx-auto mb-16">
+        <Grid container className="!w-10/12 !mx-auto mb-16">
           <Grid container spacing={2}>
             <Grid item xs={12} sm={12} md={8} lg={8}>
               <List>

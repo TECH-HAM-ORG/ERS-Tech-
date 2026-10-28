@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { useRouter } from "next/router";
 import {
   Box,
   Grid,
@@ -22,6 +23,15 @@ import {
 } from "react-icons/fa";
 
 function Footer() {
+  const router = useRouter();
+  const [workEmail, setWorkEmail] = useState("");
+
+  const handleWorkWithUsSubmit = (e) => {
+    e.preventDefault();
+    if (!workEmail.trim()) return;
+    router.push(`/services?email=${encodeURIComponent(workEmail.trim())}#contact`);
+  };
+
   const openWhatsApp = () => {
     const phoneNumber = "03001420033";
     const message = `ERS TECH: Delivering innovative, scalable, and secure software solutions tailored to your needs. Let's transform your ideas into reality!`;
@@ -61,15 +71,17 @@ function Footer() {
                     Interested To Work With Us
                   </Typography>
                   <Box>
-                    <form className="subscription-form">
+                    <form className="subscription-form" onSubmit={handleWorkWithUsSubmit}>
                       <input
                         type="email"
                         placeholder="Enter your email address"
                         className="subscription-input !font-poppins"
+                        value={workEmail}
+                        onChange={(e) => setWorkEmail(e.target.value)}
                         required
                       />
                       <button
-                        type="button"
+                        type="submit"
                         className="subscription-button shadow-xl hover:bg-[#29bcf1] hover:text-white !font-poppins"
                       >
                         Send

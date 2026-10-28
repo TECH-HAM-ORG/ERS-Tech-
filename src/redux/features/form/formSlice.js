@@ -12,12 +12,9 @@ export const AddUserForm = createAsyncThunk(
   "form/AddUserForm",
   async (formData, { rejectWithValue }) => {
     try {
-      const res = await axios.post(
-        "https://blogs.erstech.org/wp-json/custom/v1/send-mail",
-        formData
-      );
+      const res = await axios.post("/api/send-mail", formData);
       if (res.status === 200) {
-        toast.success(res.data.message);
+        toast.success(res.data.message || "Mail sent successfully!");
       }
       const resData = res.data;
       return {
@@ -26,7 +23,7 @@ export const AddUserForm = createAsyncThunk(
       };
     } catch (error) {
       console.error("Error....", error);
-      return rejectWithValue({ message: "Failed to fetch blogs" });
+      return rejectWithValue({ message: "Failed to send message" });
     }
   }
 );

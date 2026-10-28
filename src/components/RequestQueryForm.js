@@ -21,7 +21,10 @@ import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 import { AddUserForm } from "../redux/features/form/formSlice";
 import { toast } from "react-toastify";
+import { useRouter } from "next/router";
 function RequestQueryForm() {
+  const router = useRouter();
+  const queryEmail = typeof router.query?.email === "string" ? router.query.email : "";
   const { loading } = useSelector((state) => state.form);
   const dispatch = useDispatch();
   const theme = useTheme();
@@ -37,7 +40,7 @@ function RequestQueryForm() {
   return (
     <>
       <Box id="contact">
-        <Grid container xs={10} className="!mx-auto">
+        <Grid container className="!w-10/12 !mx-auto">
           <Grid container spacing={2}>
             <Grid item xs={12} sm={12} md={3} lg={3}>
               <Box className="bg-white shadow-xl pb-6 xl:h-[450px] lg:h-[450px] md:h-full sm:h-full xsm:h-full xxs:h-full xxxs:h-full min-h-full">
@@ -104,8 +107,9 @@ function RequestQueryForm() {
                       <Divider className="w-[170px] !border-[1.5px]" />
                     </Box>
                     <Formik
+                      enableReinitialize
                       initialValues={{
-                        email: "",
+                        email: queryEmail || "",
                         Name: "",
                         Contact: "",
                         Subject: "",
