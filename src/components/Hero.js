@@ -48,6 +48,7 @@ function Hero() {
                 <Image
                   src={ROneImg}
                   className="w-[80%] object-cover"
+                  priority
                   alt="Software development showcase graphic"
                 />
               </Box>
@@ -55,6 +56,7 @@ function Hero() {
                 <Image
                   src={RTwoImg}
                   className="w-[70%] object-cover"
+                  priority
                   alt="Fintech dashboard illustration"
                 />
               </Box>

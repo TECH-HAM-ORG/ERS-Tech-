@@ -148,6 +148,7 @@ function Header() {
                 alt="ERS TECH Logo"
                 width={125}
                 height={125}
+                priority
                 className="!mb-0 object-cover !rounded-[0px]"
               />
             </Link>

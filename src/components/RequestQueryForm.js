@@ -1,5 +1,5 @@
 import React from "react";
-import book from "@/../public/assets/icons/request-quote.png";
+import book from "@/../public/assets/icons/request-quote.webp";
 import { useTheme } from "@mui/material/styles";
 import { TextareaAutosize } from "@mui/base/TextareaAutosize";
 import { FaLinkedin } from "react-icons/fa";
@@ -363,7 +363,7 @@ function RequestQueryForm() {
                     </Box>
                     <Box className="grid place-content-center	text-center">
                       <Image
-                        src={"/assets/images/sales-team.jpg"}
+                        src={"/assets/images/sales-team.webp"}
                         width={180}
                         height={180}
                         className="object-cover"

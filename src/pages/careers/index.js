@@ -1,10 +1,13 @@
 import React from "react";
+import dynamic from "next/dynamic";
 import Head from "../../corelayout/Head/index";
 import Careerhero from "../../components/Careerhero";
 import CurrentOpening from "../../components/CurrentOpening";
 import PerksAndBenefits from "../../components/PerksAndBenefits";
-import ClientsAboutUs from "../../components/ClientsAboutUs";
 import CareerGraphic from "@/../public/assets/images/career-hero.png";
+
+// Below-the-fold testimonial slider
+const ClientsAboutUs = dynamic(() => import("../../components/ClientsAboutUs"));
 function page() {
   let TestimonialsEmp = [
     {

@@ -71,8 +71,10 @@ function FeaturedBlogs({ initialBlogs = null }) {
                           <Box className="block w-full h-[250px] mb-6 mx-auto rounded-[20px] relative z-[1]">
                             <Image
                               src={data.image ? data.image : dummy}
-                              width={1000}
-                              height={1000}
+                              width={400}
+                              height={250}
+                              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                              loading="lazy"
                               className="w-full h-full rounded-[20px] object-cover"
                               alt={data.title || "Blog post preview"}
                             />

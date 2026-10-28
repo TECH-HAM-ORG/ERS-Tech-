@@ -6,11 +6,11 @@ import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
-import Aconomy from "@/../public/assets/projects/Aconomy.jpg";
-import BCCOIN from "@/../public/assets/projects/BCCOIN.jpg";
-import Focusmonk from "@/../public/assets/projects/Focusmonk.jpg";
-import Salharo from "@/../public/assets/projects/Salharo.jpg";
-import Wise1HRM from "@/../public/assets/projects/Wise1HRM.jpg";
+import Aconomy from "@/../public/assets/projects/aconomy.webp";
+import BCCOIN from "@/../public/assets/projects/bccoin.webp";
+import Focusmonk from "@/../public/assets/projects/focusmonk.webp";
+import Salharo from "@/../public/assets/projects/salharo.webp";
+import Wise1HRM from "@/../public/assets/projects/wise1hrm.webp";
 import Link from "next/link";
 import Image from "next/image";
 function Projects({ title }) {

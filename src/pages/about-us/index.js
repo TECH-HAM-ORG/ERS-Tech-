@@ -1,4 +1,5 @@
 import React from "react";
+import dynamic from "next/dynamic";
 import Head from "../../corelayout/Head/index";
 import AboutHero from "../../components/About-Hero ";
 import OurStats from "../../components/OurStats";
@@ -6,7 +7,9 @@ import HowWeDo from "../../components/HowWeDo";
 import Team from "../../components/Team";
 import WhyChooseUs from "../../components/WhyChooseUs";
 import TrustedBy from "../../components/TrustedBy";
-import Faqs from "../../components/Faqs";
+
+// Dynamic import for below-the-fold FAQs
+const Faqs = dynamic(() => import("../../components/Faqs"));
 
 // FAQ data mirrored exactly from Faqs.js (visible Q&A only — no commented-out entries)
 const faqSchema = {

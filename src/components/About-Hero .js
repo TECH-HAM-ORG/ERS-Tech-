@@ -173,6 +173,7 @@ function Hero() {
                   <Image
                     src={aboutOneImg}
                     className="w-[95%] object-cover"
+                    priority
                     alt="About ERS TECH software engineering team"
                   />
                   <Box className="h-[100px] w-[90%] mx-auto bg-white border-[3px] border-[rgba(41,188,241,0.6)] rounded-[14px] absolute xl:-bottom-[12%] lg:-bottom-[18%] md:-bottom-[25%] right-[5%] z-[1]">

@@ -1,13 +1,16 @@
 import React from "react";
+import dynamic from "next/dynamic";
 import fs from "fs";
 import path from "path";
 import Head from "../../corelayout/Head/index";
 import ServicesHero from "../../components/Careerhero";
-import ServicesGraphic from "../../../public/assets/images/services.png";
+import ServicesGraphic from "../../../public/assets/images/services.webp";
 import OurServices from "@/components/OurServices";
 import OurStack from "@/components/OurStack";
-import Projects from "@/components/Projects";
-import RequestQueryForm from "@/components/RequestQueryForm";
+
+// Dynamic imports for below-the-fold sections
+const Projects = dynamic(() => import("@/components/Projects"));
+const RequestQueryForm = dynamic(() => import("@/components/RequestQueryForm"));
 
 function index({ initialStack = null }) {
   return (

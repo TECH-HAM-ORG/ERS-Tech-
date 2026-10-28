@@ -78,6 +78,10 @@ const Default = ({
     breadcrumbSchema = buildBreadcrumb(crumbs);
   }
 
+  // Determine if current page uses the .hero-bg component
+  const currentPath = router?.pathname || "";
+  const usesHeroBg = ["/", "/home", "/about-us", "/services", "/portfolio", "/careers"].includes(currentPath);
+
   return (
     <Head>
       <title>{finalTitle}</title>
@@ -97,6 +101,26 @@ const Default = ({
         title="ERS TECH RSS Feed"
         href={`${SITE_URL}/rss.xml`}
       />
+
+      {/* Preload Hero Background Image for LCP only on pages that use .hero-bg */}
+      {usesHeroBg && (
+        <>
+          <link
+            rel="preload"
+            as="image"
+            href="/assets/images/hero-mobile.webp"
+            media="(max-width: 600px)"
+            type="image/webp"
+          />
+          <link
+            rel="preload"
+            as="image"
+            href="/assets/images/new-hero.webp"
+            media="(min-width: 601px)"
+            type="image/webp"
+          />
+        </>
+      )}
 
       {/* Open Graph */}
       <meta property="og:type" content={ogType} />

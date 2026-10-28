@@ -16,9 +16,7 @@ import cv5 from "@/../public/assets/images/cv5.png";
 import cv6 from "@/../public/assets/images/cv6.png";
 import Qmark from "@/../public/assets/images/qmark.png";
 import dynamic from "next/dynamic";
-const RequestQueryForm = dynamic(() => import("./RequestQueryForm"), {
-  ssr: false,
-});
+const RequestQueryForm = dynamic(() => import("./RequestQueryForm"));
 
 import Image from "next/image";
 function CoreValues() {

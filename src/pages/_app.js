@@ -2,11 +2,34 @@ import "@/styles/globals.css";
 import AppLayout from "../corelayout/AppLayout/index";
 import { Provider } from "react-redux";
 import store from "../redux/store";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import dynamic from "next/dynamic";
 import Head from "next/head";
+import { Poppins, Inter } from "next/font/google";
 import JsonLd from "@/components/JsonLd";
 import { organizationSchema, websiteSchema } from "@/utils/schemas";
+
+const poppins = Poppins({
+  weight: ["300", "400", "500", "600", "700"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-poppins",
+});
+
+const inter = Inter({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
+
+const ToastContainer = dynamic(
+  () =>
+    import("react-toastify").then((mod) => {
+      require("react-toastify/dist/ReactToastify.css");
+      return mod.ToastContainer;
+    }),
+  { ssr: false }
+);
 
 export default function App({ Component, pageProps }) {
   return (
@@ -26,17 +49,28 @@ export default function App({ Component, pageProps }) {
           }}
         />
       </Head>
-      <Provider store={store}>
-        <AppLayout>
-          <Component {...pageProps} />
-          <ToastContainer
-            position="top-center"
-            theme="light"
-            hideProgressBar={true}
-            pauseOnHover
-          />
-        </AppLayout>
-      </Provider>
+      <style jsx global>{`
+        html, body {
+          font-family: ${poppins.style.fontFamily}, sans-serif;
+        }
+        :root {
+          --font-poppins: ${poppins.style.fontFamily};
+          --font-inter: ${inter.style.fontFamily};
+        }
+      `}</style>
+      <div className={`${poppins.className} ${poppins.variable} ${inter.variable}`}>
+        <Provider store={store}>
+          <AppLayout>
+            <Component {...pageProps} />
+            <ToastContainer
+              position="top-center"
+              theme="light"
+              hideProgressBar={true}
+              pauseOnHover
+            />
+          </AppLayout>
+        </Provider>
+      </div>
     </>
   );
 }

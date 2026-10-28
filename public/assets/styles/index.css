@@ -768,6 +768,7 @@ button {
 /* ==============Header-ENd==================== */
 .hero-bg {
   background-image: url(../images/new-hero.jpg);
+  background-image: url(../images/new-hero.webp);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -987,7 +988,7 @@ button {
       rgba(41, 188, 241, 0.8),
       rgba(14, 77, 194, 0.8)
     ),
-    url(../images/project-bg.png);
+    url(../images/project-bg.webp);
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover;
@@ -2411,6 +2412,7 @@ button {
 @media screen and (max-width: 600px) {
   .hero-bg {
     background-image: url(../images/hero-mobile.jpg);
+    background-image: url(../images/hero-mobile.webp);
     margin-bottom: 2rem;
   }
 }

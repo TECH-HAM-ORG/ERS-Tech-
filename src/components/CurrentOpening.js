@@ -1,7 +1,10 @@
 import React, { useState } from "react";
+import dynamic from "next/dynamic";
 import { Box, Typography, Grid } from "@mui/material";
 import { FaLocationDot } from "react-icons/fa6";
-import FormModal from "./Modal/FormModal";
+
+// Dynamic import for modal dialog (interaction-only)
+const FormModal = dynamic(() => import("./Modal/FormModal"));
 
 function CurrentOpening() {
   const [openForm, setOpenForm] = useState(false);
