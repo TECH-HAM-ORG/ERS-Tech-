@@ -13,6 +13,7 @@ const keyRoutes = [
   { path: "/about-us", expectedCanonical: "https://erstech.org/about-us" },
   { path: "/services", expectedCanonical: "https://erstech.org/services" },
   { path: "/portfolio", expectedCanonical: "https://erstech.org/portfolio" },
+  { path: "/portfolio/aconomy", expectedCanonical: "https://erstech.org/portfolio/aconomy" },
   { path: "/careers", expectedCanonical: "https://erstech.org/careers" },
   { path: "/blogs", expectedCanonical: "https://erstech.org/blogs" },
   { path: "/blogs/early-stage-cryptos-to-buy-in-2025", expectedCanonical: "https://erstech.org/blogs/early-stage-cryptos-to-buy-in-2025" }

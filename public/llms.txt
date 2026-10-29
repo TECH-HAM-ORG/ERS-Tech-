@@ -6,7 +6,17 @@
 
 - [About Us](https://erstech.org/about-us): Learn about our mission, vision, and core values: delivering innovative tech solutions, empowering businesses globally, and upholding integrity and excellence.
 - [Services](https://erstech.org/services): Core services include Web Development, UI/UX Design, Mobile App Development, Software Development, AI / Robotics, and Blockchain Development.
-- [Portfolio](https://erstech.org/portfolio): Case studies and client projects across web applications, software, mobile apps, and blockchain.
+- [Portfolio](https://erstech.org/portfolio): Case studies and client projects across web applications, software, mobile apps, and blockchain. Case studies include:
+  - [Aconomy](https://erstech.org/portfolio/aconomy): Complete Crypto Platform featuring trading, exchange, wallet, marketplace, crypto cards, and staking.
+  - [Salharo](https://erstech.org/portfolio/salharo): Multi-Vendor E-Commerce Platform connecting sellers and buyers with real-time inventory and Stripe/PayPal payments.
+  - [Wise1ne](https://erstech.org/portfolio/wise1ne): All-in-One HR & Team Operations SaaS managing employee records, attendance, payroll, and tasks.
+  - [FocusMonk](https://erstech.org/portfolio/focusmonk): Productivity & Gamified Habit Tracker with timer and reward systems.
+  - [BCCoin](https://erstech.org/portfolio/bccoin): Staking Platform & Crypto Banking Ecosystem offering debit cards and referral rewards.
+  - [A-Bot](https://erstech.org/portfolio/a-bot): AI-Powered Crypto Agent for Telegram with wallet operations, trading, and AML verification.
+  - [QuikiPay](https://erstech.org/portfolio/quikipay): Global Payment Gateway Provider supporting credit cards, crypto, and merchant settlement automation.
+  - [LiftSplit](https://erstech.org/portfolio/liftsplit): Smart Ride-Sharing & Commute Platform featuring dual-role driver/rider accounts and in-app wallet.
+  - [Koker](https://erstech.org/portfolio/koker): Cryptocurrency Wallet & Trading Platform with spot trading, staking, KYC/AML screening, and risk monitoring.
+  - [Card Access](https://erstech.org/portfolio/card-access): Crypto Card FinTech Platform with mediator admin controls, multi-tier commissions, and cardholder portal.
 - [Pricing](https://erstech.org/pricing): Pricing plans include Technical Support (24/7 support and monitoring), Custom Development (tailored end-to-end solutions), and Hire A Dedicated Staff (skilled professionals with full transparency).
 - [Careers](https://erstech.org/careers): Openings based in Lahore, Pakistan include ReactJs Developer, SQA Engineer, NodeJs Developer, MERN Stack Developer, Project Manager, and Tech Lead.
 - [Blogs](https://erstech.org/blogs): Articles and insights covering technology, cryptocurrency trends, blockchain cybersecurity, and software engineering.

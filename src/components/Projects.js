@@ -11,6 +11,7 @@ import BCCOIN from "@/../public/assets/projects/bccoin.webp";
 import Focusmonk from "@/../public/assets/projects/focusmonk.webp";
 import Salharo from "@/../public/assets/projects/salharo.webp";
 import Wise1HRM from "@/../public/assets/projects/wise1hrm.webp";
+import ABot from "@/../public/assets/projects/a-bot.webp";
 import Link from "next/link";
 import Image from "next/image";
 function Projects({ title }) {
@@ -138,19 +139,19 @@ function Projects({ title }) {
               }}
             >
               <SwiperSlide>
-                <Box className="rounded-[10px] xxl:h-[400px] xl:h-[330px] lg:h-[300px] h-[280px] one-background">
-                  <Box className="rounded-[10px] xxl:h-[400px] xl:h-[330px] lg:h-[300px] h-[280px] second-bg">
+                <Box className="rounded-[10px] xxl:h-[350px] xl:h-[290px] lg:h-[260px] h-[240px] one-background">
+                  <Box className="rounded-[10px] xxl:h-[350px] xl:h-[290px] lg:h-[260px] h-[240px] second-bg">
                     <Image
                       src={Aconomy} className="object-cover img-style" alt="Aconomy project preview"
                     />
                   </Box>
                 </Box>
-                <Box className="project-slider-content text-start pb-4 relative">
+                <Box className="project-slider-content text-start pb-2">
                   <Typography
                     variant="h6"
                     component="h3"
                     gutterBottom
-                    className="!text-lg !font-[600] font-poppins !leading-[140%] text-white !mb-2"
+                    className="!text-lg !font-[600] font-poppins !leading-[140%] text-white !mb-1.5"
                   >
                     Aconomy
                   </Typography>
@@ -158,25 +159,33 @@ function Projects({ title }) {
                     variant="subtitle1"
                     component={"p"}
                     gutterBottom
-                    className="!text-[14px] !font-[400] font-poppins !leading-[140%] text-white !mb-6"
+                    className="!text-[14px] !font-[400] font-poppins !leading-[140%] text-white/90 !mb-3 min-h-[58px]"
                   >
                     A blockchain and fintech platform offering crypto trading,
                     exchange, debit cards, and a marketplace for crypto
                     payments.
                   </Typography>
-                  <Link
-                    className="capitalize absolute -bottom-[10px] !text-base text-white !font-[600] font-poppins !leading-[140%] flex items-center pb-4 hover:text-ersPrimary"
-                    href="https://aconomy.com/"
-                    target="_blank"
-                  >
-                    view project
-                    {/* <MdArrowRightAlt size={20} /> */}
-                  </Link>
+                  <Box className="flex flex-col items-start gap-1">
+                    <Link
+                      className="capitalize !text-base text-white !font-[600] font-poppins !leading-[140%] flex items-center hover:text-ersPrimary transition-colors"
+                      href="https://aconomy.com/"
+                      target="_blank"
+                    >
+                      view project
+                    </Link>
+                    <Link
+                      className="capitalize !text-xs text-ersPrimary !font-[600] font-poppins !leading-[140%] flex items-center hover:underline"
+                      href="/portfolio/aconomy"
+                      onPointerDown={(e) => e.stopPropagation()}
+                    >
+                      View Details &rarr;
+                    </Link>
+                  </Box>
                 </Box>
               </SwiperSlide>
               <SwiperSlide>
-                <Box className="rounded-[10px] xxl:h-[400px] xl:h-[330px] lg:h-[300px] h-[280px] one-background">
-                  <Box className="rounded-[10px] xxl:h-[400px] xl:h-[330px] lg:h-[300px] h-[280px] second-bg">
+                <Box className="rounded-[10px] xxl:h-[350px] xl:h-[290px] lg:h-[260px] h-[240px] one-background">
+                  <Box className="rounded-[10px] xxl:h-[350px] xl:h-[290px] lg:h-[260px] h-[240px] second-bg">
                     <Image
                       src={BCCOIN}
                       className="object-cover img-style"
@@ -184,12 +193,12 @@ function Projects({ title }) {
                     />
                   </Box>
                 </Box>
-                <Box className="project-slider-content text-start pb-4 relative">
+                <Box className="project-slider-content text-start pb-2">
                   <Typography
                     variant="h6"
                     component="h3"
                     gutterBottom
-                    className="!text-lg !font-[600] font-poppins !leading-[140%] text-white !mb-2"
+                    className="!text-lg !font-[600] font-poppins !leading-[140%] text-white !mb-1.5"
                   >
                     BlackCardCoin
                   </Typography>
@@ -197,24 +206,32 @@ function Projects({ title }) {
                     variant="subtitle1"
                     component={"p"}
                     gutterBottom
-                    className="!text-[14px] !font-[400] font-poppins !leading-[140%] text-white !mb-6"
+                    className="!text-[14px] !font-[400] font-poppins !leading-[140%] text-white/90 !mb-3 min-h-[58px]"
                   >
                     A crypto based system offering to buy BCCOIN for staking
                     rewards and exclusive access to a personal crypto card.
                   </Typography>
-                  <Link
-                    className="capitalize absolute -bottom-[10px] !text-base text-white !font-[600] font-poppins !leading-[140%] flex items-center pb-4 hover:text-ersPrimary"
-                    href="https://blackcardcoin.com"
-                    target="_blank"
-                  >
-                    view project
-                    {/* <MdArrowRightAlt size={20} /> */}
-                  </Link>
+                  <Box className="flex flex-col items-start gap-1">
+                    <Link
+                      className="capitalize !text-base text-white !font-[600] font-poppins !leading-[140%] flex items-center hover:text-ersPrimary transition-colors"
+                      href="https://blackcardcoin.com"
+                      target="_blank"
+                    >
+                      view project
+                    </Link>
+                    <Link
+                      className="capitalize !text-xs text-ersPrimary !font-[600] font-poppins !leading-[140%] flex items-center hover:underline"
+                      href="/portfolio/bccoin"
+                      onPointerDown={(e) => e.stopPropagation()}
+                    >
+                      View Details &rarr;
+                    </Link>
+                  </Box>
                 </Box>
               </SwiperSlide>
               <SwiperSlide>
-                <Box className="rounded-[10px] xxl:h-[400px] xl:h-[330px] lg:h-[300px] h-[280px] one-background">
-                  <Box className="rounded-[10px] xxl:h-[400px] xl:h-[330px] lg:h-[300px] h-[280px] second-bg">
+                <Box className="rounded-[10px] xxl:h-[350px] xl:h-[290px] lg:h-[260px] h-[240px] one-background">
+                  <Box className="rounded-[10px] xxl:h-[350px] xl:h-[290px] lg:h-[260px] h-[240px] second-bg">
                     <Image
                       src={Focusmonk}
                       className="object-cover img-style"
@@ -222,12 +239,12 @@ function Projects({ title }) {
                     />
                   </Box>
                 </Box>
-                <Box className="project-slider-content text-start pb-4 relative">
+                <Box className="project-slider-content text-start pb-2">
                   <Typography
                     variant="h6"
                     component="h3"
                     gutterBottom
-                    className="!text-lg !font-[600] font-poppins !leading-[140%] text-white !mb-2"
+                    className="!text-lg !font-[600] font-poppins !leading-[140%] text-white !mb-1.5"
                   >
                     FocusMonk
                   </Typography>
@@ -235,35 +252,43 @@ function Projects({ title }) {
                     variant="subtitle1"
                     component={"p"}
                     gutterBottom
-                    className="!text-[14px] !font-[400] font-poppins !leading-[140%] text-white !mb-6"
+                    className="!text-[14px] !font-[400] font-poppins !leading-[140%] text-white/90 !mb-3 min-h-[58px]"
                   >
                     An AI-driven solution to enhance focus and productivity with
                     performance-based rewards.
                   </Typography>
-                  <Link
-                    className="capitalize absolute -bottom-[10px] !text-base text-white !font-[600] font-poppins !leading-[140%] flex items-center pb-4 hover:text-ersPrimary"
-                    href="https://www.focusmonk.co"
-                    target="_blank"
-                  >
-                    view project
-                    {/* <MdArrowRightAlt size={20} /> */}
-                  </Link>
+                  <Box className="flex flex-col items-start gap-1">
+                    <Link
+                      className="capitalize !text-base text-white !font-[600] font-poppins !leading-[140%] flex items-center hover:text-ersPrimary transition-colors"
+                      href="https://www.focusmonk.co"
+                      target="_blank"
+                    >
+                      view project
+                    </Link>
+                    <Link
+                      className="capitalize !text-xs text-ersPrimary !font-[600] font-poppins !leading-[140%] flex items-center hover:underline"
+                      href="/portfolio/focusmonk"
+                      onPointerDown={(e) => e.stopPropagation()}
+                    >
+                      View Details &rarr;
+                    </Link>
+                  </Box>
                 </Box>
               </SwiperSlide>
               <SwiperSlide>
-                <Box className="rounded-[10px] xxl:h-[400px] xl:h-[330px] lg:h-[300px] h-[280px] one-background">
-                  <Box className="rounded-[10px] xxl:h-[400px] xl:h-[330px] lg:h-[300px] h-[280px] second-bg">
+                <Box className="rounded-[10px] xxl:h-[350px] xl:h-[290px] lg:h-[260px] h-[240px] one-background">
+                  <Box className="rounded-[10px] xxl:h-[350px] xl:h-[290px] lg:h-[260px] h-[240px] second-bg">
                     <Image
                       src={Salharo} className="object-cover img-style" alt="Salharo project preview"
                     />
                   </Box>
                 </Box>
-                <Box className="project-slider-content text-start pb-4 relative">
+                <Box className="project-slider-content text-start pb-2">
                   <Typography
                     variant="h6"
                     component="h3"
                     gutterBottom
-                    className="!text-lg !font-[600] font-poppins !leading-[140%] text-white !mb-2"
+                    className="!text-lg !font-[600] font-poppins !leading-[140%] text-white !mb-1.5"
                   >
                     Salharo
                   </Typography>
@@ -271,24 +296,32 @@ function Projects({ title }) {
                     variant="subtitle1"
                     component={"p"}
                     gutterBottom
-                    className="!text-[14px] !font-[400] font-poppins !leading-[140%] text-white !mb-6"
+                    className="!text-[14px] !font-[400] font-poppins !leading-[140%] text-white/90 !mb-3 min-h-[58px]"
                   >
                     A USA-based e-commerce platform supporting payments via
                     Stripe and PayPal.
                   </Typography>
-                  <Link
-                    className="capitalize absolute -bottom-[10px] !text-base text-white !font-[600] font-poppins !leading-[140%] flex items-center pb-4 hover:text-ersPrimary"
-                    href="https://salharo.us"
-                    target="_blank"
-                  >
-                    view project
-                    {/* <MdArrowRightAlt size={20} /> */}
-                  </Link>
+                  <Box className="flex flex-col items-start gap-1">
+                    <Link
+                      className="capitalize !text-base text-white !font-[600] font-poppins !leading-[140%] flex items-center hover:text-ersPrimary transition-colors"
+                      href="https://salharo.us"
+                      target="_blank"
+                    >
+                      view project
+                    </Link>
+                    <Link
+                      className="capitalize !text-xs text-ersPrimary !font-[600] font-poppins !leading-[140%] flex items-center hover:underline"
+                      href="/portfolio/salharo"
+                      onPointerDown={(e) => e.stopPropagation()}
+                    >
+                      View Details &rarr;
+                    </Link>
+                  </Box>
                 </Box>
               </SwiperSlide>
               <SwiperSlide>
-                <Box className="rounded-[10px] xxl:h-[400px] xl:h-[330px] lg:h-[300px] h-[280px] one-background">
-                  <Box className="rounded-[10px] xxl:h-[400px] xl:h-[330px] lg:h-[300px] h-[280px] second-bg">
+                <Box className="rounded-[10px] xxl:h-[350px] xl:h-[290px] lg:h-[260px] h-[240px] one-background">
+                  <Box className="rounded-[10px] xxl:h-[350px] xl:h-[290px] lg:h-[260px] h-[240px] second-bg">
                     <Image
                       src={Wise1HRM}
                       className="object-cover img-style"
@@ -296,12 +329,12 @@ function Projects({ title }) {
                     />
                   </Box>
                 </Box>
-                <Box className="project-slider-content text-start pb-4 relative">
+                <Box className="project-slider-content text-start pb-2">
                   <Typography
                     variant="h6"
                     component={"h6"}
                     gutterBottom
-                    className="!text-lg !font-[600] font-poppins !leading-[140%] text-white !mb-2"
+                    className="!text-lg !font-[600] font-poppins !leading-[140%] text-white !mb-1.5"
                   >
                     Wise1HRM
                   </Typography>
@@ -309,19 +342,73 @@ function Projects({ title }) {
                     variant="subtitle1"
                     component={"p"}
                     gutterBottom
-                    className="!text-[14px] !font-[400] font-poppins !leading-[140%] text-white !mb-6"
+                    className="!text-[14px] !font-[400] font-poppins !leading-[140%] text-white/90 !mb-3 min-h-[58px]"
                   >
                     A comprehensive HRM system with all essential features for
                     efficient workforce management.
                   </Typography>
-                  <Link
-                    className="capitalize absolute -bottom-[10px] !text-base text-white !font-[600] font-poppins !leading-[140%] flex items-center pb-4 hover:text-ersPrimary"
-                    href="https://app.wise1ne.com"
-                    target="_blank"
+                  <Box className="flex flex-col items-start gap-1">
+                    <Link
+                      className="capitalize !text-base text-white !font-[600] font-poppins !leading-[140%] flex items-center hover:text-ersPrimary transition-colors"
+                      href="https://app.wise1ne.com"
+                      target="_blank"
+                    >
+                      view project
+                    </Link>
+                    <Link
+                      className="capitalize !text-xs text-ersPrimary !font-[600] font-poppins !leading-[140%] flex items-center hover:underline"
+                      href="/portfolio/wise1ne"
+                      onPointerDown={(e) => e.stopPropagation()}
+                    >
+                      View Details &rarr;
+                    </Link>
+                  </Box>
+                </Box>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Box className="rounded-[10px] xxl:h-[350px] xl:h-[290px] lg:h-[260px] h-[240px] one-background">
+                  <Box className="rounded-[10px] xxl:h-[350px] xl:h-[290px] lg:h-[260px] h-[240px] second-bg">
+                    <Image
+                      src={ABot}
+                      className="object-cover img-style"
+                      alt="A-Bot AI Telegram Crypto Bot"
+                    />
+                  </Box>
+                </Box>
+                <Box className="project-slider-content text-start pb-2">
+                  <Typography
+                    variant="h6"
+                    component={"h6"}
+                    gutterBottom
+                    className="!text-lg !font-[600] font-poppins !leading-[140%] text-white !mb-1.5"
                   >
-                    view project
-                    {/* <MdArrowRightAlt size={20} /> */}
-                  </Link>
+                    A-Bot
+                  </Typography>
+                  <Typography
+                    variant="subtitle1"
+                    component={"p"}
+                    gutterBottom
+                    className="!text-[14px] !font-[400] font-poppins !leading-[140%] text-white/90 !mb-3 min-h-[58px]"
+                  >
+                    An AI-powered Crypto Agent for Telegram bringing multi-asset
+                    wallet management, trading, and AML verification into one interface.
+                  </Typography>
+                  <Box className="flex flex-col items-start gap-1">
+                    <Link
+                      className="capitalize !text-base text-white !font-[600] font-poppins !leading-[140%] flex items-center hover:text-ersPrimary transition-colors"
+                      href="https://t.me/vymopay_bot"
+                      target="_blank"
+                    >
+                      view project
+                    </Link>
+                    <Link
+                      className="capitalize !text-xs text-ersPrimary !font-[600] font-poppins !leading-[140%] flex items-center hover:underline"
+                      href="/portfolio/a-bot"
+                      onPointerDown={(e) => e.stopPropagation()}
+                    >
+                      View Details &rarr;
+                    </Link>
+                  </Box>
                 </Box>
               </SwiperSlide>
             </Swiper>

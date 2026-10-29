@@ -33,7 +33,19 @@ ERS TECH is your partner for software innovation, offering an IT guide to a vast
 PHP/Laravel, Blockchain, JavaScript, Node Js, iOS & Android, ReactJS, React-Native.
 
 ## Featured Products Developed
-Quikipay, CardHolder, FocusMonk, Salharo, LiftSplit, Wise1ne, Mukaf.
+Quikipay, CardHolder, FocusMonk, Salharo, LiftSplit, Wise1ne, Mukaf, Aconomy, BCCoin, A-Bot, Card Access, Koker.
+
+## Case Studies
+1. Aconomy (https://erstech.org/portfolio/aconomy): Complete Crypto Platform featuring trading, exchange, wallet, marketplace, crypto cards, and staking.
+2. Salharo (https://erstech.org/portfolio/salharo): Multi-Vendor E-Commerce Platform connecting sellers and buyers with real-time inventory and Stripe/PayPal payments.
+3. Wise1ne (https://erstech.org/portfolio/wise1ne): All-in-One HR & Team Operations SaaS managing employee records, attendance, payroll, and tasks.
+4. FocusMonk (https://erstech.org/portfolio/focusmonk): Productivity & Gamified Habit Tracker with timer and reward systems.
+5. BCCoin (https://erstech.org/portfolio/bccoin): Staking Platform & Crypto Banking Ecosystem offering debit cards and referral rewards.
+6. A-Bot (https://erstech.org/portfolio/a-bot): AI-Powered Crypto Agent for Telegram with wallet operations, trading, and AML verification.
+7. QuikiPay (https://erstech.org/portfolio/quikipay): Global Payment Gateway Provider supporting cards, crypto, and automated settlements.
+8. LiftSplit (https://erstech.org/portfolio/liftsplit): Smart Ride-Sharing & Commute Platform with dual-role driver/rider capability.
+9. Koker (https://erstech.org/portfolio/koker): Cryptocurrency Wallet & Trading Platform with spot exchange and risk monitoring.
+10. Card Access (https://erstech.org/portfolio/card-access): Crypto Card FinTech Management Platform with mediator admin controls and customer portal.
 
 ## Pricing Plans
 1. Technical Support: 24/7 support for any technical issues, troubleshooting and issue resolution, regular system monitoring and maintenance, fast response times to ensure minimal downtime.
