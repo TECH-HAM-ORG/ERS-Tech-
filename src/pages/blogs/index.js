@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "../../corelayout/Head/index";
 import Careerhero from "../../components/Careerhero";
-import Blogsimg from "@/../public/assets/images/blogs-hero.png";
+import Blogsimg from "@/../public/assets/images/blogs-hero.webp";
 import FeaturedBlogs from "../../components/FeaturedBlogs";
 import { fetchAllPosts } from "@/utils/fetchWordPress";
 

@@ -33,7 +33,7 @@ function Footer() {
   };
 
   const openWhatsApp = () => {
-    const phoneNumber = "03001420033";
+    const phoneNumber = "923001420033";
     const message = `ERS TECH: Delivering innovative, scalable, and secure software solutions tailored to your needs. Let's transform your ideas into reality!`;
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
       message
@@ -73,7 +73,9 @@ function Footer() {
                   <Box>
                     <form className="subscription-form" onSubmit={handleWorkWithUsSubmit}>
                       <input
+                        id="footer-subscribe-email"
                         type="email"
+                        aria-label="Email address for subscription"
                         placeholder="Enter your email address"
                         className="subscription-input !font-poppins"
                         value={workEmail}
@@ -246,6 +248,7 @@ function Footer() {
                 <Link
                   href="https://www.linkedin.com/company/erstech/"
                   target="_blank"
+                  aria-label="Visit ERS TECH on LinkedIn"
                 >
                   <Box className="w-[35px] h-[35px] border-[2px] border-white flex items-center justify-center rounded-[7px] group hover:bg-white">
                     <FaLinkedinIn
@@ -257,7 +260,11 @@ function Footer() {
                 </Link>
               </ListItem>
               <ListItem className="xl:!w-[10%] lg:!w-[10%] md:!w-[10%] sm:!w-[10%] xsm:!w-[20%] xxs:!w-[20%] xxxs:!w-[25%]">
-                <Link href="https://x.com/erstechinfo?s=11" target="_blank">
+                <Link
+                  href="https://x.com/erstechinfo?s=11"
+                  target="_blank"
+                  aria-label="Follow ERS TECH on X"
+                >
                   <Box className="w-[35px] h-[35px] border-[2px] border-white flex items-center justify-center rounded-[7px] group hover:bg-white">
                     <FaTwitter
                       color="#fff"
@@ -271,6 +278,7 @@ function Footer() {
                 <Link
                   href="https://www.instagram.com/erstechofficial?igsh=MXJhNnQxaDlwcmRsaQ=="
                   target="_blank"
+                  aria-label="Follow ERS TECH on Instagram"
                 >
                   <Box className="w-[35px] h-[35px] border-[2px] border-white flex items-center justify-center rounded-[7px] group hover:bg-white">
                     <FaInstagram
@@ -292,6 +300,7 @@ function Footer() {
                 <Link
                   href="https://www.pinterest.com/erstechofficial/"
                   target="_blank"
+                  aria-label="Follow ERS TECH on Pinterest"
                 >
                   <Box className="w-[35px] h-[35px] border-[2px] border-white flex items-center justify-center rounded-[7px] group hover:bg-white">
                     <FaPinterestP
@@ -306,6 +315,7 @@ function Footer() {
                 <Link
                   href="https://www.facebook.com/share/15eNRvup3Y/?mibextid=wwXIfr"
                   target="_blank"
+                  aria-label="Follow ERS TECH on Facebook"
                 >
                   <Box className="w-[35px] h-[35px] border-[2px] border-white flex items-center justify-center rounded-[7px] group hover:bg-white">
                     <FaFacebookF
@@ -317,7 +327,11 @@ function Footer() {
                 </Link>
               </ListItem>
               <ListItem className="xl:!w-[10%] lg:!w-[10%] md:!w-[10%] sm:!w-[10%] xsm:!w-[20%] xxs:!w-[20%] xxxs:!w-[25%]">
-                <button type="button" onClick={openWhatsApp}>
+                <button
+                  type="button"
+                  onClick={openWhatsApp}
+                  aria-label="Chat with ERS TECH on WhatsApp"
+                >
                   <Box className="w-[35px] h-[35px] border-[2px] border-white flex items-center justify-center rounded-[7px] group hover:bg-white">
                     <FaWhatsapp
                       color="#fff"

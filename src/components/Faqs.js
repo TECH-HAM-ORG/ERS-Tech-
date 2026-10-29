@@ -99,7 +99,7 @@ function Faqs() {
         <Box className="xl:w-[80%] lg:w-[80%] md:w-[80%] sm:w-[90%] xsm:w-[95%] xxs:w-[95%] xxxs:w-[95%] max-w-full mx-auto h-full min-h-full mb-[3rem]">
           {faqsData.map((faq, index) => (
             <div
-              key={index}
+              key={faq.id || faq.question || index}
               className={`faq-item ${activeIndex === index ? "open" : ""}`}
             >
               <div className="faq-question" onClick={() => toggleFAQ(index)}>

@@ -12,7 +12,9 @@ export const AddUserForm = createAsyncThunk(
   "form/AddUserForm",
   async (formData, { rejectWithValue }) => {
     try {
-      const res = await axios.post("/api/send-mail", formData);
+      const res = await axios.post("/api/send-mail", formData, {
+        timeout: 10000,
+      });
       if (res.status === 200) {
         toast.success(res.data.message || "Mail sent successfully!");
       }
@@ -22,8 +24,14 @@ export const AddUserForm = createAsyncThunk(
         message: "success",
       };
     } catch (error) {
-      console.error("Error....", error);
-      return rejectWithValue({ message: "Failed to send message" });
+      console.error("Form submission error:", error);
+      const errorMessage =
+        error.response?.data?.message ||
+        (error.code === "ECONNABORTED"
+          ? "Request timed out. Please try again."
+          : "Submission failed. Please try again later.");
+      toast.error(errorMessage);
+      return rejectWithValue({ message: errorMessage });
     }
   }
 );
@@ -33,7 +41,8 @@ const formSlice = createSlice({
   initialState,
   reducers: {
     clearform: (state) => {
-      state.form = null;
+      state.userdata = null;
+      state.error = "";
     },
   },
   extraReducers: (builder) => {

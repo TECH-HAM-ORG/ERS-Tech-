@@ -3,7 +3,7 @@ import fs from "fs";
 import path from "path";
 import Head from "../../corelayout/Head/index";
 import Careerhero from "../../components/Careerhero";
-import PortfoiloGraphic from "@/../public/assets/images/portfolio-grapjics2.png";
+import PortfoiloGraphic from "@/../public/assets/images/portfolio-grapjics2.webp";
 import FeaturedProjects from "../../components/FeaturedProjects";
 
 function index({ initialProjects = [] }) {

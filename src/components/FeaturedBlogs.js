@@ -6,9 +6,18 @@ import Link from "next/link";
 import Image from "next/image";
 import { getBlogs } from "@/redux/features/blogs/blogSlice";
 import { useSelector, useDispatch } from "react-redux";
-import moment from "moment";
 import Loader from "@/utils/Loader";
 import dummy from "../../public/assets/imgs/dummy.jpg";
+
+const formatShortDate = (dateStr) => {
+  if (!dateStr) return "";
+  const d = new Date(dateStr);
+  if (isNaN(d.getTime())) return dateStr;
+  const day = d.getDate();
+  const month = d.toLocaleString("en-US", { month: "short" });
+  const year = String(d.getFullYear()).slice(-2);
+  return `${day}-${month}-${year}`;
+};
 
 function FeaturedBlogs({ initialBlogs = null }) {
   const dispatch = useDispatch();
@@ -61,7 +70,7 @@ function FeaturedBlogs({ initialBlogs = null }) {
               <Grid container spacing={6}>
                 {blogsToDisplay?.map((data, i) => {
                   return (
-                    <Grid key={i} item xs={12} sm={12} md={6} lg={4}>
+                    <Grid key={data.id || data.slug || i} item xs={12} sm={12} md={6} lg={4}>
                       <Link
                         href={`/blogs/${data.slug}`}
                         aria-label={`Read more about ${data.title}`}
@@ -103,7 +112,7 @@ function FeaturedBlogs({ initialBlogs = null }) {
                                 className="!font-[500] !text-[14px] font-poppins !leading-[140%] !tracking-[-0.16px] !flex items-center gap-1"
                               >
                                 <ImCalendar size={16} color="#25A9EB" />
-                                &nbsp;{moment(data.date).format("D-MMM-YY")}
+                                &nbsp;{formatShortDate(data.date)}
                               </Typography>
                               <span className="!text-[14px] text-ersPrimary capitalize !font-[400] font-poppins flex items-center read-more-btn">
                                 Read more&nbsp;

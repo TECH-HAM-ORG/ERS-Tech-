@@ -73,7 +73,7 @@ function CurrentOpening() {
           <Grid container spacing={4} pb={8}>
             {jobs.map((data, i) => {
               return (
-                <Grid key={i} item xs={12} sm={6} md={6} lg={4}>
+                <Grid key={data.id || i} item xs={12} sm={6} md={6} lg={4}>
                   <Box className="job-card-box">
                     <Box className="job-card p-6">
                       <Box className="pl-8 mb-4">

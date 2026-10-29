@@ -7,6 +7,16 @@ const STATIC_PAGES = [
   { loc: "/about-us", lastmod: "2024-12-16" },
   { loc: "/services", lastmod: "2024-12-16" },
   { loc: "/portfolio", lastmod: "2024-12-16" },
+  { loc: "/portfolio/aconomy" },
+  { loc: "/portfolio/salharo" },
+  { loc: "/portfolio/wise1ne" },
+  { loc: "/portfolio/focusmonk" },
+  { loc: "/portfolio/bccoin" },
+  { loc: "/portfolio/a-bot" },
+  { loc: "/portfolio/quikipay" },
+  { loc: "/portfolio/liftsplit" },
+  { loc: "/portfolio/koker" },
+  { loc: "/portfolio/card-access" },
   { loc: "/blogs", lastmod: "2024-12-16" },
   { loc: "/careers", lastmod: "2024-12-16" },
   { loc: "/pricing", lastmod: "2024-12-16" },
@@ -32,9 +42,10 @@ function toW3CDate(dateStr) {
 }
 
 function buildXml(posts) {
-  const staticUrls = STATIC_PAGES.map(
-    ({ loc, lastmod }) =>
-      `  <url>\n    <loc>${SITE_URL}${loc}</loc>\n    <lastmod>${lastmod}</lastmod>\n  </url>`
+  const staticUrls = STATIC_PAGES.map(({ loc, lastmod }) =>
+    lastmod
+      ? `  <url>\n    <loc>${SITE_URL}${loc}</loc>\n    <lastmod>${lastmod}</lastmod>\n  </url>`
+      : `  <url>\n    <loc>${SITE_URL}${loc}</loc>\n  </url>`
   ).join("\n");
 
   const blogUrls = (posts || [])

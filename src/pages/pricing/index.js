@@ -2,7 +2,7 @@ import React from "react";
 import Head from "../../corelayout/Head/index";
 import { Box } from "@mui/material";
 import Careerhero from "../../components/Careerhero";
-import PricingHero from "@/../public/assets/images/pricing-hero.png";
+import PricingHero from "@/../public/assets/images/pricing-hero.webp";
 import PriceTable from "../../components/priceTable";
 import RequestQueryForm from "../../components/RequestQueryForm";
 function pricing() {

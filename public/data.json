@@ -148,14 +148,14 @@
   },
   {
     "id": 13,
-    "name": "ADM Card",
+    "name": "Card Access",
     "category": "web app ,blockchain",
-    "imageUrl": "/assets/projects/Mockups/adm.webp",
-    "url": "https://admcard.com",
+    "imageUrl": "/assets/projects/Mockups/card-access.webp",
+    "url": "/portfolio/card-access",
     "techStack": {
       "frontend": "React.js",
-      "backend": "Laravel",
-      "database": "MySql"
+      "backend": "Node.js",
+      "database": "MongoDB"
     }
   },
   {
@@ -166,6 +166,30 @@
     "url": "https://focusmonk.co",
     "techStack": {
       "frontend": "Electron.js",
+      "backend": "Node.js",
+      "database": "MongoDB"
+    }
+  },
+  {
+    "id": 16,
+    "name": "A-Bot",
+    "category": "web app ,blockchain",
+    "imageUrl": "/assets/projects/Mockups/a-bot.webp",
+    "url": "https://t.me/vymopay_bot",
+    "techStack": {
+      "frontend": "Next.js",
+      "backend": "Node.js",
+      "database": "MongoDB"
+    }
+  },
+  {
+    "id": 17,
+    "name": "Koker",
+    "category": "web app ,blockchain",
+    "imageUrl": "/assets/projects/Mockups/KOKER.jpg",
+    "url": "/portfolio/koker",
+    "techStack": {
+      "frontend": "React.js",
       "backend": "Node.js",
       "database": "MongoDB"
     }

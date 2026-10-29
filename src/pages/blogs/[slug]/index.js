@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import moment from "moment";
 import {
   FacebookShareButton,
   FacebookIcon,
@@ -16,7 +15,17 @@ import {
 import Head from "@/corelayout/Head/index";
 import NextHead from "next/head";
 import { IoMdArrowBack } from "react-icons/io";
-import { fetchAllPosts } from "@/utils/fetchWordPress";
+import { fetchAllPosts, sanitizeWordPressHtml } from "@/utils/fetchWordPress";
+
+const formatLongDate = (dateStr) => {
+  if (!dateStr) return "";
+  const d = new Date(dateStr);
+  if (isNaN(d.getTime())) return dateStr;
+  const month = d.toLocaleString("en-US", { month: "long" });
+  const day = d.getDate();
+  const year = d.getFullYear();
+  return `${month} ${day}, ${year}`;
+};
 
 function SingleBlog({ post }) {
   const router = useRouter();
@@ -85,7 +94,7 @@ function SingleBlog({ post }) {
         }
       >
         <div className="flex items-center justify-center h-full">
-          <h1 className="md:text-[45px] text-[36px] text-center font-inter font-[600] leading-normal tracking-[-0.18px] text-white inline-block">
+          <h1 className="md:text-[45px] text-[36px] text-center font-poppins font-[600] leading-normal tracking-[-0.18px] text-white inline-block">
             {post.title}
           </h1>
         </div>
@@ -102,7 +111,7 @@ function SingleBlog({ post }) {
             <button
               onClick={() => router.back()}
               type="button"
-              className="flex items-center text-base font-[500] font-inter leading-[120%] text-black"
+              className="flex items-center text-base font-[500] font-poppins leading-[120%] text-black"
             >
               <IoMdArrowBack size={25} color="#000" />
               &nbsp;Back
@@ -112,8 +121,8 @@ function SingleBlog({ post }) {
           <div className="border-b-[1px] border-solid border-[#606060] w-full" />
 
           <div className="flex items-center justify-between mb-8">
-            <span className="text-sm font-inter font-[400] leading-normal tracking-[-0.16px] mb-0">
-              {post.date ? moment(post.date).format("MMMM D, YYYY") : ""}
+            <span className="text-sm font-poppins font-[400] leading-normal tracking-[-0.16px] mb-0">
+              {post.date ? formatLongDate(post.date) : ""}
             </span>
 
             <div className="flex justify-end items-center share-buttons">
@@ -187,9 +196,14 @@ export async function getStaticProps({ params }) {
     };
   }
 
+  const sanitizedPost = {
+    ...post,
+    description: sanitizeWordPressHtml(post.description),
+  };
+
   return {
     props: {
-      post,
+      post: sanitizedPost,
     },
     revalidate: 600,
   };

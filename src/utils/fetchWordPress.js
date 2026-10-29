@@ -88,3 +88,44 @@ export function fetchAllPosts(timeoutMs = 4000) {
     });
   });
 }
+
+/**
+ * Server-side HTML sanitizer for WordPress content.
+ * Preserves safe rich formatting, typography, tables, pre/code blocks, figure/figcaption,
+ * images with attributes, and whitelisted video iframes (YouTube and Vimeo).
+ * Strips executable scripts, dangerous tags, rogue iframes, and inline event handlers.
+ *
+ * @param {string} html
+ * @returns {string}
+ */
+export function sanitizeWordPressHtml(html) {
+  if (!html || typeof html !== "string") return "";
+
+  let sanitized = html;
+
+  // 1. Remove dangerous executable/embed elements and their contents
+  sanitized = sanitized.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, "");
+  sanitized = sanitized.replace(/<style\b[^<]*(?:(?!<\/style>)<[^<]*)*<\/style>/gi, "");
+  sanitized = sanitized.replace(/<(object|embed|applet|form|input|textarea|button|base|meta|link)\b[^>]*>.*?<\/\1>/gi, "");
+  sanitized = sanitized.replace(/<(object|embed|applet|form|input|textarea|button|base|meta|link)\b[^>]*\/?>/gi, "");
+
+  // 2. Whitelist iframes: Only allow YouTube and Vimeo embeds; strip all other iframes
+  sanitized = sanitized.replace(/<iframe\b([^>]*)>(.*?)<\/iframe>/gi, (match, attrs, body) => {
+    const srcMatch = attrs.match(/\bsrc\s*=\s*(['"])(.*?)\1/i);
+    if (!srcMatch) return "";
+    const src = srcMatch[2].trim();
+    const isWhitelisted = /^(https?:)?\/\/(www\.)?(youtube\.com|youtube-nocookie\.com|player\.vimeo\.com)\//i.test(src);
+    if (!isWhitelisted) return "";
+    const cleanAttrs = attrs.replace(/\son\w+\s*=\s*(?:'[^']*'|"[^"]*"|[^\s>]+)/gi, "");
+    return `<iframe${cleanAttrs}>${body}</iframe>`;
+  });
+
+  // 3. Strip all inline on* event handler attributes (onload, onerror, onclick, etc.)
+  sanitized = sanitized.replace(/\son\w+\s*=\s*(?:'[^']*'|"[^"]*"|[^\s>]+)/gi, "");
+
+  // 4. Neutralize javascript: or vbscript: pseudo-protocols in href and src
+  sanitized = sanitized.replace(/href\s*=\s*(['"])\s*(?:javascript|vbscript):[^\1]*?\1/gi, 'href="#"');
+  sanitized = sanitized.replace(/src\s*=\s*(['"])\s*(?:javascript|vbscript):[^\1]*?\1/gi, 'src=""');
+
+  return sanitized;
+}

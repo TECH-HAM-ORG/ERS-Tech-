@@ -30,7 +30,8 @@ const blogSlice = createSlice({
   initialState,
   reducers: {
     clearBlogs: (state) => {
-      state.blogs = null;
+      state.AllBlogs = null;
+      state.error = "";
     },
   },
   extraReducers: (builder) => {

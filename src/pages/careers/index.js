@@ -4,7 +4,7 @@ import Head from "../../corelayout/Head/index";
 import Careerhero from "../../components/Careerhero";
 import CurrentOpening from "../../components/CurrentOpening";
 import PerksAndBenefits from "../../components/PerksAndBenefits";
-import CareerGraphic from "@/../public/assets/images/career-hero.png";
+import CareerGraphic from "@/../public/assets/images/career-hero.webp";
 import AbrarImg from "@/../public/assets/images/abrar.png";
 import BilalImg from "@/../public/assets/images/men-avatar.jpg";
 import AishaImg from "@/../public/assets/icons/client-2-opt.webp";
