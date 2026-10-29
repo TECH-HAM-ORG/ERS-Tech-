@@ -102,7 +102,7 @@ function page() {
         <div className="mx-auto w-[1263px] max-w-full">
           <HowWeDo />
         </div>
-        <Team />
+        {/* <Team /> */}
         <WhyChooseUs />
         <TrustedBy />
         <Faqs />
