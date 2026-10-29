@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Box, Typography, Button, Tab, Tabs } from "@mui/material";
-import aboutOneImg from "@/../public/assets/images/about-h-img.png";
+import aboutOneImg from "@/../public/assets/images/about-h-img.webp";
 import Image from "next/image";
 
 function Hero() {
@@ -167,6 +167,8 @@ function Hero() {
                     src={aboutOneImg}
                     className="w-[95%] object-cover"
                     priority
+                    unoptimized
+                    placeholder="blur"
                     alt="About ERS TECH software engineering team"
                   />
                   <Box className="h-[95px] xl:h-[90px] lg:h-[80px] w-[90%] mx-auto bg-white border-[3px] border-[rgba(41,188,241,0.6)] rounded-[14px] absolute -bottom-[10%] right-[5%] z-[1]">

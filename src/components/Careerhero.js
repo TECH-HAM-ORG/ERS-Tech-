@@ -59,6 +59,9 @@ function Careerhero({
                   className={
                     width ? `w-${width} object-cover` : "w-[80%] object-cover"
                   }
+                  priority
+                  unoptimized
+                  placeholder={typeof img === "object" && img?.blurDataURL ? "blur" : "empty"}
                   alt={btnText ? `${btnText} banner illustration` : "ERS TECH banner illustration"}
                 />
               </Box>

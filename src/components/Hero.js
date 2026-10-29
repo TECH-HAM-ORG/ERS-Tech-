@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Divider, Typography, Button } from "@mui/material";
-import ROneImg from "@/../public/assets/images/hero-graphic.png";
-import RTwoImg from "@/../public/assets/images/hero-graphic-two.png";
+import ROneImg from "@/../public/assets/images/hero-graphic.webp";
+import RTwoImg from "@/../public/assets/images/hero-graphic-two.webp";
 import Image from "next/image";
 function Hero() {
   return (
@@ -49,6 +49,8 @@ function Hero() {
                   src={ROneImg}
                   className="w-[80%] object-cover"
                   priority
+                  unoptimized
+                  placeholder="blur"
                   alt="Software development showcase graphic"
                 />
               </Box>
@@ -57,6 +59,8 @@ function Hero() {
                   src={RTwoImg}
                   className="w-[70%] object-cover"
                   priority
+                  unoptimized
+                  placeholder="blur"
                   alt="Fintech dashboard illustration"
                 />
               </Box>

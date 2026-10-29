@@ -169,6 +169,7 @@ export default function CaseStudyPage({ study }) {
                   width={1400}
                   height={800}
                   priority
+                  unoptimized
                   className="w-full h-auto object-contain"
                 />
               </div>
