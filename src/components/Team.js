@@ -1,13 +1,39 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow } from "swiper/modules";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
-import TeamMember from "@/../public/assets/images/abrar.png";
+import IsmailImg from "@/../public/assets/images/ismail.png";
+import AbrarImg from "@/../public/assets/images/abrar.png";
+import HaiderImg from "@/../public/assets/images/boss-img.png";
+import GufranImg from "@/../public/assets/images/gufran.png";
 import Image from "next/image";
+
+const teamData = [
+  {
+    name: "Muhammad Ismail",
+    designation: "Lead Software Engineer",
+    image: IsmailImg,
+  },
+  {
+    name: "Abrar Amin",
+    designation: "Lead SQA Engineer",
+    image: AbrarImg,
+  },
+  {
+    name: "Syed Haider Raza",
+    designation: "Lead App Developer",
+    image: HaiderImg,
+  },
+  {
+    name: "Ghufran Qamar",
+    designation: "Sr. Business Development Executive",
+    image: GufranImg,
+  },
+];
+
 function Team() {
   return (
     <>
@@ -34,7 +60,7 @@ function Team() {
             modules={[Navigation, Autoplay]}
             speed={2000}
             autoplay={{
-              delay: 2000,
+              delay: 3000,
               disableOnInteraction: false,
             }}
             spaceBetween={30}
@@ -66,151 +92,37 @@ function Team() {
               },
             }}
           >
-            <SwiperSlide>
-              <Box className="container-img-box">
-                <div className="container-inner !h-[220px] xl:!left-[0%] lg:!-left-[15%] md:!-left-[15%] sm:!left-[35%] xsm:!left-[38%] xxs:!left-[50%] xxxs:!left-[50%]">
-                  <div className="circle"></div>
-                  <Image
-                    className="mask-img mask-img-one xl:!left-[27%] lg:!left-[33%] md:!left-[20%] sm:!left-[20%] xsm:!left-[20%] xxs:!left-[22%] xxxs:!left-[25%]"
-                    src={TeamMember}
-                    alt="..."
-                  />
-                </div>
-              </Box>
-              <Box className="block text-center">
-                <Typography
-                  variant="h5"
-                  component={"h5"}
-                  className="!text-[18px] !font-[600] font-poppins !leading-[140%] !tracking-[-0.16px]"
-                >
-                  John Doe
-                </Typography>
-                <Typography
-                  variant="h6"
-                  component="h3"
-                  gutterBottom
-                  className="!text-[14px] !font-[400] font-poppins !text-ersPrimary !leading-[140%] !tracking-[-0.16px]"
-                >
-                  Chief Executive Officer
-                </Typography>
-              </Box>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Box className="container-img-box">
-                <div className="container-inner !h-[220px] xl:!left-[0%] lg:!-left-[15%] md:!-left-[15%] sm:!left-[35%] xsm:!left-[38%] xxs:!left-[50%] xxxs:!left-[50%]">
-                  <div className="circle"></div>
-                  <Image
-                    className="mask-img mask-img-one xl:!left-[27%] lg:!left-[33%] md:!left-[20%] sm:!left-[20%] xsm:!left-[20%] xxs:!left-[22%] xxxs:!left-[25%]"
-                    src={TeamMember}
-                    alt="..."
-                  />
-                </div>
-              </Box>
-              <Box className="block text-center">
-                <Typography
-                  variant="h5"
-                  component={"h5"}
-                  className="!text-[18px] !font-[600] font-poppins !leading-[140%] !tracking-[-0.16px]"
-                >
-                  John Doe
-                </Typography>
-                <Typography
-                  variant="h6"
-                  component="h3"
-                  gutterBottom
-                  className="!text-[14px] !font-[400] font-poppins !text-ersPrimary !leading-[140%] !tracking-[-0.16px]"
-                >
-                  Chief Executive Officer
-                </Typography>
-              </Box>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Box className="container-img-box">
-                <div className="container-inner !h-[220px] xl:!left-[0%] lg:!-left-[15%] md:!-left-[15%] sm:!left-[35%] xsm:!left-[38%] xxs:!left-[50%] xxxs:!left-[50%]">
-                  <div className="circle"></div>
-                  <Image
-                    className="mask-img mask-img-one xl:!left-[27%] lg:!left-[33%] md:!left-[20%] sm:!left-[20%] xsm:!left-[20%] xxs:!left-[22%] xxxs:!left-[25%]"
-                    src={TeamMember}
-                    alt="..."
-                  />
-                </div>
-              </Box>
-              <Box className="block text-center">
-                <Typography
-                  variant="h5"
-                  component={"h5"}
-                  className="!text-[18px] !font-[600] font-poppins !leading-[140%] !tracking-[-0.16px]"
-                >
-                  John Doe
-                </Typography>
-                <Typography
-                  variant="h6"
-                  component="h3"
-                  gutterBottom
-                  className="!text-[14px] !font-[400] font-poppins !text-ersPrimary !leading-[140%] !tracking-[-0.16px]"
-                >
-                  Chief Executive Officer
-                </Typography>
-              </Box>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Box className="container-img-box">
-                <div className="container-inner !h-[220px] xl:!left-[0%] lg:!-left-[15%] md:!-left-[15%] sm:!left-[35%] xsm:!left-[38%] xxs:!left-[50%] xxxs:!left-[50%]">
-                  <div className="circle"></div>
-                  <Image
-                    className="mask-img mask-img-one xl:!left-[27%] lg:!left-[33%] md:!left-[20%] sm:!left-[20%] xsm:!left-[20%] xxs:!left-[22%] xxxs:!left-[25%]"
-                    src={TeamMember}
-                    alt="..."
-                  />
-                </div>
-              </Box>
-              <Box className="block text-center">
-                <Typography
-                  variant="h5"
-                  component={"h5"}
-                  className="!text-[18px] !font-[600] font-poppins !leading-[140%] !tracking-[-0.16px]"
-                >
-                  John Doe
-                </Typography>
-                <Typography
-                  variant="h6"
-                  component="h3"
-                  gutterBottom
-                  className="!text-[14px] !font-[400] font-poppins !text-ersPrimary !leading-[140%] !tracking-[-0.16px]"
-                >
-                  Chief Executive Officer
-                </Typography>
-              </Box>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Box className="container-img-box">
-                <div className="container-inner !h-[220px] xl:!left-[0%] lg:!-left-[15%] md:!-left-[15%] sm:!left-[35%] xsm:!left-[38%] xxs:!left-[50%] xxxs:!left-[50%]">
-                  <div className="circle"></div>
-                  <Image
-                    className="mask-img mask-img-one xl:!left-[27%] lg:!left-[33%] md:!left-[20%] sm:!left-[20%] xsm:!left-[20%] xxs:!left-[22%] xxxs:!left-[25%]"
-                    src={TeamMember}
-                    alt="..."
-                  />
-                </div>
-              </Box>
-              <Box className="block text-center">
-                <Typography
-                  variant="h5"
-                  component={"h5"}
-                  className="!text-[18px] !font-[600] font-poppins !leading-[140%] !tracking-[-0.16px]"
-                >
-                  John Doe
-                </Typography>
-                <Typography
-                  variant="h6"
-                  component="h3"
-                  gutterBottom
-                  className="!text-[14px] !font-[400] font-poppins !text-ersPrimary !leading-[140%] !tracking-[-0.16px]"
-                >
-                  Chief Executive Officer
-                </Typography>
-              </Box>
-            </SwiperSlide>
+            {teamData.map((member, index) => (
+              <SwiperSlide key={index}>
+                <Box className="container-img-box">
+                  <div className="container-inner !h-[220px] xl:!left-[0%] lg:!-left-[15%] md:!-left-[15%] sm:!left-[35%] xsm:!left-[38%] xxs:!left-[50%] xxxs:!left-[50%]">
+                    <div className="circle"></div>
+                    <Image
+                      className="mask-img mask-img-one xl:!left-[27%] lg:!left-[33%] md:!left-[20%] sm:!left-[20%] xsm:!left-[20%] xxs:!left-[22%] xxxs:!left-[25%]"
+                      src={member.image}
+                      alt={member.name}
+                    />
+                  </div>
+                </Box>
+                <Box className="block text-center">
+                  <Typography
+                    variant="h5"
+                    component={"h5"}
+                    className="!text-[18px] !font-[600] font-poppins !leading-[140%] !tracking-[-0.16px]"
+                  >
+                    {member.name}
+                  </Typography>
+                  <Typography
+                    variant="h6"
+                    component="h3"
+                    gutterBottom
+                    className="!text-[14px] !font-[400] font-poppins !text-ersPrimary !leading-[140%] !tracking-[-0.16px]"
+                  >
+                    {member.designation}
+                  </Typography>
+                </Box>
+              </SwiperSlide>
+            ))}
           </Swiper>
         </Box>
       </Box>
