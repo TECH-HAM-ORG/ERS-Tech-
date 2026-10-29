@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { styled, css } from "@mui/system";
-import { Modal as BaseModal } from "@mui/base/Modal";
+import { styled, css } from "@mui/material/styles";
+import MuiModal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
-import { Button } from "@mui/base/Button";
+import Button from "@mui/material/Button";
 import { Box } from "@mui/material";
 import * as Yup from "yup";
 import { Formik } from "formik";
@@ -13,11 +13,10 @@ import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import { useTheme } from "@mui/material/styles";
-import { TextareaAutosize } from "@mui/base/TextareaAutosize";
+import TextareaAutosize from "@mui/material/TextareaAutosize";
 import { useDispatch, useSelector } from "react-redux";
 import { AiOutlineCloudUpload } from "react-icons/ai";
 import { AddUserForm } from "../../redux/features/form/formSlice";
-import { toast } from "react-toastify";
 import SpinnerLoader from "@/utils/SpinnerLoader";
 function FormModal({ open, onClose, data }) {
   const { loading } = useSelector((state) => state.form);
@@ -31,9 +30,8 @@ function FormModal({ open, onClose, data }) {
           aria-labelledby="transition-modal-title"
           aria-describedby="transition-modal-description"
           open={open}
-          onClose={() => onClose(!open)}
+          onClose={() => onClose(false)}
           closeAfterTransition
-          slots={{ backdrop: StyledBackdrop }}
         >
           <Fade in={open}>
             <ModalContent sx={style} className="lg:w-[500px] md:w-[500px] sm:[400px] xsm:w-[350px] xxs:w-[330px] xxxs:w-[300px] lg:overflow-hidden md:overflow-hidden sm:overflow-scroll xsm:overflow-scroll xxs:overflow-scroll xxxs:overflow-scroll md:h-[unset] sm:h-[100vh] xsm:h-[100vh] xxs:h-[100vh] xxxs:h-[100vh]">
@@ -101,12 +99,10 @@ function FormModal({ open, onClose, data }) {
                       formData.append("resume", values.file);
                     }
                     const result = await dispatch(AddUserForm(formData));
-                    if (result.payload.message === "success") {
+                    if (result.payload?.message === "success") {
                       setStatus({ success: true });
                       resetForm();
                       onClose(!open);
-                    } else {
-                      toast.error("Submission failed");
                     }
                   } catch (err) {
                     console.error(err);
@@ -397,7 +393,7 @@ const grey = {
   900: "#1C2025",
 };
 
-const Modal = styled(BaseModal)`
+const Modal = styled(MuiModal)`
   position: fixed;
   z-index: 1300;
   inset: 0;

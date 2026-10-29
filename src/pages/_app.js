@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import store from "../redux/store";
 import dynamic from "next/dynamic";
 import Head from "next/head";
-import { Poppins, Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import JsonLd from "@/components/JsonLd";
 import { organizationSchema, websiteSchema } from "@/utils/schemas";
 
@@ -13,13 +13,6 @@ const poppins = Poppins({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-poppins",
-});
-
-const inter = Inter({
-  weight: ["400", "500", "600", "700"],
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
 });
 
 const ToastContainer = dynamic(
@@ -55,10 +48,9 @@ export default function App({ Component, pageProps }) {
         }
         :root {
           --font-poppins: ${poppins.style.fontFamily};
-          --font-inter: ${inter.style.fontFamily};
         }
       `}</style>
-      <div className={`${poppins.className} ${poppins.variable} ${inter.variable}`}>
+      <div className={`${poppins.className} ${poppins.variable}`}>
         <Provider store={store}>
           <AppLayout>
             <Component {...pageProps} />

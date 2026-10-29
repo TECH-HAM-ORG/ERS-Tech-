@@ -1,5 +1,6 @@
 # dependencies
 /node_modules
+node_modules
 /.pnp
 .pnp.js
 .yarn/install-state.gz
@@ -9,14 +10,18 @@
 
 # next.js
 /.next/
+.next
 /out/
 
 # production
 /build
 
-# misc
+# logs & misc
 .DS_Store
 *.pem
+stderr.log
+tmp
+/tmp
 
 # debug
 npm-debug.log*
@@ -33,3 +38,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# archives
+*.zip
+*.rar

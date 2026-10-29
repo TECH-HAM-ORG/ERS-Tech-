@@ -1,7 +1,7 @@
 import React from "react";
 import book from "@/../public/assets/icons/request-quote.webp";
 import { useTheme } from "@mui/material/styles";
-import { TextareaAutosize } from "@mui/base/TextareaAutosize";
+import TextareaAutosize from "@mui/material/TextareaAutosize";
 import { FaLinkedin } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { FaSquarePhone } from "react-icons/fa6";
@@ -20,7 +20,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 import { AddUserForm } from "../redux/features/form/formSlice";
-import { toast } from "react-toastify";
 import { useRouter } from "next/router";
 function RequestQueryForm() {
   const router = useRouter();
@@ -30,7 +29,7 @@ function RequestQueryForm() {
   const theme = useTheme();
 
   const openWhatsApp = () => {
-    const phoneNumber = "03001420033";
+    const phoneNumber = "923001420033";
     const message = `ERS TECH: Delivering innovative, scalable, and secure software solutions tailored to your needs. Let's transform your ideas into reality!`;
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
       message
@@ -144,11 +143,9 @@ function RequestQueryForm() {
                           formData.append("subject", values.Subject);
                           formData.append("message", values.Message);
                           const result = await dispatch(AddUserForm(formData));
-                          if (result.payload.message === "success") {
+                          if (result.payload?.message === "success") {
                             setStatus({ success: true });
                             resetForm();
-                          } else {
-                            toast.error("Submission failed");
                           }
                         } catch (err) {
                           console.error(err);
@@ -190,6 +187,7 @@ function RequestQueryForm() {
                                   value={values.Name}
                                   variant="standard"
                                   autoComplete="new-password"
+                                  inputProps={{ "aria-label": "Your Name", id: "contact-name" }}
                                   onBlur={handleBlur}
                                   onChange={handleChange}
                                 />
@@ -218,6 +216,7 @@ function RequestQueryForm() {
                                   value={values.email}
                                   variant="standard"
                                   autoComplete="new-password"
+                                  inputProps={{ "aria-label": "Your Email", id: "contact-email" }}
                                   onBlur={handleBlur}
                                   onChange={handleChange}
                                 />
@@ -248,6 +247,7 @@ function RequestQueryForm() {
                                   value={values.Contact}
                                   variant="standard"
                                   autoComplete="new-password"
+                                  inputProps={{ "aria-label": "Your Phone Number", id: "contact-phone" }}
                                   onBlur={handleBlur}
                                   onChange={(e) => {
                                     const value = e.target.value;
@@ -287,6 +287,7 @@ function RequestQueryForm() {
                                   value={values.Subject}
                                   variant="standard"
                                   autoComplete="new-password"
+                                  inputProps={{ "aria-label": "Subject", id: "contact-subject" }}
                                   onBlur={handleBlur}
                                   onChange={handleChange}
                                 />
@@ -317,7 +318,8 @@ function RequestQueryForm() {
                                   maxRows={3}
                                   minRows={3}
                                   className="resize-none w-full text-base font-normal leading-normal border-b border-solid border-slate-300 hover:border-gray-500  focus:border-black-500 bg-white focus-visible:outline-0"
-                                  aria-label="empty textarea"
+                                  aria-label="Your Message"
+                                  id="contact-message"
                                   placeholder="Message"
                                 />
                                 {touched.Message && errors.Message && (

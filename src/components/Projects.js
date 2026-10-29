@@ -18,6 +18,7 @@ function Projects({ title }) {
   const prevButtonRef = useRef();
   useEffect(() => {
     const handleMediaQuery = (mq) => {
+      if (!nextButtonRef.current || !prevButtonRef.current) return;
       if (mq.matches) {
         nextButtonRef.current.style.setProperty("display", "none", "important");
         prevButtonRef.current.style.setProperty("display", "none", "important");
@@ -29,10 +30,18 @@ function Projects({ title }) {
 
     const mediaQuery = window.matchMedia("(max-width: 600px)");
     handleMediaQuery(mediaQuery);
-    mediaQuery.addListener(handleMediaQuery);
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener("change", handleMediaQuery);
+    } else if (mediaQuery.addListener) {
+      mediaQuery.addListener(handleMediaQuery);
+    }
 
     return () => {
-      mediaQuery.removeListener(handleMediaQuery);
+      if (mediaQuery.removeEventListener) {
+        mediaQuery.removeEventListener("change", handleMediaQuery);
+      } else if (mediaQuery.removeListener) {
+        mediaQuery.removeListener(handleMediaQuery);
+      }
     };
   }, []);
 
@@ -60,7 +69,7 @@ function Projects({ title }) {
             delivering cutting-edge technology for businesses worldwide.
           </Typography>
         </Box>
-        <Box className="projects-bg-img relative">
+        <Box className="projects-bg-img relative overflow-hidden">
           <Box className="xl:w-[80%] lg:w-[80%] md:w-[80%] sm:w-[80%] xsm:w-full xxs:w-full xxxs:w-full max-w-[100%] m-auto position-setting">
             <div
               ref={nextButtonRef}
@@ -72,13 +81,12 @@ function Projects({ title }) {
             ></div>
             <Swiper
               className="!pt-10 !pb-10 !px-[2rem]"
-              effect="Cards"
               navigation={{
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
               }}
               loop={true}
-              modules={[Navigation, Autoplay, EffectFade]}
+              modules={[Navigation, Autoplay]}
               speed={2000}
               autoplay={{
                 delay: 2500,
@@ -121,13 +129,17 @@ function Projects({ title }) {
                 },
                 1200: {
                   slidesPerView: 3,
+                  spaceBetween: 40,
+                },
+                1440: {
+                  slidesPerView: 3,
                   spaceBetween: 60,
                 },
               }}
             >
               <SwiperSlide>
-                <Box className="rounded-[10px] h-[400px] one-background">
-                  <Box className="rounded-[10px] h-[400px] second-bg">
+                <Box className="rounded-[10px] xxl:h-[400px] xl:h-[330px] lg:h-[300px] h-[280px] one-background">
+                  <Box className="rounded-[10px] xxl:h-[400px] xl:h-[330px] lg:h-[300px] h-[280px] second-bg">
                     <Image
                       src={Aconomy} className="object-cover img-style" alt="Aconomy project preview"
                     />
@@ -163,8 +175,8 @@ function Projects({ title }) {
                 </Box>
               </SwiperSlide>
               <SwiperSlide>
-                <Box className="rounded-[10px] h-[400px] one-background">
-                  <Box className="rounded-[10px] h-[400px] second-bg">
+                <Box className="rounded-[10px] xxl:h-[400px] xl:h-[330px] lg:h-[300px] h-[280px] one-background">
+                  <Box className="rounded-[10px] xxl:h-[400px] xl:h-[330px] lg:h-[300px] h-[280px] second-bg">
                     <Image
                       src={BCCOIN}
                       className="object-cover img-style"
@@ -201,8 +213,8 @@ function Projects({ title }) {
                 </Box>
               </SwiperSlide>
               <SwiperSlide>
-                <Box className="rounded-[10px] h-[400px] one-background">
-                  <Box className="rounded-[10px] h-[400px] second-bg">
+                <Box className="rounded-[10px] xxl:h-[400px] xl:h-[330px] lg:h-[300px] h-[280px] one-background">
+                  <Box className="rounded-[10px] xxl:h-[400px] xl:h-[330px] lg:h-[300px] h-[280px] second-bg">
                     <Image
                       src={Focusmonk}
                       className="object-cover img-style"
@@ -239,8 +251,8 @@ function Projects({ title }) {
                 </Box>
               </SwiperSlide>
               <SwiperSlide>
-                <Box className="rounded-[10px] h-[400px] one-background">
-                  <Box className="rounded-[10px] h-[400px] second-bg">
+                <Box className="rounded-[10px] xxl:h-[400px] xl:h-[330px] lg:h-[300px] h-[280px] one-background">
+                  <Box className="rounded-[10px] xxl:h-[400px] xl:h-[330px] lg:h-[300px] h-[280px] second-bg">
                     <Image
                       src={Salharo} className="object-cover img-style" alt="Salharo project preview"
                     />
@@ -275,8 +287,8 @@ function Projects({ title }) {
                 </Box>
               </SwiperSlide>
               <SwiperSlide>
-                <Box className="rounded-[10px] h-[400px] one-background">
-                  <Box className="rounded-[10px] h-[400px] second-bg">
+                <Box className="rounded-[10px] xxl:h-[400px] xl:h-[330px] lg:h-[300px] h-[280px] one-background">
+                  <Box className="rounded-[10px] xxl:h-[400px] xl:h-[330px] lg:h-[300px] h-[280px] second-bg">
                     <Image
                       src={Wise1HRM}
                       className="object-cover img-style"

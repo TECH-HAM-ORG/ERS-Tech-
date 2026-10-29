@@ -97,9 +97,9 @@ function ClientsAboutUs({ Heading ,Testimonials}) {
             }}
           >
             {/* <Box className="bg-white border-2 border-[#C1ECFB] w-full rounded-[14px] shadow-lg py-8 px-4"></Box> */}
-            {Testimonials.map((data, index) => {
+            {Testimonials?.map((data, index) => {
               return (
-                <SwiperSlide key={index}>
+                <SwiperSlide key={data.id || index}>
                   <Box className="client-quotes-box">
                     <Image
                       src={TopLeft}

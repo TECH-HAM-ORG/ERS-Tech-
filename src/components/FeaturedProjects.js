@@ -114,7 +114,7 @@ function FeaturedProjects({ initialProjects = [] }) {
             <Grid container spacing={6}>
               {data.map((data, i) => {
                 return (
-                  <Grid key={i} item xs={12} sm={12} md={6} lg={4}>
+                  <Grid key={data.id || data.name || i} item xs={12} sm={12} md={6} lg={4}>
                     <Box className="block w-[90%] h-[250px] mb-6 mx-auto portfolio-container rounded-[15px]">
                       <Image
                         width={1000}

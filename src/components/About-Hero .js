@@ -1,20 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Box, Typography, Button, Tab } from "@mui/material";
+import { Box, Typography, Button, Tab, Tabs } from "@mui/material";
 import aboutOneImg from "@/../public/assets/images/about-h-img.png";
-import TabContext from "@mui/lab/TabContext";
-import TabList from "@mui/lab/TabList";
-import TabPanel from "@mui/lab/TabPanel";
-import { makeStyles } from "@mui/styles";
 import Image from "next/image";
-const useStyles = makeStyles({
-  indicator: {
-    backgroundColor: "#fff !important",
-    height: "3px !important",
-  },
-});
 
 function Hero() {
-  const classes = useStyles();
   const [value, setValue] = React.useState("1");
 
   const handleChange = (event, newValue) => {
@@ -40,7 +29,7 @@ function Hero() {
                 </Button>
 
                 <Typography
-                  className="!text-white xl:!text-[4rem] lg:!text-[2.7rem] md:!text-6xl sm:!text-5xl xsm:!text-[2rem] xxs:!text-3xl xxxs:!text-2xl !font-[600] uppercase !mb-6 font-poppins xl:!leading-[110%]"
+                  className="!text-white xxl:!text-[4rem] xl:!text-[2.85rem] lg:!text-[2.35rem] md:!text-5xl sm:!text-4xl xsm:!text-[2rem] xxs:!text-3xl xxxs:!text-2xl !font-[600] uppercase !mb-4 font-poppins xl:!leading-[115%]"
                   variant="h1"
                   component="h1"
                   gutterBottom
@@ -51,21 +40,26 @@ function Hero() {
                 <Typography
                   variant="subtitle1"
                   component={"p"}
-                  className="!leading-[180%] xl:!text-lg lg:!text-base md:!text-base sm:!text-sm xsm:!text-[13px] xxs:!text-[12px] xxxs:!text-[12px] !font-[400] font-poppins !capitalize text-white xl:w-[65%] lg:w-[55%] md:w-[55%] sm:w-full xsm:w-full xxs:w-full xxxs:w-full !mb-6"
+                  className="!leading-[170%] xxl:!text-lg xl:!text-base lg:!text-sm md:!text-sm sm:!text-sm xsm:!text-[13px] xxs:!text-[12px] xxxs:!text-[12px] !font-[400] font-poppins !capitalize text-white xxl:w-[65%] xl:w-[58%] lg:w-[55%] md:w-[55%] sm:w-full xsm:w-full xxs:w-full xxxs:w-full !mb-6"
                 >
                   We offer an IT guide to a vast variety of organizations
                   throughout the world. We continue to provide strategic value
                   in the days, weeks & years after the launch of the product.
                 </Typography>
                 <Box sx={{ width: "100%", height: "200px" }}>
-                  <TabContext value={value}>
-                    <Box>
-                      <TabList
-                        onChange={handleChange}
-                        aria-label="lab API tabs example"
-                        classes={{ indicator: classes.indicator }}
-                      >
-                        <Tab
+                  <Box>
+                    <Tabs
+                      value={value}
+                      onChange={handleChange}
+                      aria-label="about us tabs"
+                      TabIndicatorProps={{
+                        style: {
+                          backgroundColor: "#fff",
+                          height: "3px",
+                        },
+                      }}
+                    >
+                      <Tab
                           label={
                             <Typography
                               variant="h6"
@@ -113,7 +107,7 @@ function Hero() {
                           }
                           value="3"
                         />
-                      </TabList>
+                      </Tabs>
                     </Box>
                     <div
                       role="tabpanel"
@@ -165,18 +159,17 @@ function Hero() {
                         client success remains at the core of our approach.
                       </Typography>
                     </div>
-                  </TabContext>
                 </Box>
               </Box>
               <Box className="xl:block lg:block md:block sm:hidden xsm:hidden xxs:hidden xxxs:hidden">
-                <Box className="xl:h-[400px] lg:h-[330px] md:h-[250px] xl:w-[420px] lg:w-[350px] md:w-[250px] bg-white border-[3px] border-[rgba(41,188,241,0.6)] rounded-[10px] right-one-visual flex justify-center items-center z-[1] xl:!top-[46%] lg:!top-[45%] md:!top-[40%] xl:!right-0 lg:!right-[1%] md:!-right-[1%]">
+                <Box className="xxl:h-[400px] xxl:w-[420px] xl:h-[310px] xl:w-[325px] lg:h-[280px] lg:w-[290px] md:h-[240px] md:w-[250px] bg-white border-[3px] border-[rgba(41,188,241,0.6)] rounded-[10px] right-one-visual flex justify-center items-center z-[1] xl:!top-[46%] lg:!top-[45%] md:!top-[40%] xl:!right-0 lg:!right-[1%] md:!-right-[1%]">
                   <Image
                     src={aboutOneImg}
                     className="w-[95%] object-cover"
                     priority
                     alt="About ERS TECH software engineering team"
                   />
-                  <Box className="h-[100px] w-[90%] mx-auto bg-white border-[3px] border-[rgba(41,188,241,0.6)] rounded-[14px] absolute xl:-bottom-[12%] lg:-bottom-[18%] md:-bottom-[25%] right-[5%] z-[1]">
+                  <Box className="h-[95px] xl:h-[90px] lg:h-[80px] w-[90%] mx-auto bg-white border-[3px] border-[rgba(41,188,241,0.6)] rounded-[14px] absolute -bottom-[10%] right-[5%] z-[1]">
                     <Box className="p-4 flex items-center justify-around gap-4">
                       <Box className="grid place-items-center place-content-center text-center">
                         <Typography

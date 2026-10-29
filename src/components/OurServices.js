@@ -79,7 +79,7 @@ function OurServices({ title, page }) {
           <Grid container direction={"row"} justify="center" spacing={2}>
             {Services.map((data, i) => {
               return (
-                <Grid key={i} item xs={12} sm={6} md={6} lg={4}>
+                <Grid key={data.id || data.title || i} item xs={12} sm={6} md={6} lg={4}>
                   <Box className="card relative shadow p-4 rounded-[10px] services-shadow">
                     <Box className="card-body h-[300px] min-h-full">
                       <Box className="bg-[rgba(41,188,241,0.1)] rounded-[50%] w-[100px] h-[100px] flex justify-center items-center mb-6">

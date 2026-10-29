@@ -22,6 +22,7 @@ function Header() {
   let subMenu;
 
   const [menuActive, setMenuActive] = useState(false);
+  const [mobileMenuTitle, setMobileMenuTitle] = useState("");
   const [scroll, setScroll] = useState(0);
 
   useEffect(() => {
@@ -44,7 +45,7 @@ function Header() {
         subMenu.style.animation = "slideLeft 0.5s ease forwards";
         const menuTitle =
           hasChildren.querySelector("i")?.parentNode?.childNodes[0].textContent;
-        menu.querySelector(".menu-mobile-title").innerHTML = menuTitle;
+        setMobileMenuTitle(menuTitle || "");
         menu.querySelector(".menu-mobile-header")?.classList?.add("active");
       }
     };
@@ -55,7 +56,7 @@ function Header() {
       }
       setTimeout(() => {
         subMenu?.classList?.remove("active");
-        menu.querySelector(".menu-mobile-title").innerHTML = "";
+        setMobileMenuTitle("");
         menu.querySelector(".menu-mobile-header")?.classList?.remove("active");
       }, 300);
     };
@@ -161,7 +162,7 @@ function Header() {
                 <button type="button" className="btn menu-mobile-arrow">
                   <IoMdArrowRoundBack className="ml-4" size={40} />
                 </button>
-                <div className="menu-mobile-title"></div>
+                <div className="menu-mobile-title">{mobileMenuTitle}</div>
                 <button type="button" className="btn menu-mobile-close">
                   <IoClose size={40} />
                 </button>
