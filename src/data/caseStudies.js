@@ -1580,13 +1580,13 @@ export const koker = {
   seoTitle: "Koker Case Study: Crypto Wallet & Trading Platform | ERS TECH",
   seoDescription:
     "How ERS TECH built Koker, a secure crypto wallet and exchange platform with spot trading, staking, KYC/AML compliance, and risk monitoring.",
-  ogImage: "/assets/case-studies/koker/hero.webp",
+  ogImage: "/assets/case-studies/koker/KOKER.jpg",
   hero: {
     h1: "Koker: Cryptocurrency Wallet & Trading Platform",
     kicker: "SECURE CRYPTO ECOSYSTEM",
     title: "Cryptocurrency Wallet and Trading Platform",
     image: {
-      src: "/assets/case-studies/koker/hero.webp",
+      src: "/assets/case-studies/koker/KOKER.jpg",
       alt: "Koker cryptocurrency wallet and trading platform preview",
     },
   },
