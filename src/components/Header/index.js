@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useRouter } from "next/router";
 import Link from "next/link";
 import { IoClose } from "react-icons/io5";
 import { IoMdArrowRoundBack } from "react-icons/io";
@@ -17,6 +18,7 @@ import SupportIcon from "@/../public/assets/images/support-icon.png";
 import Image from "next/image";
 
 function Header() {
+  const router = useRouter();
   const menuRef = useRef(null);
   const menuOverlayRef = useRef(null);
   let subMenu;
@@ -24,6 +26,14 @@ function Header() {
   const [menuActive, setMenuActive] = useState(false);
   const [mobileMenuTitle, setMobileMenuTitle] = useState("");
   const [scroll, setScroll] = useState(0);
+
+  const isCaseStudyPage =
+    router.pathname === "/portfolio/[slug]" ||
+    (Boolean(router.asPath) &&
+      router.asPath.startsWith("/portfolio/") &&
+      router.asPath !== "/portfolio");
+
+  const isScrolled = scroll > 50 || isCaseStudyPage;
 
   useEffect(() => {
     const menu = menuRef.current;
@@ -129,12 +139,12 @@ function Header() {
   }, []);
 
   const headerStyle = {
-    position: scroll > 50 ? "sticky" : "absolute",
-    backgroundColor: scroll > 50 ? "#fff" : "transparent",
-    color: scroll > 50 ? "#3E3E3E !important" : "#fff",
+    position: isScrolled ? "sticky" : "absolute",
+    backgroundColor: isScrolled ? "#fff" : "transparent",
+    color: isScrolled ? "#3E3E3E !important" : "#fff",
     transition: "all 0.2s ease",
     boxShadow:
-      scroll > 50
+      isScrolled
         ? "0 4px 6px -1px rgba(0, 0, 0, 0.1),0 2px 4px -1px rgba(0, 0, 0, 0.06)"
         : undefined,
   };
@@ -146,7 +156,7 @@ function Header() {
           <div className="logo-btn header-item-left">
             <Link href="/">
               <Image
-                src={scroll > 50 ? CLogo : Logo}
+                src={isScrolled ? CLogo : Logo}
                 alt="ERS TECH Logo"
                 width={125}
                 height={125}
@@ -171,7 +181,7 @@ function Header() {
                 <li className="menu-item-has-children">
                   <Link
                     href="/"
-                    className={scroll > 50 ? "!text-[#3E3E3E]" : "text-white"}
+                    className={isScrolled ? "!text-[#3E3E3E]" : "text-white"}
                   >
                     Home
                   </Link>
@@ -181,7 +191,7 @@ function Header() {
                   <Link
                     href="/about-us"
                     onClick={(e) => e.preventDefault()}
-                    className={scroll > 50 ? "!text-[#3E3E3E]" : "text-white"}
+                    className={isScrolled ? "!text-[#3E3E3E]" : "text-white"}
                   >
                     Company <i className="ion ion-ios-arrow-down"></i>
                   </Link>
@@ -244,7 +254,7 @@ function Header() {
                 <li className="menu-item-has-children">
                   <Link
                     href="/services"
-                    className={scroll > 50 ? "!text-[#3E3E3E]" : "text-white"}
+                    className={isScrolled ? "!text-[#3E3E3E]" : "text-white"}
                   >
                     Services <i className="ion ion-ios-arrow-down"></i>
                   </Link>
@@ -252,7 +262,7 @@ function Header() {
                 <li className="menu-item-has-children">
                   <Link
                     href="/pricing"
-                    className={scroll > 50 ? "!text-[#3E3E3E]" : "text-white"}
+                    className={isScrolled ? "!text-[#3E3E3E]" : "text-white"}
                   >
                     Pricing
                   </Link>

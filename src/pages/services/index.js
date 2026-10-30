@@ -12,7 +12,7 @@ import OurStack from "@/components/OurStack";
 const Projects = dynamic(() => import("@/components/Projects"));
 const RequestQueryForm = dynamic(() => import("@/components/RequestQueryForm"));
 
-function index({ initialStack = null }) {
+function index({ initialStack = null, allStacks = null }) {
   return (
     <>
       <Head
@@ -38,7 +38,7 @@ function index({ initialStack = null }) {
           title={{ titleOne: "Services", titleTwo: "We Offer" }}
           page={"services"}
         />
-        <OurStack initialStack={initialStack} />
+        <OurStack initialStack={initialStack} allStacks={allStacks} />
         <div className="mb-20">
           <Projects
             title={{ titleOne: "featured", titleTwo: "Projects" }}
@@ -57,14 +57,21 @@ export async function getStaticProps() {
   try {
     const filePath = path.join(process.cwd(), "public", "stackdata.json");
     const stackData = JSON.parse(fs.readFileSync(filePath, "utf8"));
-    const webDevItems = stackData.filter(
-      (item) => item.category && item.category.toLowerCase() === "web-dev"
-    );
-    const initialStack = { imageUrls: webDevItems.map((item) => item.imageUrl) };
+    const allStacks = {};
+    stackData.forEach((item) => {
+      if (item.category && item.imageUrl) {
+        const cat = item.category.toLowerCase();
+        if (!allStacks[cat]) allStacks[cat] = [];
+        allStacks[cat].push(item.imageUrl);
+      }
+    });
+    const webDevItems = allStacks["web-dev"] || [];
+    const initialStack = { imageUrls: webDevItems };
 
     return {
       props: {
         initialStack,
+        allStacks,
       },
     };
   } catch (err) {
@@ -72,6 +79,7 @@ export async function getStaticProps() {
     return {
       props: {
         initialStack: null,
+        allStacks: null,
       },
     };
   }

@@ -101,17 +101,17 @@ export default function CaseStudyPage({ study }) {
       </Head>
 
       <main
-        className="min-h-screen text-slate-100 font-poppins selection:bg-[#ff5c16] selection:text-white"
+        className="min-h-screen text-slate-800 font-poppins selection:bg-[#ff5c16] selection:text-white"
         style={{
-          backgroundColor: theme?.sectionBg || "#0d0e12",
-          color: theme?.textColor || "#bbbbbb",
+          backgroundColor: theme?.sectionBg || "#ffffff",
+          color: theme?.textColor || "#263238",
         }}
       >
         {/* Ambient Radial Glow Effect */}
         <div
           className="relative overflow-hidden w-full"
           style={{
-            background: `radial-gradient(ellipse 80% 50% at 50% -10%, ${theme?.accent || "#ff5c16"}25, transparent 70%)`,
+            background: `radial-gradient(ellipse 80% 50% at 50% -10%, ${theme?.accent || "#ff5c16"}15, transparent 70%)`,
           }}
         >
           {/* Hero Section */}
@@ -141,7 +141,7 @@ export default function CaseStudyPage({ study }) {
               {/* Exactly one H1 for SEO with visually-hidden semantic prefix if needed */}
               <h1
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-[1.15]"
-                style={{ color: theme?.headingColor || "#ffffff" }}
+                style={{ color: theme?.headingColor || "#111827" }}
               >
                 {hero?.h1?.includes(name) ? (
                   hero.h1
@@ -154,7 +154,10 @@ export default function CaseStudyPage({ study }) {
               </h1>
 
               {hero?.subtitle && (
-                <p className="text-base md:text-lg leading-relaxed text-[#999999] max-w-3xl">
+                <p
+                  className="text-base md:text-lg leading-relaxed max-w-3xl"
+                  style={{ color: theme?.textColor || "#555555" }}
+                >
                   {hero.subtitle}
                 </p>
               )}
@@ -162,7 +165,7 @@ export default function CaseStudyPage({ study }) {
 
             {/* Hero Main Mockup Image */}
             {isValidImage(hero?.image) && (
-              <div className="mt-12 rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black/40">
+              <div className="mt-12 rounded-2xl overflow-hidden border border-slate-200/80 shadow-2xl bg-white">
                 <Image
                   src={hero.image.src}
                   alt={hero.image.alt || `${name} Platform Mockup`}
@@ -213,25 +216,25 @@ export default function CaseStudyPage({ study }) {
                         return (
                           <div
                             key={cIdx}
-                            className={`p-6 sm:p-7 rounded-[8px] transition-transform duration-200 hover:-translate-y-1 ${
+                            className={`p-6 sm:p-7 rounded-[12px] transition-transform duration-200 hover:-translate-y-1 ${
                               isLastSingle ? "lg:col-start-2" : ""
                             }`}
                             style={{
-                              backgroundColor: theme?.cardBg || "#1c1c1c",
+                              backgroundColor: theme?.cardBg || "#f8f9fa",
                               boxShadow:
                                 theme?.cardShadow ||
-                                "0px 2px 2px rgba(171,190,209,0.2)",
+                                "0px 4px 16px rgba(0,0,0,0.06)",
                             }}
                           >
                             <h3
                               className="text-lg sm:text-xl font-bold mb-3"
-                              style={{ color: theme?.headingColor || "#ffffff" }}
+                              style={{ color: theme?.headingColor || "#111827" }}
                             >
                               {card.title}
                             </h3>
                             <p
                               className="text-sm leading-relaxed"
-                              style={{ color: theme?.textColor || "#bbbbbb" }}
+                              style={{ color: theme?.textColor || "#263238" }}
                             >
                               {card.text}
                             </p>
@@ -247,8 +250,8 @@ export default function CaseStudyPage({ study }) {
                       {section.stats.map((stat, sIdx) => (
                         <div
                           key={sIdx}
-                          className="p-6 rounded-[8px] text-center border border-white/5"
-                          style={{ backgroundColor: theme?.cardBg || "#1c1c1c" }}
+                          className="p-6 rounded-[12px] text-center border border-slate-200/80 shadow-sm"
+                          style={{ backgroundColor: theme?.cardBg || "#f8f9fa" }}
                         >
                           <div
                             className="text-3xl sm:text-4xl font-extrabold mb-2"
@@ -256,7 +259,10 @@ export default function CaseStudyPage({ study }) {
                           >
                             {stat.value}
                           </div>
-                          <div className="text-xs sm:text-sm text-slate-300 font-medium">
+                          <div
+                            className="text-xs sm:text-sm font-medium"
+                            style={{ color: theme?.textColor || "#555555" }}
+                          >
                             {stat.label}
                           </div>
                         </div>
@@ -270,8 +276,8 @@ export default function CaseStudyPage({ study }) {
                       {section.tools.map((tool, tIdx) => (
                         <div
                           key={tIdx}
-                          className="p-4 rounded-[8px] flex items-center gap-3 border border-white/5"
-                          style={{ backgroundColor: theme?.cardBg || "#1c1c1c" }}
+                          className="p-4 rounded-[12px] flex items-center gap-3 border border-slate-200/80 shadow-sm"
+                          style={{ backgroundColor: theme?.cardBg || "#f8f9fa" }}
                         >
                           {tool.icon && !tool.icon.startsWith("TODO") && (
                             <img
@@ -281,7 +287,10 @@ export default function CaseStudyPage({ study }) {
                               className="w-6 h-6 object-contain"
                             />
                           )}
-                          <span className="text-sm font-medium text-white">
+                          <span
+                            className="text-sm font-medium"
+                            style={{ color: theme?.headingColor || "#111827" }}
+                          >
                             {typeof tool === "string" ? tool : tool.name}
                           </span>
                         </div>
@@ -414,7 +423,7 @@ export default function CaseStudyPage({ study }) {
 
                   {/* Section Bottom Image (if specified and valid) */}
                   {isValidImage(section.image) && (
-                    <div className="mt-8 rounded-xl overflow-hidden border border-white/10 shadow-xl bg-black/40">
+                    <div className="mt-8 rounded-xl overflow-hidden border border-slate-200/80 shadow-xl bg-white">
                       <img
                         src={section.image.src}
                         alt={section.image.alt || `${section.title} illustration`}
@@ -430,21 +439,21 @@ export default function CaseStudyPage({ study }) {
           {/* Bottom Call to Action */}
           <section className="pt-8">
             <div
-              className="p-8 sm:p-12 md:p-16 rounded-2xl text-center relative overflow-hidden border border-white/10"
+              className="p-8 sm:p-12 md:p-16 rounded-2xl text-center relative overflow-hidden border border-slate-200/80 shadow-sm"
               style={{
-                backgroundColor: theme?.cardBg || "#1c1c1c",
-                background: `radial-gradient(circle at 50% 50%, ${theme?.accent || "#ff5c16"}20 0%, ${theme?.cardBg || "#1c1c1c"} 100%)`,
+                backgroundColor: theme?.cardBg || "#f8f9fa",
+                background: `radial-gradient(circle at 50% 50%, ${theme?.accent || "#ff5c16"}12 0%, ${theme?.cardBg || "#f8f9fa"} 100%)`,
               }}
             >
               <h2
                 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4"
-                style={{ color: theme?.headingColor || "#ffffff" }}
+                style={{ color: theme?.headingColor || "#111827" }}
               >
                 {cta?.title || "Have a Project in Mind? Let's Discuss!"}
               </h2>
               <p
                 className="text-sm sm:text-base max-w-xl mx-auto mb-8"
-                style={{ color: theme?.textColor || "#bbbbbb" }}
+                style={{ color: theme?.textColor || "#555555" }}
               >
                 Let our engineering and blockchain experts help you build scalable,
                 enterprise-ready digital solutions.

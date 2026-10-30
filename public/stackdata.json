@@ -2,7 +2,7 @@
     {
         "id": 1,
         "category": "web-dev",
-        "imageUrl": "/assets/icons/NodeJs.png"
+        "imageUrl": "/assets/icons/NodeJS.png"
     },
     {
         "id": 2,
@@ -67,7 +67,7 @@
     {
         "id": 14,
         "category": "app-dev",
-        "imageUrl": "/assets/icons/java.png"
+        "imageUrl": "/assets/icons/Java.png"
     },
     {
         "id": 15,
@@ -187,7 +187,7 @@
     {
         "id": 38,
         "category": "technical-support",
-        "imageUrl": "/assets/icons/jira.png"
+        "imageUrl": "/assets/icons/Jira.png"
     },
     {
         "id": 39,
