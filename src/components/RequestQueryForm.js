@@ -38,7 +38,7 @@ function RequestQueryForm() {
   };
   return (
     <>
-      <Box id="contact">
+      <Box id="contact" className="scroll-mt-28">
         <Grid container className="!w-10/12 !mx-auto">
           <Grid container spacing={2}>
             <Grid item xs={12} sm={12} md={3} lg={3}>

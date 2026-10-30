@@ -15,6 +15,14 @@ const nextConfig = {
       },
       {
         protocol: "https",
+        hostname: "erstech.org",
+      },
+      {
+        protocol: "https",
+        hostname: "www.erstech.org",
+      },
+      {
+        protocol: "https",
         hostname: "erstech-lime.vercel.app",
       },
       {

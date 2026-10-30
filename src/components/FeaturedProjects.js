@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Box, Grid, Typography } from "@mui/material";
-import Feature from "@/../public/assets/images/portfolio-img.png";
 import { FaEye } from "react-icons/fa";
 import RequestQueryForm from "./RequestQueryForm";
 import Link from "next/link";
@@ -12,6 +11,22 @@ function FeaturedProjects({ initialProjects = [] }) {
   const [selected, setSelected] = useState("all");
 
   const handleCategory = (category) => {
+    setSelected(category);
+    if (initialProjects && initialProjects.length > 0) {
+      if (category.toLowerCase() === "all") {
+        setData(initialProjects);
+      } else {
+        const filtered = initialProjects.filter((item) => {
+          const itemCategories = (item.category || "")
+            .split(",")
+            .map((cat) => cat.trim().toLowerCase());
+          return itemCategories.includes(category.toLowerCase());
+        });
+        setData(filtered);
+      }
+      return;
+    }
+
     fetch(`/api/filterByCategory?category=${encodeURIComponent(category)}`)
       .then((res) => res.json())
       .then((result) => {
@@ -28,18 +43,12 @@ function FeaturedProjects({ initialProjects = [] }) {
   };
 
   useEffect(() => {
-    if (!initialProjects || initialProjects.length === 0) {
+    if (initialProjects && initialProjects.length > 0) {
+      setData(initialProjects);
+    } else {
       handleCategory("all");
     }
   }, [initialProjects]);
-
-  const getFullImageUrl = (relativeUrl) => {
-    if (typeof window === "undefined") {
-      return relativeUrl;
-    }
-    if (relativeUrl.startsWith("http")) return relativeUrl;
-    return `${window.location.origin}${relativeUrl}`;
-  };
 
   return (
     <>
@@ -120,7 +129,7 @@ function FeaturedProjects({ initialProjects = [] }) {
                       <Image
                         width={1000}
                         height={1000}
-                        src={getFullImageUrl(data.imageUrl)}
+                        src={data.imageUrl}
                         className="w-[90%] h-full rounded-[15px] object-cover portfolio-image"
                         alt={data.name}
                       />
