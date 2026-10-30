@@ -13,6 +13,15 @@ import Team from "@/../public/assets/images/teamwork.png";
 import Customdevelop from "@/../public/assets/images/graphic-design.png";
 import Image from "next/image";
 function priceTable() {
+  const scrollToContact = () => {
+    const contactElem = document.getElementById("contact");
+    if (contactElem) {
+      contactElem.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      window.location.hash = "#contact";
+    }
+  };
+
   return (
     <>
       <Box className="4xl:!container xxxl:!container xxl:!container xl:!container lg:!container md:!container sm:max-w-full xsm:max-w-full xxs:max-w-full xxxs:max-w-full bg-[rgba(222,233,251,0.3)] pb-16 mb-16">
@@ -97,9 +106,10 @@ function priceTable() {
                   <Button
                     type="button"
                     size="medium"
-                    className="bg-gradient-to-r from-[#29BCF1] to-[#0F53CE] !text-white !px-6 !rounded-[50px] !capitalize !w-[150px] !text-base !font-[500] font-poppins !leading-[140%] !tracking-[-0.16px] send-msg-btn"
+                    onClick={scrollToContact}
+                    className="bg-gradient-to-r from-[#29BCF1] to-[#0F53CE] !text-white !px-6 !rounded-[50px] !capitalize !w-[150px] !text-base !font-[500] font-poppins !leading-[140%] !tracking-[-0.16px] send-msg-btn cursor-pointer"
                   >
-                    get quote
+                    Get Quote
                   </Button>
                 </Box>
               </Box>
@@ -168,9 +178,10 @@ function priceTable() {
                   <Button
                     type="button"
                     size="medium"
-                    className="bg-gradient-to-r from-[#29BCF1] to-[#0F53CE] !text-white !px-6 !rounded-[50px] !capitalize !w-[150px] !text-base !font-[500] font-poppins !leading-[140%] !tracking-[-0.16px] send-msg-btn"
+                    onClick={scrollToContact}
+                    className="bg-gradient-to-r from-[#29BCF1] to-[#0F53CE] !text-white !px-6 !rounded-[50px] !capitalize !w-[150px] !text-base !font-[500] font-poppins !leading-[140%] !tracking-[-0.16px] send-msg-btn cursor-pointer"
                   >
-                    get quote
+                    Get Quote
                   </Button>
                 </Box>
               </Box>
@@ -239,9 +250,10 @@ function priceTable() {
                   <Button
                     type="button"
                     size="medium"
-                    className="bg-gradient-to-r from-[#29BCF1] to-[#0F53CE] !text-white !px-6 !rounded-[50px] !capitalize !w-[150px] !text-base !font-[500] font-poppins !leading-[140%] !tracking-[-0.16px] send-msg-btn"
+                    onClick={scrollToContact}
+                    className="bg-gradient-to-r from-[#29BCF1] to-[#0F53CE] !text-white !px-6 !rounded-[50px] !capitalize !w-[150px] !text-base !font-[500] font-poppins !leading-[140%] !tracking-[-0.16px] send-msg-btn cursor-pointer"
                   >
-                    get quote
+                    Get Quote
                   </Button>
                 </Box>
               </Box>
